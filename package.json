@@ -1,0 +1,29 @@
+{
+    "name": "theme-dracula",
+    "version": "1.2.5",
+    "engines": {
+        "vscode": "*"
+    },
+    "publisher": "Dracula Theme",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dracula/visual-studio-code/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dracula/visual-studio-code.git"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "icon": "icon.png",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Dracula Syntax Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Dracula.tmTheme"
+            }
+        ]
+    }
+}
