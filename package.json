@@ -4,7 +4,7 @@
     "engines": {
         "vscode": "*"
     },
-    "publisher": "Dracula Theme",
+    "publisher": "dracula-theme",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/dracula/visual-studio-code/issues"
