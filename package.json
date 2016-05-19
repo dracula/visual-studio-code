@@ -1,5 +1,7 @@
 {
     "name": "theme-dracula",
+    "displayName": "Dracula Syntax Theme",
+    "description": "Dracula Syntax Theme. A dark theme for many editors, shells, and more.",
     "version": "1.2.5",
     "engines": {
         "vscode": "*"
@@ -17,6 +19,7 @@
         "Themes"
     ],
     "icon": "icon.png",
+    "homepage": "https://draculatheme.com/",
     "contributes": {
         "themes": [
             {
