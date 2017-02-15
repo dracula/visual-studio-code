@@ -568,6 +568,17 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Markdown: Horizontal Rule</string>
+			<key>scope</key>
+			<string>meta.separator.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6272a4</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Markdown: Italics</string>
 			<key>scope</key>
 			<string>markup.italic.markdown</string>
