@@ -1,0 +1,198 @@
+name: Dracula
+author: Zeno Rocha
+semanticClass: theme.dracula
+scheme:
+  BG: '#282a36'
+  FG: '#f8f8f2'
+  SELECTION: '#44475a'
+  COMMENT: '#6272a4'
+  CYAN: '#8be9fd'
+  GREEN: '#50fa7b'
+  ORANGE: '#ffb86c'
+  PINK: '#ff79c6'
+  PURPLE: '#bd93f9'
+  RED: '#ff5555'
+  YELLOW: '#f1fa8c'
+settings:
+  - settings:
+      background: BG
+      foreground: FG
+      lineHighlight: SELECTION
+      findRangeHighlight:
+      inactiveSelection:
+      invisibles: "#3b3a32"
+      selection: SELECTION
+      guide:
+      rangeHighlight:
+      selectionHighlight:
+      wordHighlight: COMMENT
+      wordHighlightStrong: COMMENT
+      findMatchHighlight: SELECTION
+      currentFindMatchHighlight: COMMENT
+      linkForeground:
+      activeLinkForeground: GREEN
+      hoverHighlight: SELECTION
+      referenceHighlight:
+  - scope: emphasis
+    settings:
+      fontStyle: italic
+  - scope: strong
+    settings:
+      fontStyle: bold
+  - scope: comment
+    settings:
+      foreground: COMMENT
+  - scope: string
+    settings:
+      foreground: YELLOW
+  - scope: variable
+    settings:
+      foreground: FG
+  - scope: constant
+    settings:
+      foreground: PURPLE
+  - scope: keyword
+    settings:
+      foreground: PINK
+  - scope: keyword.operator
+    settings:
+      fontStyle: bold
+  - scope: storage
+    settings:
+      foreground: PINK
+  - scope: storage.type
+    settings:
+      foreground: CYAN
+      fontStyle: italic
+  - scope: entity.name.class
+    settings:
+      fontStyle: underline
+      foreground: GREEN
+  - scope: entity.other.inherited-class
+    settings:
+      fontStyle: italic underline
+      foreground: GREEN
+  - scope: variable.language.this
+    settings:
+      foreground: PURPLE
+      fontStyle: bold italic
+  - scope: meta.decorator
+    settings:
+      foreground: CYAN
+      fontStyle: italic
+  - scope: entity.name.function
+    settings:
+      foreground: GREEN
+  - scope: variable.parameter
+    settings:
+      fontStyle: italic
+      foreground: ORANGE
+  - scope: entity.name.tag
+    settings:
+      foreground: PINK
+  - scope: entity.other.attribute-name
+    settings:
+      foreground: GREEN
+  - scope: support.function
+    settings:
+      foreground: CYAN
+  - scope: support.constant
+    settings:
+      foreground: "#6be5fd"
+  - scope:
+    - support.type
+    - support.class
+    settings:
+      fontStyle: italic
+      foreground: CYAN
+  - scope: invalid
+    settings:
+      background: PINK
+      foreground: "#f8f8f0"
+  - scope: invalid.deprecated
+    settings:
+      background: PURPLE
+      foreground: "#f8f8f0"
+  - scope:
+    - meta.diff
+    - meta.diff.header
+    settings:
+      foreground: COMMENT
+  - scope: markup.deleted
+    settings:
+      foreground: PINK
+  - scope: markup.inserted
+    settings:
+      foreground: GREEN
+  - scope: markup.changed
+    settings:
+      foreground: "#e6db74"
+  - scope: entity.name.filename
+    settings:
+      foreground: "#e6dB74"
+  - scope: markup.error
+    settings:
+      foreground: RED
+  - scope: meta.structure.dictionary.json string.quoted.double.json
+    settings:
+      foreground: CYAN
+  - name: JSON string
+    scope: meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json
+    settings:
+      foreground: YELLOW
+  - name: JSON boolean
+    scope: constant.language.json
+    settings:
+      foreground: GREEN
+  - scope: markup.heading.${1/(#)(#)?(#)?(#)?(#)?(#)?/${6:?6:${5:?5:${4:?4:${3:?3:${2:?2:1}}}}}/}.markdown
+    settings:
+      foreground: PURPLE
+  - scope:
+    - markup.underline.link.markdown
+    - markup.underline.link.image.markdown
+    settings:
+      foreground: CYAN
+  - scope:
+    - string.other.link.description.markdown
+    - string.other.link.title.markdown
+    settings:
+      foreground: PINK
+  - scope: markup.quote.markdown
+    settings:
+      foreground: COMMENT
+  - scope: meta.separator.markdown
+    settings:
+      foreground: COMMENT
+  - scope: markup.italic.markdown
+    settings:
+      foreground: YELLOW
+      fontStyle: italic
+  - scope: markup.bold.markdown
+    settings:
+      foreground: ORANGE
+      fontStyle: bold
+  - scope: beginning.punctuation.definition.list.markdown
+    settings:
+      foreground: CYAN
+  - scope: markup.inline.raw.markdown
+    settings:
+      foreground: GREEN
+  - scope: punctuation.definition.markdown
+    settings:
+      foreground: GREEN
+  - scope: fenced_code.block.language
+    settings:
+      foreground: PINK
+  - name: Ruby's @variable
+    scope: variable.other.readwrite.instance
+    settings:
+      foreground: ORANGE
+  - name: JavaScript string interpolation ${}
+    scope:
+    - punctuation.definition.template-expression.begin.ts
+    - punctuation.definition.template-expression.end.ts
+    settings:
+      foreground: PINK
+  - scope: string.quoted.double.shell variable
+    settings:
+      foreground: PURPLE
