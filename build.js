@@ -1,10 +1,10 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 
-const doc = yaml.safeLoad(fs.readFileSync(__dirname + '/src/dracula-theme.yml', 'utf8'));
+const doc = yaml.safeLoad(fs.readFileSync(__dirname + '/src/dracula.yml', 'utf8'));
 const { scheme } = doc;
 
-fs.writeFileSync(__dirname + '/themes/dracula-theme.json', JSON.stringify(parseColors(doc), null, 4));
+fs.writeFileSync(__dirname + '/theme/dracula.json', JSON.stringify(parseColors(doc), null, 4));
 
 function parseColors(input) {
     if (Array.isArray(input)) {
