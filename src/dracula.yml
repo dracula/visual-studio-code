@@ -1,0 +1,365 @@
+name: Dracula
+author: Zeno Rocha
+semanticClass: theme.dracula
+scheme:
+  BG: '#282a36'
+  FG: '#f8f8f2'
+  SELECTION: '#44475a'
+  COMMENT: '#6272a4'
+  CYAN: '#8be9fd'
+  GREEN: '#50fa7b'
+  ORANGE: '#ffb86c'
+  PINK: '#ff79c6'
+  PURPLE: '#bd93f9'
+  RED: '#ff5555'
+  YELLOW: '#f1fa8c'
+settings:
+  - settings:
+      background: BG
+      foreground: FG
+      lineHighlight: SELECTION
+      findRangeHighlight:
+      inactiveSelection:
+      invisibles:
+      selection: SELECTION
+      guide:
+      rangeHighlight:
+      selectionHighlight:
+      wordHighlight: COMMENT
+      wordHighlightStrong: COMMENT
+      findMatchHighlight: SELECTION
+      currentFindMatchHighlight: COMMENT
+      linkForeground:
+      activeLinkForeground: GREEN
+      hoverHighlight: SELECTION
+      referenceHighlight:
+  
+  # General
+  - scope: emphasis
+    settings:
+      fontStyle: italic
+  - scope: strong
+    settings:
+      fontStyle: bold
+  - scope: header
+    settings:
+      foreground: PINK
+  - scope: comment
+    settings:
+      foreground: COMMENT
+  - scope: source
+    settings:
+      foreground: FG
+
+  # Constants
+  - scope: contant.language
+    settings:
+      foreground: GREEN
+  - scope: contant.numeric
+    settings:
+      foreground: PURPLE
+  - scope: constant.regexp
+    settings:
+      foreground: PINK
+  
+  # Variables
+  - scope: variable
+    settings:
+      foreground: FG
+  - scope: variable.language.this
+    settings:
+      foreground: PURPLE
+      fontStyle: bold italic
+  - scope: variable.parameter
+    settings:
+      fontStyle: italic
+      foreground: ORANGE
+  
+  # Keywords
+  - scope:
+    - keyword
+    - punctuation.definition.keyword
+    settings:
+      foreground: PINK
+  - scope: keyword.operator.new
+    settings:
+      fontStyle: bold
+
+  # Diffs
+  - scope:
+    - meta.diff
+    - meta.diff.header
+    settings:
+      foreground: COMMENT
+  - scope: markup.underline
+    settings:
+      fontStyle: underline
+  - scope: markup.bold
+    settings:
+      fontStyle: bold
+      foreground: ORANGE
+  - scope: markup.heading
+    settings:
+      fontStyle: bold
+      foreground: PURPLE
+  - scope: markup.italic
+    settings:
+      foreground: YELLOW
+      fontStyle: italic
+  - scope: markup.inserted
+    settings:
+      foreground: GREEN
+  - scope: markup.deleted
+    settings:
+      foreground: RED
+  - scope: markup.changed
+    settings:
+      foreground: ORANGE
+  - scope: invalid
+    settings:
+      background: RED
+      foreground: FG 
+  - scope: invalid.deprecated
+    settings:
+      background: PURPLE
+      foreground: FG
+  - scope: entity.name.filename
+    settings:
+      foreground: YELLOW
+  - scope: markup.error
+    settings:
+      foreground: RED
+  
+  # Markdown
+  - scope:
+    - beginning.punctuation.definition.quote.markdown
+    - beginning.punctuation.definition.list.markdown
+    settings:
+      foreground: CYAN
+  - scope: markup.inline.raw
+    settings:
+      foreground: GREEN
+  - scope:
+    - markup.underline.link.markdown
+    - markup.underline.link.image.markdown
+    settings:
+      foreground: CYAN
+  - scope:
+    - string.other.link.description.markdown
+    - string.other.link.title.markdown
+    settings:
+      foreground: PINK
+  - scope: markup.quote.markdown
+    settings:
+      foreground: COMMENT
+  - scope: meta.separator.markdown
+    settings:
+      foreground: COMMENT
+  - scope: punctuation.definition.markdown
+    settings:
+      foreground: GREEN
+  - scope: fenced_code.block.language
+    settings:
+      foreground: ORANGE 
+  
+  # Meta
+  - scope: meta.selector
+    settings:
+      foreground: FG 
+  - scope: meta.preprocessor
+    settings:
+      foreground: CYAN
+  - scope: meta.preprocessor.string
+    settings:
+      foreground: ORANGE
+  - scope: meta.preprocessor.numeric
+    settings:
+      foreground: PURPLE
+
+  # Storage
+  - scope: storage
+    settings:
+      foreground: PINK
+  - scope: storage.type
+    settings:
+      foreground: CYAN
+      fontStyle: italic
+  - scope: storage.modifier
+    settings:
+      foreground: PINK
+  
+  # String
+  - scope: string
+    settings:
+      foreground: YELLOW
+  - scope: string.tag
+    settings:
+      foreground: YELLOW
+  - scope: string.value
+    settings:
+      foreground: YELLOW
+  - scope: string.regexp
+    settings:
+      foreground: RED
+  
+  # Support
+  - name: Provided by external / built-in library
+    scope:
+    - support.function
+    settings:
+      foreground: CYAN
+  - name: Defined language constants
+    scope: support.constant
+    settings:
+      foreground: CYAN
+  - name: Defined language constant properties
+    scope: support.constant.property
+    settings:
+      foreground: PURPLE
+  - name: External / built-in types and classes
+    scope:
+    - support.type
+    - support.class
+    settings:
+      fontStyle: italic
+      foreground: CYAN
+
+  # General Language Constructs
+  - name: Functions
+    scope: entity.name.function
+    settings:
+      foreground: GREEN
+  - name: Inherited classes
+    scope: entity.other.inherited-class
+    settings:
+      fontStyle: italic underline
+      foreground: GREEN
+  - name: Decorators
+    scope: 
+    - meta.decorator
+    - meta.decorator variable.other.readwrite
+    settings:
+      foreground: CYAN
+      fontStyle: italic
+  
+  # CSS / CSS Preprocessors
+  - scope:
+    - support.constant.property-value
+    - support.constant.font-name
+    - support.constant.media-type
+    - support.constant.media
+    - constant.other.color.rgb-value
+    - constant.other.rgb-value
+    - support.constant.color
+    settings:
+      foreground: FG
+  - scope:
+    - variable.css
+    - variable.scss
+    - variable.stylus
+    - variable.other.less
+    settings:
+      foreground: ORANGE
+  - scope:
+    - meta.property-list.css
+    - support.type.vendored.property-name
+    - support.type.property-name
+    settings:
+      foreground: CYAN 
+  - name: HTML tags in CSS
+    scope: entity.name.tag.css
+    settings:
+      foreground: PINK
+  - scope:
+    - entity.other.attribute-name.parent-selector.css
+    - entity.other.attribute-name.pseudo-class.css
+    - entity.other.attribute-name.pseudo-element.css
+    settings:
+      fontStyle: italic
+      foreground: GREEN
+  - scope:
+    - entity.other.attribute-name.id.css
+    - source.css.less entity.other.attribute-name.id
+    - entity.other.attribute-name.attribute.scss
+    - entity.other.attribute-name.scss
+    - entity.other.attribute-name.class.css
+    - entity.other.attribute-name.class.mixin.css
+    settings:
+      foreground: GREEN
+
+  # HTML
+  - name: HTML attributes
+    scope: entity.other.attribute-name
+    settings:
+      foreground: GREEN
+  - name: HTML tags
+    scope: entity.name.tag
+    settings:
+      foreground: PINK
+
+  # JavaScript
+  - name: JavaScript string interpolation ${}
+    scope:
+    - punctuation.definition.template-expression.begin.ts
+    - punctuation.definition.template-expression.end.ts
+    settings:
+      foreground: PINK
+  - name: Arrow function arrows
+    scope: storage.type.function.arrow
+    settings:
+      foreground: PINK
+
+  # JSON
+  - name: JSON keys
+    scope: meta.structure.dictionary.json string.quoted.double.json
+    settings:
+      foreground: CYAN
+  - name: JSON string
+    scope: meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json
+    settings:
+      foreground: YELLOW
+  - name: JSON boolean
+    scope: constant.language.json
+    settings:
+      foreground: GREEN
+
+  # PHP
+  - scope:
+    - punctuation.section.embedded.begin.metatag.php
+    - punctuation.section.embedded.end.metatag.php
+    settings:
+      foreground: FG
+  - scope: meta.function-call.php
+    settings:
+      foreground: GREEN
+
+  # Python
+  - scope: meta.structure.dictionary.key.python
+    settings:
+      foreground: CYAN
+  
+  # Ruby
+  - name: Ruby's @variable
+    scope: variable.other.readwrite.instance
+    settings:
+      foreground: ORANGE
+
+  # Shell
+  - scope: string.quoted.double.shell variable
+    settings:
+      foreground: PURPLE
+
+  # TypeScript
+  - scope:
+    - meta.type.annotation meta.type.parameters entity.name.type
+    - meta.type.parameters entity.name.type
+    - meta.indexer.mappedtype.declaration entity.name.type
+    - meta.return.type meta.type.parameters entity.name.type
+    settings:
+      foreground: ORANGE
+  - scope:
+    - meta.type.annotation entity.name.type
+    - meta.return.type entity.name.type
+    settings:
+      fontStyle: italic
+      foreground: CYAN
