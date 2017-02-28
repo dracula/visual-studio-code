@@ -394,11 +394,11 @@
         },
         {
             "scope": [
+                "support.constant.property-value",
                 "support.constant.color",
                 "support.constant.font-name",
                 "support.constant.media-type",
-                "support.constant.media",
-                "support.constant.property-value"
+                "support.constant.media"
             ],
             "settings": {
                 "foreground": "#f8f8f2"
