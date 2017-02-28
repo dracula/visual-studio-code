@@ -55,7 +55,13 @@ settings:
   - scope: contant.language
     settings:
       foreground: GREEN
-  - scope: contant.numeric
+  - scope: 
+    - contant.numeric
+    - constant.numeric.decimal
+    - constant.numeric.scss
+    - constant.numeric.css
+    - constant.numeric.less
+    - constant.numeric.color.rgb-value
     settings:
       foreground: PURPLE
   - scope: constant.regexp
@@ -245,14 +251,18 @@ settings:
   # CSS / CSS Preprocessors
   - scope:
     - support.constant.property-value
+    - support.constant.color
     - support.constant.font-name
     - support.constant.media-type
     - support.constant.media
-    - constant.other.color.rgb-value
-    - constant.other.rgb-value
-    - support.constant.color
     settings:
       foreground: FG
+  - scope:
+    - constant.numeric.color.hex-value
+    - constant.other.color.rgb-value
+    - constant.other.rgb-value
+    settings:
+      foreground: YELLOW
   - scope:
     - variable.css
     - variable.scss

@@ -1,3 +1,8 @@
+# 1.6.1
+
+- Fix highlighting for numbers (`constant.numeric.decimal`).
+- Fix hex color highlighting for CSS and friends.
+
 # 1.6.0
 
 - Change Maintainers
