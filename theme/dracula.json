@@ -388,7 +388,7 @@
                 "meta.decorator variable.other.readwrite"
             ],
             "settings": {
-                "foreground": "#8be9fd",
+                "foreground": "#f8f8f2",
                 "fontStyle": "italic"
             }
         },
@@ -483,8 +483,8 @@
         {
             "name": "JavaScript string interpolation ${}",
             "scope": [
-                "punctuation.definition.template-expression.begin.ts",
-                "punctuation.definition.template-expression.end.ts"
+                "punctuation.definition.template-expression.begin",
+                "punctuation.definition.template-expression.end"
             ],
             "settings": {
                 "foreground": "#ff79c6"
@@ -493,6 +493,22 @@
         {
             "name": "Arrow function arrows",
             "scope": "storage.type.function.arrow",
+            "settings": {
+                "fontStyle": "regular",
+                "foreground": "#ff79c6"
+            }
+        },
+        {
+            "name": "Object destructuring property name",
+            "scope": "meta.object-binding-pattern-variable variable.object.property",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#ffb86c"
+            }
+        },
+        {
+            "name": "Object destructuring punctuation",
+            "scope": "meta.object-binding-pattern-variable punctuation.destructuring",
             "settings": {
                 "foreground": "#ff79c6"
             }
