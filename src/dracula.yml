@@ -62,6 +62,7 @@ settings:
     - constant.numeric.css
     - constant.numeric.less
     - constant.numeric.color.rgb-value
+    - constant.language.boolean
     settings:
       foreground: PURPLE
   - scope: constant.regexp

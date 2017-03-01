@@ -81,7 +81,8 @@
                 "constant.numeric.scss",
                 "constant.numeric.css",
                 "constant.numeric.less",
-                "constant.numeric.color.rgb-value"
+                "constant.numeric.color.rgb-value",
+                "constant.language.boolean"
             ],
             "settings": {
                 "foreground": "#bd93f9"
