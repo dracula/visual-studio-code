@@ -1,3 +1,14 @@
+# 1.8.0
+
+## Minor
+- `this`, `var`, `const`, `let`, etc.. text formatting removed.
+- Various reserved words (e.g. `class`, `interface`, `type`, etc..) color switched to match other reserved words.
+- Add highlighting for import aliases in JS and friends.
+
+## Patch
+- Fix highlighting for variable constants (i.e. Variables in all caps in JS).
+- Fix highlighting for JS string interpolation.
+
 # 1.7.0
 
 ## Minor 

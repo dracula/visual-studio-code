@@ -1,5 +1,8 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
+const { execSync } = require('child_process');
+
+execSync('mkdir -p ./theme');
 
 const doc = yaml.safeLoad(fs.readFileSync(__dirname + '/src/dracula.yml', 'utf8'));
 const { scheme } = doc;

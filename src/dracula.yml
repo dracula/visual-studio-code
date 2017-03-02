@@ -63,6 +63,7 @@ settings:
     - constant.numeric.less
     - constant.numeric.color.rgb-value
     - constant.language.boolean
+    - variable.other.constant
     settings:
       foreground: PURPLE
   - scope: constant.regexp
@@ -75,8 +76,7 @@ settings:
       foreground: FG
   - scope: variable.language.this
     settings:
-      foreground: PURPLE
-      fontStyle: bold italic
+      foreground: CYAN
   - scope: variable.parameter
     settings:
       fontStyle: italic
@@ -187,7 +187,17 @@ settings:
   - scope: storage
     settings:
       foreground: PINK
-  - scope: storage.type
+  - scope:
+    - storage.type.class
+    - storage.type.function
+    - storage.type.interface
+    - storage.type.type
+    settings:
+      fontStyle: regular
+      foreground: PINK
+  - scope:
+    - storage.type
+    - storage.type.class.jsdoc
     settings:
       foreground: CYAN
       fontStyle: italic
@@ -232,6 +242,17 @@ settings:
       foreground: CYAN
 
   # General Language Constructs
+  - name: Class "constructor" statement
+    scope: meta.method.declaration storage.type
+    settings:
+      # fontStyle: bold italic
+      fontStyle: regular
+      foreground: PINK
+  - name: Variable declarations
+    scope: source meta.var.expr storage.type
+    settings:
+      fontStyle: regular
+      foreground: CYAN
   - name: Functions
     scope: entity.name.function
     settings:
@@ -309,12 +330,16 @@ settings:
       foreground: PINK
 
   # JavaScript
-  - name: JavaScript string interpolation ${}
+  - name: String interpolation ${}
     scope:
     - punctuation.definition.template-expression.begin
     - punctuation.definition.template-expression.end
     settings:
       foreground: PINK
+  - name: String interpolation content
+    scope: string.template meta.template.expression
+    settings:
+      foreground: FG
   - name: Arrow function arrows
     scope: storage.type.function.arrow
     settings:
@@ -329,6 +354,20 @@ settings:
     scope: meta.object-binding-pattern-variable punctuation.destructuring
     settings:
       foreground: PINK
+  - name: Import references
+    scope: meta.import variable.other.readwrite
+    settings:
+      fontStyle: italic
+      foreground: ORANGE
+  - name: Import aliases
+    scope: meta.import variable.other.readwrite.alias
+    settings:
+      fontStyle: normal
+      foreground: FG
+  - name: Import all asterisk
+    scope: constant.language.import-export-all
+    settings:
+      foreground: PURPL
 
   # JSON
   - name: JSON keys
@@ -350,9 +389,6 @@ settings:
     - punctuation.section.embedded.end.metatag.php
     settings:
       foreground: FG
-  - scope: meta.function-call.php
-    settings:
-      foreground: GREEN
 
   # Python
   - scope: meta.structure.dictionary.key.python
@@ -379,6 +415,7 @@ settings:
     settings:
       foreground: ORANGE
   - scope:
+    - entity.name.type
     - meta.type.annotation entity.name.type
     - meta.return.type entity.name.type
     settings:
