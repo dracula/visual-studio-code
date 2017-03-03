@@ -367,7 +367,7 @@ settings:
   - name: Import all asterisk
     scope: constant.language.import-export-all
     settings:
-      foreground: PURPL
+      foreground: PURPLE
 
   # JSON
   - name: JSON keys
