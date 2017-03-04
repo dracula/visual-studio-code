@@ -2,37 +2,46 @@ name: Dracula
 author: Zeno Rocha
 semanticClass: theme.dracula
 scheme:
-  BG: '#282a36'
-  FG: '#f8f8f2'
-  SELECTION: '#44475a'
-  COMMENT: '#6272a4'
-  CYAN: '#8be9fd'
-  GREEN: '#50fa7b'
-  ORANGE: '#ffb86c'
-  PINK: '#ff79c6'
-  PURPLE: '#bd93f9'
-  RED: '#ff5555'
-  YELLOW: '#f1fa8c'
+  BG: &BG '#282a36'
+  FG: &FG '#f8f8f2'
+  SELECTION: &SELECTION '#44475a'
+  COMMENT: &COMMENT '#6272a4'
+  CYAN: &CYAN '#8be9fd'
+  GREEN: &GREEN '#50fa7b'
+  ORANGE: &ORANGE '#ffb86c'
+  PINK: &PINK '#ff79c6'
+  PURPLE: &PURPLE '#bd93f9'
+  RED: &RED '#ff5555'
+  YELLOW: &YELLOW '#f1fa8c'
 settings:
   - settings:
-      background: BG
-      foreground: FG
-      lineHighlight: SELECTION
-      findRangeHighlight:
-      inactiveSelection:
-      invisibles:
-      selection: SELECTION
+      background: *BG
+      foreground: *FG
+      lineHighlight: '#44475a75'
+      selection: *SELECTION
+
+      # Searching
+      referenceHighlight: *PURPLE
+      findMatchHighlight: *SELECTION
+      currentFindMatchHighlight: '#f8f8f275'
+
+      # Symbols
+      wordHighlight: '#8be9fd50'       # Background color of symbol with read-access.
+      wordHighlightStrong: '#50fa7b50' # Background color of symbol with write-access.
+
+      # Links
+      activeLinkForeground: *GREEN
+
+      # Unused
+      caret:
       guide:
-      rangeHighlight:
-      selectionHighlight:
-      wordHighlight: COMMENT
-      wordHighlightStrong: COMMENT
-      findMatchHighlight: SELECTION
-      currentFindMatchHighlight: COMMENT
+      invisibles:
       linkForeground:
-      activeLinkForeground: GREEN
-      hoverHighlight: SELECTION
-      referenceHighlight:
+      rangeHighlight:     # Background color of the line that the current find result is on.
+      hoverHighlight:     # Background color of symbol when hovered.
+      inactiveSelection:  # Background color of selections when not in focus.
+      selectionHighlight: # Background color of regions highlighted while selecting.
+      findRangeHighlight: # Highlight of selected range using "find in selection" mode.
   
   # General
   - scope: emphasis
@@ -43,51 +52,56 @@ settings:
       fontStyle: bold
   - scope: header
     settings:
-      foreground: PINK
+      foreground: *PINK
   - scope: comment
     settings:
-      foreground: COMMENT
+      foreground: *COMMENT
   - scope: source
     settings:
-      foreground: FG
+      foreground: *FG
 
   # Constants
-  - scope: contant.language
+  - scope: constant.language
     settings:
-      foreground: GREEN
+      foreground: *GREEN
   - scope: 
-    - contant.numeric
+    - constant.numeric
+    - constant.numeric.integer
+    - constant.numeric.float
     - constant.numeric.decimal
     - constant.numeric.scss
     - constant.numeric.css
     - constant.numeric.less
+    - constant.numeric.json
     - constant.numeric.color.rgb-value
     - constant.language.boolean
+    - constant.language.null
+    - constant.language.undefined
     - variable.other.constant
     settings:
-      foreground: PURPLE
+      foreground: *PURPLE
   - scope: constant.regexp
     settings:
-      foreground: PINK
+      foreground: *PINK
   
   # Variables
   - scope: variable
     settings:
-      foreground: FG
+      foreground: *FG
   - scope: variable.language.this
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   - scope: variable.parameter
     settings:
       fontStyle: italic
-      foreground: ORANGE
+      foreground: *ORANGE
   
   # Keywords
   - scope:
     - keyword
     - punctuation.definition.keyword
     settings:
-      foreground: PINK
+      foreground: *PINK
   - scope: keyword.operator.new
     settings:
       fontStyle: bold
@@ -97,96 +111,96 @@ settings:
     - meta.diff
     - meta.diff.header
     settings:
-      foreground: COMMENT
+      foreground: *COMMENT
   - scope: markup.underline
     settings:
       fontStyle: underline
   - scope: markup.bold
     settings:
       fontStyle: bold
-      foreground: ORANGE
+      foreground: *ORANGE
   - scope: markup.heading
     settings:
       fontStyle: bold
-      foreground: PURPLE
+      foreground: *PURPLE
   - scope: markup.italic
     settings:
-      foreground: YELLOW
+      foreground: *YELLOW
       fontStyle: italic
   - scope: markup.inserted
     settings:
-      foreground: GREEN
+      foreground: *GREEN
   - scope: markup.deleted
     settings:
-      foreground: RED
+      foreground: *RED
   - scope: markup.changed
     settings:
-      foreground: ORANGE
+      foreground: *ORANGE
   - scope: invalid
     settings:
-      background: RED
-      foreground: FG 
+      background: *RED
+      foreground: *FG 
   - scope: invalid.deprecated
     settings:
-      background: PURPLE
-      foreground: FG
+      background: *PURPLE
+      foreground: *FG
   - scope: entity.name.filename
     settings:
-      foreground: YELLOW
+      foreground: *YELLOW
   - scope: markup.error
     settings:
-      foreground: RED
+      foreground: *RED
   
   # Markdown
   - scope:
     - beginning.punctuation.definition.quote.markdown
     - beginning.punctuation.definition.list.markdown
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   - scope: markup.inline.raw
     settings:
-      foreground: GREEN
+      foreground: *GREEN
   - scope:
     - markup.underline.link.markdown
     - markup.underline.link.image.markdown
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   - scope:
     - string.other.link.description.markdown
     - string.other.link.title.markdown
     settings:
-      foreground: PINK
+      foreground: *PINK
   - scope: markup.quote.markdown
     settings:
-      foreground: COMMENT
+      foreground: *COMMENT
   - scope: meta.separator.markdown
     settings:
-      foreground: COMMENT
+      foreground: *COMMENT
   - scope: punctuation.definition.markdown
     settings:
-      foreground: GREEN
+      foreground: *GREEN
   - scope: fenced_code.block.language
     settings:
-      foreground: ORANGE 
+      foreground: *ORANGE 
   
   # Meta
   - scope: meta.selector
     settings:
-      foreground: FG 
+      foreground: *FG 
   - scope: meta.preprocessor
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   - scope: meta.preprocessor.string
     settings:
-      foreground: ORANGE
+      foreground: *ORANGE
   - scope: meta.preprocessor.numeric
     settings:
-      foreground: PURPLE
+      foreground: *PURPLE
 
   # Storage
   - scope: storage
     settings:
-      foreground: PINK
+      foreground: *PINK
   - scope:
     - storage.type.class
     - storage.type.function
@@ -194,80 +208,83 @@ settings:
     - storage.type.type
     settings:
       fontStyle: regular
-      foreground: PINK
+      foreground: *PINK
   - scope:
     - storage.type
     - storage.type.class.jsdoc
     settings:
-      foreground: CYAN
+      foreground: *CYAN
       fontStyle: italic
   - scope: storage.modifier
     settings:
-      foreground: PINK
+      foreground: *PINK
   
   # String
   - scope: string
     settings:
-      foreground: YELLOW
+      foreground: *YELLOW
   - scope: string.tag
     settings:
-      foreground: YELLOW
+      foreground: *YELLOW
   - scope: string.value
     settings:
-      foreground: YELLOW
+      foreground: *YELLOW
   - scope: string.regexp
     settings:
-      foreground: RED
+      foreground: *RED
   
   # Support
   - name: Provided by external / built-in library
     scope:
     - support.function
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   - name: Defined language constants
     scope: support.constant
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   - name: Defined language constant properties
     scope: support.constant.property
     settings:
-      foreground: PURPLE
+      foreground: *PURPLE
   - name: External / built-in types and classes
     scope:
     - support.type
     - support.class
     settings:
       fontStyle: italic
-      foreground: CYAN
+      foreground: *CYAN
+  - name: Object built-ins (e.g. __dirname in nodejs)
+    scope: support.variable.object
+    settings:
+      foreground: *PURPLE
 
   # General Language Constructs
   - name: Class "constructor" statement
     scope: meta.method.declaration storage.type
     settings:
-      # fontStyle: bold italic
       fontStyle: regular
-      foreground: PINK
+      foreground: *PINK
   - name: Variable declarations
     scope: source meta.var.expr storage.type
     settings:
       fontStyle: regular
-      foreground: CYAN
+      foreground: *CYAN
   - name: Functions
     scope: entity.name.function
     settings:
-      foreground: GREEN
+      foreground: *GREEN
   - name: Inherited classes
     scope: entity.other.inherited-class
     settings:
       fontStyle: italic underline
-      foreground: GREEN
+      foreground: *GREEN
   - name: Decorators
     scope: 
     - meta.decorator
     - meta.decorator variable.other.readwrite
     settings:
-      foreground: FG 
+      foreground: *FG 
       fontStyle: italic
   
   # CSS / CSS Preprocessors
@@ -278,37 +295,37 @@ settings:
     - support.constant.media-type
     - support.constant.media
     settings:
-      foreground: FG
+      foreground: *FG
   - scope:
     - constant.numeric.color.hex-value
     - constant.other.color.rgb-value
     - constant.other.rgb-value
     settings:
-      foreground: YELLOW
+      foreground: *YELLOW
   - scope:
     - variable.css
     - variable.scss
     - variable.stylus
     - variable.other.less
     settings:
-      foreground: ORANGE
+      foreground: *ORANGE
   - scope:
     - meta.property-list.css
     - support.type.vendored.property-name
     - support.type.property-name
     settings:
-      foreground: CYAN 
+      foreground: *CYAN 
   - name: HTML tags in CSS
     scope: entity.name.tag.css
     settings:
-      foreground: PINK
+      foreground: *PINK
   - scope:
     - entity.other.attribute-name.parent-selector.css
     - entity.other.attribute-name.pseudo-class.css
     - entity.other.attribute-name.pseudo-element.css
     settings:
       fontStyle: italic
-      foreground: GREEN
+      foreground: *GREEN
   - scope:
     - entity.other.attribute-name.id.css
     - source.css.less entity.other.attribute-name.id
@@ -317,17 +334,17 @@ settings:
     - entity.other.attribute-name.class.css
     - entity.other.attribute-name.class.mixin.css
     settings:
-      foreground: GREEN
+      foreground: *GREEN
 
   # HTML
   - name: HTML attributes
     scope: entity.other.attribute-name
     settings:
-      foreground: GREEN
+      foreground: *GREEN
   - name: HTML tags
     scope: entity.name.tag
     settings:
-      foreground: PINK
+      foreground: *PINK
 
   # JavaScript
   - name: String interpolation ${}
@@ -335,76 +352,85 @@ settings:
     - punctuation.definition.template-expression.begin
     - punctuation.definition.template-expression.end
     settings:
-      foreground: PINK
+      foreground: *PINK
   - name: String interpolation content
     scope: string.template meta.template.expression
     settings:
-      foreground: FG
+      foreground: *FG
   - name: Arrow function arrows
     scope: storage.type.function.arrow
     settings:
       fontStyle: regular
-      foreground: PINK
+      foreground: *PINK
   - name: Object destructuring property name
     scope: meta.object-binding-pattern-variable variable.object.property
     settings:
       fontStyle: italic
-      foreground: ORANGE
+      foreground: *ORANGE
   - name: Object destructuring punctuation
     scope: meta.object-binding-pattern-variable punctuation.destructuring
     settings:
-      foreground: PINK
+      foreground: *PINK
   - name: Import references
     scope: meta.import variable.other.readwrite
     settings:
       fontStyle: italic
-      foreground: ORANGE
+      foreground: *ORANGE
   - name: Import aliases
     scope: meta.import variable.other.readwrite.alias
     settings:
       fontStyle: normal
-      foreground: FG
+      foreground: *FG
   - name: Import all asterisk
     scope: constant.language.import-export-all
     settings:
-      foreground: PURPLE
+      foreground: *PURPLE
+  - name: Object literal keys with quotes
+    scope: meta.object-literal.key string.quoted
+    settings:
+      foreground: *FG
+
 
   # JSON
-  - name: JSON keys
-    scope: meta.structure.dictionary.json string.quoted.double.json
+  - name: Object keys
+    scope: support.type.property-name.json
     settings:
-      foreground: CYAN
-  - name: JSON string
+      fontStyle: regular
+  - name: Key-value separators
+    scope: punctuation.separator.dictionary.key-value.json
+    settings:
+      foreground: *PINK 
+  - name: Strings
     scope: meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json
     settings:
-      foreground: YELLOW
-  - name: JSON boolean
+      foreground: *YELLOW
+  - name: Booleans
     scope: constant.language.json
     settings:
-      foreground: GREEN
+      foreground: *PURPLE
 
   # PHP
   - scope:
     - punctuation.section.embedded.begin.metatag.php
     - punctuation.section.embedded.end.metatag.php
     settings:
-      foreground: FG
+      foreground: *FG
 
   # Python
   - scope: meta.structure.dictionary.key.python
     settings:
-      foreground: CYAN
+      foreground: *CYAN
   
   # Ruby
   - name: Ruby's @variable
     scope: variable.other.readwrite.instance
     settings:
-      foreground: ORANGE
+      foreground: *ORANGE
 
   # Shell
   - scope: string.quoted.double.shell variable
     settings:
-      foreground: PURPLE
+      foreground: *PURPLE
 
   # TypeScript
   - scope:
@@ -413,11 +439,34 @@ settings:
     - meta.indexer.mappedtype.declaration entity.name.type
     - meta.return.type meta.type.parameters entity.name.type
     settings:
-      foreground: ORANGE
+      foreground: *ORANGE
   - scope:
     - entity.name.type
     - meta.type.annotation entity.name.type
     - meta.return.type entity.name.type
     settings:
       fontStyle: italic
-      foreground: CYAN
+      foreground: *CYAN
+  
+  # YAML
+  - name: Object keys 
+    scope: entity.name.tag.yaml
+    settings:
+      foreground: *CYAN
+  - name: Separators / Punctuation
+    scope:
+    - punctuation.definition.block.sequence.item.yaml
+    - punctuation.separator.key-value.mapping.yaml
+    - punctuation.definition.block.scalar.folded.yaml
+    - punctuation.definition.block.scalar.literal.yaml
+    settings:
+      foreground: *PINK
+  - name: Timestamps
+    scope: constant.other.timestamp.yaml
+    settings:
+      foreground: *ORANGE
+  - name: Variable aliases
+    scope: variable.other.alias.yaml
+    settings:
+      fontStyle: italic underline
+      foreground: *GREEN
