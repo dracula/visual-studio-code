@@ -1,4 +1,4 @@
-src/*
+src/**
 .editorconfig
 node_modules
 build.js
