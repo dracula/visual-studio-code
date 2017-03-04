@@ -8,7 +8,7 @@
     "license": "MIT",
     "scripts": {
         "build": "mkdir -p ./theme && node ./build.js",
-        "vscode:prepublish": "node ./build.js"
+        "vscode:prepublish": "npm run build"
     },
     "maintainers": [
         "Derek P Sifford <dereksifford@gmail.com>"
