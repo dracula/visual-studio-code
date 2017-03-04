@@ -1,5 +1,7 @@
 name: Dracula
 author: Zeno Rocha
+maintainers:
+  - Derek P Sifford <dereksifford@gmail.com>
 semanticClass: theme.dracula
 scheme:
   BG: &BG '#282a36'
@@ -459,6 +461,7 @@ settings:
     - punctuation.separator.key-value.mapping.yaml
     - punctuation.definition.block.scalar.folded.yaml
     - punctuation.definition.block.scalar.literal.yaml
+    - support.other.chomping-indicator.yaml
     settings:
       foreground: *PINK
   - name: Timestamps

@@ -8,7 +8,7 @@
 - Various reserved words (e.g. `class`, `interface`, `type`, etc..) color switched to be uniform with other reserved words.
 - Add highlighting for import aliases in JS and friends.
 - Improve background color for selected symbols.
-    - Read access => orange
+    - Read access => cyan
     - Write access => green
 
 ## Patch
@@ -24,7 +24,7 @@
 
 The goal of the next several upcoming updates is to improve the uniformity of semantic highlighting between languages. I find it personally disorienting when using one language that has cyan as the color for types and then switch to another where it is green. The experience should be seamless across all languages.
 
-I've opened an issue on github for this process. Your feedback is welcomed and encouraged!
+I've [opened an issue on github](https://github.com/dracula/visual-studio-code/issues/12) for this process. Your feedback is welcomed and encouraged!
 
 # 1.7.0
 
