@@ -1,6 +1,6 @@
 # 1.9.0
 
-# Minor
+## Minor
 - Early experimental support for custom UI theming. (Feedback appreciated).
 - Add basic support for GraphQL. (Requires `GraphQL for VSCode` extension).
 
