@@ -44,6 +44,6 @@
         ]
     },
     "devDependencies": {
-        "js-yaml": "^3.8.2"
+        "js-yaml": "^3.8.3"
     }
 }
