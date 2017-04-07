@@ -1,3 +1,13 @@
+# 1.9.1
+
+## Patch
+- Fix peekview colorization.
+- Fix debug panel background color. Closes #19 (HT: @23doors)
+- Add contrast to the Activity Bar. (HT: @rajasimon)
+- Adjust find match highlight to be differentiable from selection. Closes #18 (HT: @nguyenhuumy)
+- Adjust active/inactive tab colors.
+- Add requirement for VSCode engine `^1.11.0` in package.json
+
 # 1.9.0
 
 ## Minor

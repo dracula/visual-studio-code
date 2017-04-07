@@ -4,38 +4,48 @@ maintainers:
   - Derek P Sifford <dereksifford@gmail.com>
 semanticClass: theme.dracula
 scheme:
-  BG: &BG '#282a36'
-  FG: &FG '#f8f8f2'
+  BG: &BG               '#282a36'
+  FG: &FG               '#f8f8f2'
   SELECTION: &SELECTION '#44475a'
-  COMMENT: &COMMENT '#6272a4'
-  CYAN: &CYAN '#8be9fd'
-  GREEN: &GREEN '#50fa7b'
-  ORANGE: &ORANGE '#ffb86c'
-  PINK: &PINK '#ff79c6'
-  PURPLE: &PURPLE '#bd93f9'
-  RED: &RED '#ff5555'
-  YELLOW: &YELLOW '#f1fa8c'
+  COMMENT: &COMMENT     '#6272a4'
+  CYAN: &CYAN           '#8be9fd'
+  GREEN: &GREEN         '#50fa7b'
+  ORANGE: &ORANGE       '#ffb86c'
+  PINK: &PINK           '#ff79c6'
+  PURPLE: &PURPLE       '#bd93f9'
+  RED: &RED             '#ff5555'
+  YELLOW: &YELLOW       '#f1fa8c'
 
   # UI
   BGLight: &BGLight '#343746' 
-  BGDark: &BGDark '#21222c'
+  BGDark: &BGDark   '#21222c'
+
+  # Highlight Colors
   LineHighlight: &LineHighlight '#44475a75'
+  FindMatch: &FindMatch         '#f8f8f220'
+  
+  # Opaque Colors
+  PURPLE30: &PURPLE30  '#bd93f930'
+  YELLOW50: &YELLOW50  '#f1fa8c50'
 
 # User Interface
 colors:
 
-  # Base Colors
+  # Base
   inputBoxBackground:
   dropdownBackground:
   inputBoxActiveOptionBorder:
 
-  # Editor Colors
+  # Editor
   editorBackground: *BG
   editorForeground: *FG
   
   editorCursor:
-  editorFindMatch: '#f8f8f275'
-  editorFindMatchHighlight: *SELECTION
+  editorDragAndDropBackground:
+  editorFindMatch: *YELLOW50
+  editorFindMatchHighlight: *PURPLE30
+  editorGroupBackground:
+  editorGroupBorder: *PURPLE
   editorHoverBackground: *BG
   editorHoverBorder: *PURPLE
   editorIndentGuides:
@@ -43,46 +53,51 @@ colors:
   editorLineNumbers: *COMMENT
   editorSelection: *SELECTION
   editorWhitespaces:
-  
-  focusedElementOutline: *COMMENT
-  
-  peekViewResultsBackground:
-  peekViewResultsMatchForeground:
-  peekViewResultsSelectionBackground:
-  peekViewResultsSelectionForeground:
-  peekViewEditorBackground:
-  peekViewTitleBackground:
-  peekViewBorder:
-  peekViewEditorMatchHighlight:
+
+  # Tabs
+  activeTabActiveGroupForeground: *FG
+  activeTabBackground: *BGLight
+  inactiveTabActiveGroupForeground: *COMMENT
+  inactiveTabBackground: *BG
+  tabBorder: *BGDark
+  tabsContainerBackground: *BGDark
+
+  # Activity Bar
+  activityBadgeBackground: *PINK
+  activityBarBackground: *BGLight
+  activityBarDragAndDropBackground:
+
+  # Sidebar
+  sideBarBackground: *BGDark
+  sideBarTitleForeground:
+
+  # Status Bar
+  statusBarBackground: *BGLight
+  statusBarDebuggingBackground:
+  statusBarNoFolderBackground: 
+
+  # Debug Bar
+  debugToolBarBackground:
+
+  # Peek View
+  peekViewBorder: *COMMENT
+  peekViewEditorBackground: *BG
+  peekViewEditorMatchHighlight: *YELLOW50
+  peekViewResultsBackground: *BGDark
+  peekViewResultsMatchForeground: *FG
+  peekViewResultsSelectionBackground: *LineHighlight
+  peekViewResultsSelectionForeground: *FG
+  peekViewTitleBackground: *BGDark
 
   editorMarkerNavigationBackground:
   editorMarkerNavigationError:
   editorMarkerNavigationWarning:
 
+  # Misc
   editorFindWidgetBackground:
-
-  # Workbench Colors
-  activeTabActiveGroupForeground: *FG
-  activeTabBackground: '#383b4c'
-  inactiveTabActiveGroupForeground: *COMMENT
-  inactiveTabBackground: '#303241'
-  tabsContainerBackground: *BGDark
-  tabBorder:
-  
-  editorGroupBorder: *PURPLE
-  editorGroupBackground:
-  editorDragAndDropBackground:
-  activityBarDragAndDropBackground:
   editorSideBySideBorder:
+  focusedElementOutline: *COMMENT
   panelTopBorder: *PURPLE
-  statusBarBackground: *BGLight
-  statusBarNoFolderBackground: 
-  statusBarDebuggingBackground:
-  debugToolBarBackground: *ORANGE
-  activityBarBackground: *BG
-  activityBadgeBackground: *PINK
-  sideBarBackground: *BGDark
-  sideBarTitleForeground:
   titleBarActiveBackground:
   titleBarInactiveBackground:
 
