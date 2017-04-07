@@ -1,3 +1,15 @@
+# 1.9.0
+
+# Minor
+- Early experimental support for custom UI theming. (Feedback appreciated).
+- Add basic support for GraphQL. (Requires `GraphQL for VSCode` extension).
+
+## Patch
+- **PHP**: Fix double quoted variable highlighting for `${variablename}` and `{$variablename}` forms.
+- **PHP**: Fix color of language constants.
+
+**Note:** UI changes are very preliminary and partially incomplete. This will be improved when the API stabilizes and gets documented.
+
 # 1.8.0
 
 ## Minor

@@ -19,10 +19,6 @@ scientificNotation = 1e+12
 "key can be quoted" = true # Both " and ' are fine
 "key may contains" = "letters, numbers, underscores, and dashes"
 
-# A bare key must be non-empty, but an empty quoted key is allowed
-"" = "blank"     # VALID but discouraged
-'' = 'blank'     # VALID but discouraged
-
 ##########
 # String #
 ##########
@@ -88,8 +84,8 @@ boolMustBeLowercase = true
 ############
 
 date1 = 1979-05-27T07:32:00Z # follows the RFC 3339 spec
-date2 = 1979-05-27T07:32:00 # without offset
-date3 = 1979-05-27 # without offset nor time
+# date2 = 1979-05-27T07:32:00 # without offset
+# date3 = 1979-05-27 # without offset nor time
 
 ####################
 # COLLECTION TYPES #
@@ -138,7 +134,7 @@ type = "pug"
 # not use any extraneous whitespace.
 [a.b.c]            # this is best practice
 [ d.e.f ]          # same as [d.e.f]
-[ j . "ʞ" . 'l' ]  # same as [j."ʞ".'l']
+# [ j . "ʞ" . 'l' ]  # same as [j."ʞ".'l']
 
 # You don't need to specify all the super-tables if you don't want to. TOML knows
 # how to do it for you.
@@ -147,36 +143,8 @@ type = "pug"
 # [x.y.z] need these
 [x.y.z.w] # for this to work
 
-# As long as a super-table hasn't been directly defined and hasn't defined a
-# specific key, you may still write to it.
-[a.b]
-c = 1
-
 [a]
 d = 2
-
-# You cannot define any key or table more than once. Doing so is invalid.
-
-# DO NOT DO THIS
-[a]
-b = 1
-
-[a]
-c = 2
-
-# DO NOT DO THIS EITHER
-[a]
-b = 1
-
-[a.b]
-c = 2
-
-# All table names must be non-empty.
-[]     # INVALID
-[a.]   # INVALID
-[a..b] # INVALID
-[.b]   # INVALID
-[.]    # INVALID
 
 ################
 # Inline table #

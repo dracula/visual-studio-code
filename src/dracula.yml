@@ -15,36 +15,109 @@ scheme:
   PURPLE: &PURPLE '#bd93f9'
   RED: &RED '#ff5555'
   YELLOW: &YELLOW '#f1fa8c'
-settings:
+
+  # UI
+  BGLight: &BGLight '#343746' 
+  BGDark: &BGDark '#21222c'
+  LineHighlight: &LineHighlight '#44475a75'
+
+# User Interface
+colors:
+
+  # Base Colors
+  inputBoxBackground:
+  dropdownBackground:
+  inputBoxActiveOptionBorder:
+
+  # Editor Colors
+  editorBackground: *BG
+  editorForeground: *FG
+  
+  editorCursor:
+  editorFindMatch: '#f8f8f275'
+  editorFindMatchHighlight: *SELECTION
+  editorHoverBackground: *BG
+  editorHoverBorder: *PURPLE
+  editorIndentGuides:
+  editorLineHighlight: *LineHighlight
+  editorLineNumbers: *COMMENT
+  editorSelection: *SELECTION
+  editorWhitespaces:
+  
+  focusedElementOutline: *COMMENT
+  
+  peekViewResultsBackground:
+  peekViewResultsMatchForeground:
+  peekViewResultsSelectionBackground:
+  peekViewResultsSelectionForeground:
+  peekViewEditorBackground:
+  peekViewTitleBackground:
+  peekViewBorder:
+  peekViewEditorMatchHighlight:
+
+  editorMarkerNavigationBackground:
+  editorMarkerNavigationError:
+  editorMarkerNavigationWarning:
+
+  editorFindWidgetBackground:
+
+  # Workbench Colors
+  activeTabActiveGroupForeground: *FG
+  activeTabBackground: '#383b4c'
+  inactiveTabActiveGroupForeground: *COMMENT
+  inactiveTabBackground: '#303241'
+  tabsContainerBackground: *BGDark
+  tabBorder:
+  
+  editorGroupBorder: *PURPLE
+  editorGroupBackground:
+  editorDragAndDropBackground:
+  activityBarDragAndDropBackground:
+  editorSideBySideBorder:
+  panelTopBorder: *PURPLE
+  statusBarBackground: *BGLight
+  statusBarNoFolderBackground: 
+  statusBarDebuggingBackground:
+  debugToolBarBackground: *ORANGE
+  activityBarBackground: *BG
+  activityBadgeBackground: *PINK
+  sideBarBackground: *BGDark
+  sideBarTitleForeground:
+  titleBarActiveBackground:
+  titleBarInactiveBackground:
+
+tokenColors:
   - settings:
       background: *BG
       foreground: *FG
-      lineHighlight: '#44475a75'
-      selection: *SELECTION
-
-      # Searching
-      referenceHighlight: *PURPLE
-      findMatchHighlight: *SELECTION
-      currentFindMatchHighlight: '#f8f8f275'
-
-      # Symbols
-      wordHighlight: '#8be9fd50'       # Background color of symbol with read-access.
-      wordHighlightStrong: '#50fa7b50' # Background color of symbol with write-access.
-
-      # Links
-      activeLinkForeground: *GREEN
-
-      # Unused
-      caret:
-      guide:
-      invisibles:
-      linkForeground:
-      rangeHighlight:     # Background color of the line that the current find result is on.
-      hoverHighlight:     # Background color of symbol when hovered.
-      inactiveSelection:  # Background color of selections when not in focus.
-      selectionHighlight: # Background color of regions highlighted while selecting.
-      findRangeHighlight: # Highlight of selected range using "find in selection" mode.
   
+  # LEGACY
+  #     lineHighlight: '#44475a75'
+  #     selection: *SELECTION
+
+  #     # Searching
+  #     referenceHighlight: *PURPLE
+  #     findMatchHighlight: *SELECTION
+  #     currentFindMatchHighlight: '#f8f8f275'
+
+  #     # Symbols
+      # wordHighlight: '#8be9fd50'       # Background color of symbol with read-access.
+      # wordHighlightStrong: '#50fa7b50' # Background color of symbol with write-access.
+
+  #     # Links
+  #     activeLinkForeground: *GREEN
+
+  #     # Unused
+  #     caret:
+  #     guide:
+  #     invisibles:
+  #     linkForeground:
+  #     rangeHighlight:     # Background color of the line that the current find result is on.
+  #     hoverHighlight:     # Background color of symbol when hovered.
+  #     inactiveSelection:  # Background color of selections when not in focus.
+  #     selectionHighlight: # Background color of regions highlighted while selecting.
+  #     findRangeHighlight: # Highlight of selected range using "find in selection" mode.
+
   # General
   - scope: emphasis
     settings:
@@ -337,6 +410,21 @@ settings:
     - entity.other.attribute-name.class.mixin.css
     settings:
       foreground: *GREEN
+  
+  # GraphQL
+  - scope:
+    - meta.selectionset.graphql meta.selectionset.graphql
+    - meta.selectionset.graphql variable.graphql
+    settings:
+      foreground: *YELLOW
+  - scope: meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
+    settings:
+      foreground: *ORANGE
+  - scope:
+    - meta.selectionset.graphql
+    - meta.selectionset.graphql meta.arguments.graphql variable.graphql
+    settings:
+      foreground: *FG
 
   # HTML
   - name: HTML attributes
@@ -412,11 +500,21 @@ settings:
       foreground: *PURPLE
 
   # PHP
-  - scope:
+  - name: <?php ?> Tags
+    scope:
     - punctuation.section.embedded.begin.metatag.php
     - punctuation.section.embedded.end.metatag.php
     settings:
       foreground: *FG
+  - name: Quoted variables
+    scope:
+      - string.quoted.double.php meta.string-contents.quoted.double punctuation.definition.variable
+    settings:
+      foreground: *PINK
+  - name: Constants (not scoped beyond constant.language)
+    scope: constant.language.php
+    settings:
+      foreground: *PURPLE
 
   # Python
   - scope: meta.structure.dictionary.key.python
