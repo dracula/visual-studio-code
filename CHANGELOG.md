@@ -1,3 +1,10 @@
+# 1.10.0
+
+## Patch
+- Fix status bar background color when there's no folder selected. Closes #20 (HT: @23doors)
+
+**Note:** Published as a minor bump by mistake. Should have been patch.
+
 # 1.9.1
 
 ## Patch
