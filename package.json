@@ -1,6 +1,6 @@
 {
     "name": "theme-dracula",
-    "version": "1.10.0",
+    "version": "1.11.0",
     "displayName": "Dracula Official",
     "homepage": "https://draculatheme.com/",
     "description": "Official Dracula Theme. A dark theme for many editors, shells, and more.",
@@ -14,7 +14,8 @@
         "Derek P Sifford <dereksifford@gmail.com>"
     ],
     "contributors": [
-        "Krzysztof Wisznarewski"
+        "Krzysztof Wisznarewski",
+        "Daniel Ramos"
     ],
     "repository": {
         "type": "git",

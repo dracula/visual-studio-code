@@ -1,3 +1,11 @@
+# 1.11.0
+
+# Minor
+- Adjust tab colors to make active/inactive tabs more identifiable.
+- Darken the status bar to match the tab bar.
+
+Thanks @DanielRamosAcosta for the contribution!
+
 # 1.10.0
 
 ## Patch
