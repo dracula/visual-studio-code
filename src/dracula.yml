@@ -17,8 +17,9 @@ scheme:
   YELLOW: &YELLOW       '#f1fa8c'
 
   # UI
-  BGLight: &BGLight '#343746' 
-  BGDark: &BGDark   '#21222c'
+  BGLight: &BGLight   '#343746' # HSV (230   , 25.71, 27.45)
+  BGDark: &BGDark     '#21222c' # HSV (234.55, 25   , 17.25)
+  BGDarker: &BGDarker '#15161c' # HSV (234.55, 25   , 11   )
 
   # Highlight Colors
   LineHighlight: &LineHighlight '#44475a75'
@@ -56,11 +57,11 @@ colors:
 
   # Tabs
   activeTabActiveGroupForeground: *FG
-  activeTabBackground: *BGLight
+  activeTabBackground: *BG
   inactiveTabActiveGroupForeground: *COMMENT
-  inactiveTabBackground: *BG
+  inactiveTabBackground: *BGDark
   tabBorder: *BGDark
-  tabsContainerBackground: *BGDark
+  tabsContainerBackground: *BGDarker
 
   # Activity Bar
   activityBadgeBackground: *PINK
