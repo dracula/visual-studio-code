@@ -19,7 +19,7 @@ scheme:
   # UI
   BGLight: &BGLight   '#343746' # HSV (230   , 25.71, 27.45)
   BGDark: &BGDark     '#21222c' # HSV (234.55, 25   , 17.25)
-  BGDarker: &BGDarker '#15161c' # HSV (234.55, 25   , 11   )
+  BGDarker: &BGDarker '#191a21' # HSV (234.55, 25   , 13   )
 
   # Highlight Colors
   LineHighlight: &LineHighlight '#44475a75'
@@ -73,9 +73,9 @@ colors:
   sideBarTitleForeground:
 
   # Status Bar
-  statusBarBackground: *BGLight
+  statusBarBackground: *BGDarker
   statusBarDebuggingBackground:
-  statusBarNoFolderBackground: *BGLight 
+  statusBarNoFolderBackground: *BGDarker 
 
   # Debug Bar
   debugToolBarBackground:
