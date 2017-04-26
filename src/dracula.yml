@@ -107,32 +107,111 @@ tokenColors:
       background: *BG
       foreground: *FG
   
-  # LEGACY
-  #     lineHighlight: '#44475a75'
-  #     selection: *SELECTION
-
-  #     # Searching
-  #     referenceHighlight: *PURPLE
-  #     findMatchHighlight: *SELECTION
-  #     currentFindMatchHighlight: '#f8f8f275'
-
-  #     # Symbols
-      # wordHighlight: '#8be9fd50'       # Background color of symbol with read-access.
-      # wordHighlightStrong: '#50fa7b50' # Background color of symbol with write-access.
-
-  #     # Links
-  #     activeLinkForeground: *GREEN
-
-  #     # Unused
-  #     caret:
-  #     guide:
-  #     invisibles:
-  #     linkForeground:
-  #     rangeHighlight:     # Background color of the line that the current find result is on.
-  #     hoverHighlight:     # Background color of symbol when hovered.
-  #     inactiveSelection:  # Background color of selections when not in focus.
-  #     selectionHighlight: # Background color of regions highlighted while selecting.
-  #     findRangeHighlight: # Highlight of selected range using "find in selection" mode.
+  # ALL AVAILABLE UI SCOPES
+  # "activeTabActiveGroupForeground": "",
+  # "activeTabBackground": "",
+  # "activeTabInactiveGroupForeground": "",
+  # "activityBadgeBackground": "",
+  # "activityBadgeForeground": "",
+  # "activityBarBackground": "",
+  # "activityBarDragAndDropBackground": "",
+  # "debugExceptionWidgetBackground": "",
+  # "debugExceptionWidgetBorder": "",
+  # "debugToolBarBackground": "",
+  # "dropdownBackground": "",
+  # "dropdownBorder": "",
+  # "dropdownForeground": "",
+  # "editorActiveLinkForeground": "",
+  # "editorBackground": "",
+  # "editorCursor": "",
+  # "editorDragAndDropBackground": "",
+  # "editorFindMatch": "",
+  # "editorFindMatchHighlight": "",
+  # "editorFindRangeHighlight": "",
+  # "editorFindWidgetBackground": "",
+  # "editorForeground": "",
+  # "editorGroupBackground": "",
+  # "editorGroupBorder": "",
+  # "editorHeaderBackground": "",
+  # "editorHoverBackground": "",
+  # "editorHoverBorder": "",
+  # "editorHoverHighlight": "",
+  # "editorInactiveSelection": "",
+  # "editorIndentGuides": "",
+  # "editorLineHighlight": "",
+  # "editorLineHighlightBorder": "",
+  # "editorLineNumbers": "",
+  # "editorLinkForeground": "",
+  # "editorMarkerNavigationBackground": "",
+  # "editorMarkerNavigationError": "",
+  # "editorMarkerNavigationWarning": "",
+  # "editorRangeHighlight": "",
+  # "editorSelection": "",
+  # "editorSelectionHighlight": "",
+  # "editorSideBySideBorder": "",
+  # "editorWhitespaces": "",
+  # "editorWordHighlight": "",
+  # "editorWordHighlightStrong": "",
+  # "focusedElementOutline": "",
+  # "foreground": "",
+  # "highContrastBorder": "",
+  # "highContrastOutline": "",
+  # "inactiveTabActiveGroupForeground": "",
+  # "inactiveTabBackground": "",
+  # "inactiveTabInactiveGroupForeground": "",
+  # "inputBoxActiveOptionBorder": "",
+  # "inputBoxBackground": "",
+  # "inputBoxBorder": "",
+  # "inputBoxForeground": "",
+  # "panelActiveTitleBorder": "",
+  # "panelActiveTitleForeground": "",
+  # "panelBackground": "",
+  # "panelInactiveTitleForeground": "",
+  # "panelTopBorder": "",
+  # "peekViewBorder": "",
+  # "peekViewEditorBackground": "",
+  # "peekViewEditorMatchHighlight": "",
+  # "peekViewResultsBackground": "",
+  # "peekViewResultsFileForeground": "",
+  # "peekViewResultsMatchForeground": "",
+  # "peekViewResultsMatchHighlight": "",
+  # "peekViewResultsSelectionBackground": "",
+  # "peekViewResultsSelectionForeground": "",
+  # "peekViewTitle": "",
+  # "peekViewTitleBackground": "",
+  # "peekViewTitleInfo": "",
+  # "sideBarBackground": "",
+  # "sideBarTitleForeground": "",
+  # "statusBarBackground": "",
+  # "statusBarDebuggingBackground": "",
+  # "statusBarForeground": "",
+  # "statusBarInfoItemBackground": "",
+  # "statusBarInfoItemHoverBackground": "",
+  # "statusBarItemActiveBackground": "",
+  # "statusBarItemHoverBackground": "",
+  # "statusBarNoFolderBackground": "",
+  # "tabBorder": "",
+  # "tabsContainerBackground": "",
+  # "terminalAnsiBlack": "",
+  # "terminalAnsiBlue": "",
+  # "terminalAnsiBrightBlack": "",
+  # "terminalAnsiBrightBlue": "",
+  # "terminalAnsiBrightCyan": "",
+  # "terminalAnsiBrightGreen": "",
+  # "terminalAnsiBrightMagenta": "",
+  # "terminalAnsiBrightRed": "",
+  # "terminalAnsiBrightWhite": "",
+  # "terminalAnsiBrightYellow": "",
+  # "terminalAnsiCyan": "",
+  # "terminalAnsiGreen": "",
+  # "terminalAnsiMagenta": "",
+  # "terminalAnsiRed": "",
+  # "terminalAnsiWhite": "",
+  # "terminalAnsiYellow": "",
+  # "titleBarActiveBackground": "",
+  # "titleBarActiveForeground": "",
+  # "titleBarInactiveBackground": "",
+  # "titleBarInactiveForeground": "",
 
   # General
   - scope: emphasis
@@ -311,6 +390,12 @@ tokenColors:
       foreground: *PINK
   
   # String
+  - scope:
+    # NOTE: This is a temporary fix for VSCode expand selection. See (https://github.com/Microsoft/vscode/issues/4795) 
+    - punctuation.definition.string.begin
+    - punctuation.definition.string.end
+    settings:
+      foreground: '#E9F284'
   - scope: string
     settings:
       foreground: *YELLOW

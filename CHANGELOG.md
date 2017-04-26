@@ -1,6 +1,11 @@
+# 1.11.1
+
+## Patch
+- Adjust TextMate scopes for strings so that VSCode "Expand Select" function works properly. Closes #24 (HT: @ajitid)
+
 # 1.11.0
 
-# Minor
+## Minor
 - Adjust tab colors to make active/inactive tabs more identifiable.
 - Darken the status bar to match the tab bar.
 
