@@ -250,7 +250,9 @@ tokenColors:
     - variable.other.constant
     settings:
       foreground: *PURPLE
-  - scope: constant.regexp
+  - scope:
+    - constant.regexp
+    - constant.character.escape
     settings:
       foreground: *PINK
   

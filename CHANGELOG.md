@@ -1,3 +1,8 @@
+# 1.12.0
+
+## Minor
+- Add highlighting for escape characters. (HT: @ajitid)
+
 # 1.11.1
 
 ## Patch
