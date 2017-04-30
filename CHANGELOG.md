@@ -1,3 +1,8 @@
+# 1.13.0
+
+## Minor
+- Add highlighting for HTML entities. (HT: @ajitid)
+
 # 1.12.0
 
 ## Minor

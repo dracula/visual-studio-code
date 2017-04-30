@@ -534,6 +534,10 @@ tokenColors:
     scope: entity.other.attribute-name
     settings:
       foreground: *GREEN
+  - name: HTML entities
+    scope: constant.character.entity.html
+    settings:
+      foreground: *PURPLE
   - name: HTML tags
     scope: entity.name.tag
     settings:
