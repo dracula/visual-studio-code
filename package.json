@@ -15,7 +15,8 @@
     ],
     "contributors": [
         "Krzysztof Wisznarewski",
-        "Daniel Ramos"
+        "Daniel Ramos",
+        "Eric Jackson"
     ],
     "repository": {
         "type": "git",
@@ -25,7 +26,7 @@
         "url": "https://github.com/dracula/visual-studio-code/issues"
     },
     "engines": {
-        "vscode": "^1.11.0"
+        "vscode": "^1.12.0"
     },
     "categories": [
         "Themes"
