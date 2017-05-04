@@ -16,10 +16,6 @@ This theme is maintained by the following person(s) and a bunch of [awesome cont
 :---: |
 [Derek S.](https://github.com/dsifford) |
 
-## Acknowledgements
-
-Example code used in all test files taken from [Learn X in Y Minutes](https://learnxinyminutes.com/)
-
 ## License
 
 [MIT License](./LICENSE)

@@ -436,6 +436,10 @@ tokenColors:
     scope: support.variable.object
     settings:
       foreground: *PURPLE
+  - name: Magic variables (e.g. __name__ in python)
+    scope: support.variable.magic
+    settings:
+      foreground: *PURPLE
 
   # General Language Constructs
   - name: Class "constructor" statement

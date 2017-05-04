@@ -1,3 +1,8 @@
+# 1.13.1
+
+## Patch
+- Fix magic variable highlighting in python. (e.g. `__name__`)
+
 # 1.13.0
 
 ## Minor
