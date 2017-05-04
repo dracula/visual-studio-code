@@ -33,74 +33,73 @@ scheme:
 colors:
 
   # Base
-  inputBoxBackground:
-  dropdownBackground:
-  inputBoxActiveOptionBorder:
+  input.background:
+  dropdown.background:
+  inputOption.activeBorder:
 
   # Editor
-  editorBackground: *BG
-  editorForeground: *FG
+  editor.background: *BG
+  editor.foreground: *FG
   
-  editorCursor:
-  editorDragAndDropBackground:
-  editorFindMatch: *YELLOW50
-  editorFindMatchHighlight: *PURPLE30
-  editorGroupBackground:
-  editorGroupBorder: *PURPLE
-  editorHoverBackground: *BG
-  editorHoverBorder: *PURPLE
-  editorIndentGuides:
-  editorLineHighlight: *LineHighlight
-  editorLineNumbers: *COMMENT
-  editorSelection: *SELECTION
-  editorWhitespaces:
+  editorCursor.foreground:
+  editorGroup.dropBackground:
+  editor.findMatchBackground: *YELLOW50
+  editor.findMatchHighlightBackground: *PURPLE30
+  editorGroup.background:
+  editorGroup.border: *PURPLE
+  editorHoverWidget.background: *BG
+  editorHoverWidget.border: *PURPLE
+  editorIndentGuide.background:
+  editor.lineHighlightBackground: *LineHighlight
+  editorLineNumber.foreground: *COMMENT
+  editor.selectionBackground: *SELECTION
+  editorWhitespace.foreground:
 
   # Tabs
-  activeTabActiveGroupForeground: *FG
-  activeTabBackground: *BG
-  inactiveTabActiveGroupForeground: *COMMENT
-  inactiveTabBackground: *BGDark
-  tabBorder: *BGDark
-  tabsContainerBackground: *BGDarker
+  tab.activeForeground: *FG
+  tab.activeBackground: *BG
+  tab.inactiveForeground: *COMMENT
+  tab.inactiveBackground: *BGDark
+  tab.border: *BGDark
+  editorGroupHeader.tabsBackground: *BGDarker
 
   # Activity Bar
-  activityBadgeBackground: *PINK
-  activityBarBackground: *BGLight
-  activityBarDragAndDropBackground:
+  activityBarBadge.background: *PINK
+  activityBar.background: *BGLight
+  activityBar.dropBackground:
 
   # Sidebar
-  sideBarBackground: *BGDark
-  sideBarTitleForeground:
+  sideBar.background: *BGDark
+  sideBarTitle.foreground:
 
   # Status Bar
-  statusBarBackground: *BGDarker
-  statusBarDebuggingBackground:
-  statusBarNoFolderBackground: *BGDarker 
+  statusBar.background: *BGDarker
+  statusBar.debuggingBackground:
+  statusBar.noFolderBackground: *BGDarker 
 
   # Debug Bar
-  debugToolBarBackground:
+  debugToolBar.background:
 
   # Peek View
-  peekViewBorder: *COMMENT
-  peekViewEditorBackground: *BG
-  peekViewEditorMatchHighlight: *YELLOW50
-  peekViewResultsBackground: *BGDark
-  peekViewResultsMatchForeground: *FG
-  peekViewResultsSelectionBackground: *LineHighlight
-  peekViewResultsSelectionForeground: *FG
-  peekViewTitleBackground: *BGDark
+  peekView.border: *COMMENT
+  peekViewEditor.background: *BG
+  peekViewEditor.matchHighlightBackground: *YELLOW50
+  peekViewResult.background: *BGDark
+  peekViewResult.lineForeground: *FG
+  peekViewResult.selectionBackground: *LineHighlight
+  peekViewResult.selectionForeground: *FG
+  peekViewTitle.background: *BGDark
 
-  editorMarkerNavigationBackground:
-  editorMarkerNavigationError:
-  editorMarkerNavigationWarning:
+  editorMarkerNavigation.background:
+  editorMarkerNavigationError.background:
+  editorMarkerNavigationWarning.background:
 
   # Misc
-  editorFindWidgetBackground:
-  editorSideBySideBorder:
-  focusedElementOutline: *COMMENT
-  panelTopBorder: *PURPLE
-  titleBarActiveBackground:
-  titleBarInactiveBackground:
+  editorWidget.background:
+  focusBorder: *COMMENT
+  panel.border: *PURPLE
+  titleBar.activeBackground:
+  titleBar.inactiveBackground:
 
 tokenColors:
   - settings:
@@ -108,110 +107,106 @@ tokenColors:
       foreground: *FG
   
   # ALL AVAILABLE UI SCOPES
-  # "activeTabActiveGroupForeground": "",
-  # "activeTabBackground": "",
-  # "activeTabInactiveGroupForeground": "",
-  # "activityBadgeBackground": "",
-  # "activityBadgeForeground": "",
-  # "activityBarBackground": "",
-  # "activityBarDragAndDropBackground": "",
-  # "debugExceptionWidgetBackground": "",
-  # "debugExceptionWidgetBorder": "",
+  # "tab.activeForeground": "",
+  # "tab.activeBackground": "",
+  # "activityBarBadge.background": "",
+  # "activityBarBadge.foreground": "",
+  # "activityBar.background": "",
+  # "activityBar.dropBackground": "",
+  # "debugExceptionWidget.background": "",
+  # "debugExceptionWidget.border": "",
   # "debugToolBarBackground": "",
-  # "dropdownBackground": "",
-  # "dropdownBorder": "",
-  # "dropdownForeground": "",
-  # "editorActiveLinkForeground": "",
-  # "editorBackground": "",
-  # "editorCursor": "",
-  # "editorDragAndDropBackground": "",
-  # "editorFindMatch": "",
-  # "editorFindMatchHighlight": "",
-  # "editorFindRangeHighlight": "",
-  # "editorFindWidgetBackground": "",
-  # "editorForeground": "",
-  # "editorGroupBackground": "",
-  # "editorGroupBorder": "",
-  # "editorHeaderBackground": "",
-  # "editorHoverBackground": "",
-  # "editorHoverBorder": "",
-  # "editorHoverHighlight": "",
-  # "editorInactiveSelection": "",
-  # "editorIndentGuides": "",
-  # "editorLineHighlight": "",
-  # "editorLineHighlightBorder": "",
-  # "editorLineNumbers": "",
-  # "editorLinkForeground": "",
-  # "editorMarkerNavigationBackground": "",
-  # "editorMarkerNavigationError": "",
-  # "editorMarkerNavigationWarning": "",
-  # "editorRangeHighlight": "",
-  # "editorSelection": "",
-  # "editorSelectionHighlight": "",
-  # "editorSideBySideBorder": "",
-  # "editorWhitespaces": "",
-  # "editorWordHighlight": "",
-  # "editorWordHighlightStrong": "",
-  # "focusedElementOutline": "",
+  # "dropdown.background": "",
+  # "dropdown.border": "",
+  # "dropdown.foreground": "",
+  # "editorLink.activeForeground": "",
+  # "editor.background": "",
+  # "editorCursor.foreground": "",
+  # "editorGroup.dropBackground": "",
+  # "editor.findMatchBackground": "",
+  # "editor.findMatchHighlightBackground": "",
+  # "editor.findRangeHighlightBackground": "",
+  # "editorWidget.background": "",
+  # "editor.foreground": "",
+  # "editorGroup.background": "",
+  # "editorGroup.border": "",
+  # "editorGroupHeader.noTabsBackground": "",
+  # "editorHoverWidget.background": "",
+  # "editorHoverWidget.border": "",
+  # "editor.hoverHighlightBackground": "",
+  # "editor.inactiveSelectionBackground": "",
+  # "editorIndentGuide.background": "",
+  # "editor.lineHighlightBackground": "",
+  # "editor.lineHighlightBorder": "",
+  # "editorLineNumber.foreground": "",
+  # "editorMarkerNavigation.background": "",
+  # "editorMarkerNavigationError.background": "",
+  # "editorMarkerNavigationWarning.background": "",
+  # "editor.rangeHighlightBackground": "",
+  # "editor.selectionBackground": "",
+  # "editor.selectionHighlightBackground": "",
+  # "editorWhitespace.foreground": "",
+  # "editor.wordHighlightBackground": "",
+  # "editor.wordHighlightStrongBackground": "",
+  # "focusBorder": "",
   # "foreground": "",
-  # "highContrastBorder": "",
-  # "highContrastOutline": "",
-  # "inactiveTabActiveGroupForeground": "",
-  # "inactiveTabBackground": "",
-  # "inactiveTabInactiveGroupForeground": "",
-  # "inputBoxActiveOptionBorder": "",
-  # "inputBoxBackground": "",
-  # "inputBoxBorder": "",
-  # "inputBoxForeground": "",
-  # "panelActiveTitleBorder": "",
-  # "panelActiveTitleForeground": "",
-  # "panelBackground": "",
-  # "panelInactiveTitleForeground": "",
-  # "panelTopBorder": "",
-  # "peekViewBorder": "",
-  # "peekViewEditorBackground": "",
-  # "peekViewEditorMatchHighlight": "",
-  # "peekViewResultsBackground": "",
-  # "peekViewResultsFileForeground": "",
-  # "peekViewResultsMatchForeground": "",
-  # "peekViewResultsMatchHighlight": "",
-  # "peekViewResultsSelectionBackground": "",
-  # "peekViewResultsSelectionForeground": "",
-  # "peekViewTitle": "",
-  # "peekViewTitleBackground": "",
-  # "peekViewTitleInfo": "",
-  # "sideBarBackground": "",
-  # "sideBarTitleForeground": "",
-  # "statusBarBackground": "",
-  # "statusBarDebuggingBackground": "",
+  # "contrastBorder": "",
+  # "contrastActiveBorder": "",
+  # "tab.inactiveForeground": "",
+  # "tab.inactiveBackground": "",
+  # "inputOption.activeBorder": "",
+  # "input.background": "",
+  # "input.border": "",
+  # "input.foreground": "",
+  # "panelTitle.activeBorder": "",
+  # "panelTitle.activeForeground": "",
+  # "panel.background": "",
+  # "panelTitle.inactiveForeground": "",
+  # "panel.border": "",
+  # "peekView.border": "",
+  # "peekViewEditor.background": "",
+  # "peekViewEditor.matchHighlightBackground": "",
+  # "peekViewResult.background": "",
+  # "peekViewResult.fileForeground": "",
+  # "peekViewResult.lineForeground": "",
+  # "peekViewResult.matchHighlightBackground": "",
+  # "peekViewResult.selectionBackground": "",
+  # "peekViewResult.selectionForeground": "",
+  # "peekViewTitleLabel.foreground": "",
+  # "peekViewTitle.background": "",
+  # "peekViewTitleDescription.foreground": "",
+  # "sideBar.background": "",
+  # "sideBarTitle.foreground": "",
+  # "statusBar.background": "",
+  # "statusBar.debuggingBackground": "",
   # "statusBarForeground": "",
-  # "statusBarInfoItemBackground": "",
-  # "statusBarInfoItemHoverBackground": "",
-  # "statusBarItemActiveBackground": "",
-  # "statusBarItemHoverBackground": "",
-  # "statusBarNoFolderBackground": "",
-  # "tabBorder": "",
-  # "tabsContainerBackground": "",
-  # "terminalAnsiBlack": "",
-  # "terminalAnsiBlue": "",
-  # "terminalAnsiBrightBlack": "",
-  # "terminalAnsiBrightBlue": "",
-  # "terminalAnsiBrightCyan": "",
-  # "terminalAnsiBrightGreen": "",
-  # "terminalAnsiBrightMagenta": "",
-  # "terminalAnsiBrightRed": "",
-  # "terminalAnsiBrightWhite": "",
-  # "terminalAnsiBrightYellow": "",
-  # "terminalAnsiCyan": "",
-  # "terminalAnsiGreen": "",
-  # "terminalAnsiMagenta": "",
-  # "terminalAnsiRed": "",
-  # "terminalAnsiWhite": "",
-  # "terminalAnsiYellow": "",
-  # "titleBarActiveBackground": "",
-  # "titleBarActiveForeground": "",
-  # "titleBarInactiveBackground": "",
-  # "titleBarInactiveForeground": "",
+  # "statusBarItem.prominentBackground": "",
+  # "statusBarItem.prominentHoverBackground": "",
+  # "statusBarItem.activeBackground": "",
+  # "statusBarItem.hoverBackground": "",
+  # "statusBar.noFolderBackground": "",
+  # "tab.border": "",
+  # "editorGroupHeader.tabsBackground": "",
+  # "terminal.ansiBlack": "",
+  # "terminal.ansiBlue": "",
+  # "terminal.ansiBrightBlack": "",
+  # "terminal.ansiBrightBlue": "",
+  # "terminal.ansiBrightCyan": "",
+  # "terminal.ansiBrightGreen": "",
+  # "terminal.ansiBrightMagenta": "",
+  # "terminal.ansiBrightRed": "",
+  # "terminal.ansiBrightWhite": "",
+  # "terminal.ansiBrightYellow": "",
+  # "terminal.ansiCyan": "",
+  # "terminal.ansiGreen": "",
+  # "terminal.ansiMagenta": "",
+  # "terminal.ansiRed": "",
+  # "terminal.ansiWhite": "",
+  # "terminal.ansiYellow": "",
+  # "titleBar.activeBackground": "",
+  # "titleBar.activeForeground": "",
+  # "titleBar.inactiveBackground": "",
+  # "titleBar.inactiveForeground": "",
 
   # General
   - scope: emphasis
