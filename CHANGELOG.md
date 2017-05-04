@@ -1,3 +1,10 @@
+# 1.14.0
+
+## Minor
+- Upgrade from experimental UI theme scopes (requires VSCode `v1.12.0`). #28
+
+Thanks @Eric-Jackson for your contribution!
+
 # 1.13.1
 
 ## Patch
