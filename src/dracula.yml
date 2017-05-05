@@ -26,16 +26,34 @@ scheme:
   FindMatch: &FindMatch         '#f8f8f220'
   
   # Opaque Colors
-  PURPLE30: &PURPLE30  '#bd93f930'
-  YELLOW50: &YELLOW50  '#f1fa8c50'
+  PURPLE30: &PURPLE30 '#bd93f930'
+  PURPLE90: &PURPLE90 '#bd93f990'
+  PURPLEAA: &PURPLEAA '#bd93f9AA'
+  YELLOW30: &YELLOW30 '#f1fa8c30'
+  YELLOW50: &YELLOW50 '#f1fa8c50'
+  PINKAA: &PINKAA     '#ff79c6AA'
+  PINKDD: &PINKDD     '#ff79c6DD'
+  PINK77: &PINK77     '#ff79c677'
+
+  # Gray Shades
+  WHITE: &WHITE     '#FFFFFF'
+  WHITE11: &WHITE11 '#FFFFFF11'
+  WHITEAA: &WHITEAA '#FFFFFFAA'
+  BLACK22: &BLACK22 '#00000022'
 
 # User Interface
 colors:
 
   # Base
-  input.background:
-  dropdown.background:
-  inputOption.activeBorder:
+  input.background: *BLACK22
+  input.border: *WHITE11
+  dropdown.background: *PURPLE30
+  inputOption.activeBorder: *PINK
+
+  # Buttons
+  button.background: *PURPLE90
+  button.foreground:
+  button.hoverBackground: *PURPLEAA
 
   # Editor
   editor.background: *BG
@@ -55,6 +73,13 @@ colors:
   editor.selectionBackground: *SELECTION
   editorWhitespace.foreground:
 
+  editorSuggestWidget.background: *BGDarker
+  editorSuggestWidget.border: *WHITE11
+  editorSuggestWidget.foreground: *WHITEAA
+  editorSuggestWidget.selectedBackground: *PURPLE30
+  editorSuggestWidget.highlightForeground: *WHITE
+
+
   # Tabs
   tab.activeForeground: *FG
   tab.activeBackground: *BG
@@ -71,6 +96,7 @@ colors:
   # Sidebar
   sideBar.background: *BGDark
   sideBarTitle.foreground:
+  sideBarSectionHeader.background: *BGDarker
 
   # Status Bar
   statusBar.background: *BGDarker
@@ -79,6 +105,15 @@ colors:
 
   # Debug Bar
   debugToolBar.background:
+
+  # Scroll Bar
+  scrollbarSlider.background: *PINK77
+  scrollbarSlider.hoverBackground: *PINKAA
+  scrollbarSlider.activeBackground: *PINKDD
+
+  # List View
+  list.activeSelectionBackground: *YELLOW50
+  list.focusBackground: *YELLOW30
 
   # Peek View
   peekView.border: *COMMENT
@@ -95,7 +130,7 @@ colors:
   editorMarkerNavigationWarning.background:
 
   # Misc
-  editorWidget.background:
+  editorWidget.background: *BGDarker
   focusBorder: *COMMENT
   panel.border: *PURPLE
   titleBar.activeBackground:
@@ -107,106 +142,7 @@ tokenColors:
       foreground: *FG
   
   # ALL AVAILABLE UI SCOPES
-  # "tab.activeForeground": "",
-  # "tab.activeBackground": "",
-  # "activityBarBadge.background": "",
-  # "activityBarBadge.foreground": "",
-  # "activityBar.background": "",
-  # "activityBar.dropBackground": "",
-  # "debugExceptionWidget.background": "",
-  # "debugExceptionWidget.border": "",
-  # "debugToolBar.background": "",
-  # "dropdown.background": "",
-  # "dropdown.border": "",
-  # "dropdown.foreground": "",
-  # "editorLink.activeForeground": "",
-  # "editor.background": "",
-  # "editorCursor.foreground": "",
-  # "editorGroup.dropBackground": "",
-  # "editor.findMatchBackground": "",
-  # "editor.findMatchHighlightBackground": "",
-  # "editor.findRangeHighlightBackground": "",
-  # "editorWidget.background": "",
-  # "editor.foreground": "",
-  # "editorGroup.background": "",
-  # "editorGroup.border": "",
-  # "editorGroupHeader.noTabsBackground": "",
-  # "editorHoverWidget.background": "",
-  # "editorHoverWidget.border": "",
-  # "editor.hoverHighlightBackground": "",
-  # "editor.inactiveSelectionBackground": "",
-  # "editorIndentGuide.background": "",
-  # "editor.lineHighlightBackground": "",
-  # "editor.lineHighlightBorder": "",
-  # "editorLineNumber.foreground": "",
-  # "editorMarkerNavigation.background": "",
-  # "editorMarkerNavigationError.background": "",
-  # "editorMarkerNavigationWarning.background": "",
-  # "editor.rangeHighlightBackground": "",
-  # "editor.selectionBackground": "",
-  # "editor.selectionHighlightBackground": "",
-  # "editorWhitespace.foreground": "",
-  # "editor.wordHighlightBackground": "",
-  # "editor.wordHighlightStrongBackground": "",
-  # "focusBorder": "",
-  # "foreground": "",
-  # "contrastBorder": "",
-  # "contrastActiveBorder": "",
-  # "tab.inactiveForeground": "",
-  # "tab.inactiveBackground": "",
-  # "inputOption.activeBorder": "",
-  # "input.background": "",
-  # "input.border": "",
-  # "input.foreground": "",
-  # "panelTitle.activeBorder": "",
-  # "panelTitle.activeForeground": "",
-  # "panel.background": "",
-  # "panelTitle.inactiveForeground": "",
-  # "panel.border": "",
-  # "peekView.border": "",
-  # "peekViewEditor.background": "",
-  # "peekViewEditor.matchHighlightBackground": "",
-  # "peekViewResult.background": "",
-  # "peekViewResult.fileForeground": "",
-  # "peekViewResult.lineForeground": "",
-  # "peekViewResult.matchHighlightBackground": "",
-  # "peekViewResult.selectionBackground": "",
-  # "peekViewResult.selectionForeground": "",
-  # "peekViewTitleLabel.foreground": "",
-  # "peekViewTitle.background": "",
-  # "peekViewTitleDescription.foreground": "",
-  # "sideBar.background": "",
-  # "sideBarTitle.foreground": "",
-  # "statusBar.background": "",
-  # "statusBar.debuggingBackground": "",
-  # "statusBar.foreground": "",
-  # "statusBarItem.prominentBackground": "",
-  # "statusBarItem.prominentHoverBackground": "",
-  # "statusBarItem.activeBackground": "",
-  # "statusBarItem.hoverBackground": "",
-  # "statusBar.noFolderBackground": "",
-  # "tab.border": "",
-  # "editorGroupHeader.tabsBackground": "",
-  # "terminal.ansiBlack": "",
-  # "terminal.ansiBlue": "",
-  # "terminal.ansiBrightBlack": "",
-  # "terminal.ansiBrightBlue": "",
-  # "terminal.ansiBrightCyan": "",
-  # "terminal.ansiBrightGreen": "",
-  # "terminal.ansiBrightMagenta": "",
-  # "terminal.ansiBrightRed": "",
-  # "terminal.ansiBrightWhite": "",
-  # "terminal.ansiBrightYellow": "",
-  # "terminal.ansiCyan": "",
-  # "terminal.ansiGreen": "",
-  # "terminal.ansiMagenta": "",
-  # "terminal.ansiRed": "",
-  # "terminal.ansiWhite": "",
-  # "terminal.ansiYellow": "",
-  # "titleBar.activeBackground": "",
-  # "titleBar.activeForeground": "",
-  # "titleBar.inactiveBackground": "",
-  # "titleBar.inactiveForeground": "",
+  # https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
   # General
   - scope: emphasis
