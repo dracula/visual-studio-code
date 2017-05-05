@@ -58,7 +58,6 @@ colors:
   # Editor
   editor.background: *BG
   editor.foreground: *FG
-  
   editorCursor.foreground:
   editorGroup.dropBackground:
   editor.findMatchBackground: *YELLOW50
@@ -72,13 +71,11 @@ colors:
   editorLineNumber.foreground: *COMMENT
   editor.selectionBackground: *SELECTION
   editorWhitespace.foreground:
-
   editorSuggestWidget.background: *BGDarker
   editorSuggestWidget.border: *WHITE11
   editorSuggestWidget.foreground: *WHITEAA
   editorSuggestWidget.selectedBackground: *PURPLE30
   editorSuggestWidget.highlightForeground: *WHITE
-
 
   # Tabs
   tab.activeForeground: *FG
