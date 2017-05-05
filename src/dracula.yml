@@ -26,80 +26,211 @@ scheme:
   FindMatch: &FindMatch         '#f8f8f220'
   
   # Opaque Colors
-  PURPLE30: &PURPLE30  '#bd93f930'
-  YELLOW50: &YELLOW50  '#f1fa8c50'
+  PURPLE30: &PURPLE30 '#bd93f930'
+  PURPLE90: &PURPLE90 '#bd93f990'
+  PURPLEAA: &PURPLEAA '#bd93f9AA'
+  YELLOW30: &YELLOW30 '#f1fa8c30'
+  YELLOW50: &YELLOW50 '#f1fa8c50'
+  PINKAA: &PINKAA     '#ff79c6AA'
+  PINKDD: &PINKDD     '#ff79c6DD'
+  PINK77: &PINK77     '#ff79c677'
+
+  # Gray Shades
+  WHITE: &WHITE     '#FFFFFF'
+  WHITE11: &WHITE11 '#FFFFFF11'
+  WHITEAA: &WHITEAA '#FFFFFFAA'
+  BLACK22: &BLACK22 '#00000022'
 
 # User Interface
 colors:
 
+  # Contrast
+  contrastActiveBorder:
+  contrastBorder:
+
   # Base
-  input.background:
-  dropdown.background:
-  inputOption.activeBorder:
+  focusBorder: *COMMENT
+  foreground:
+  widget.shadow:
+
+  # Button Control
+  button.background: *PURPLE90
+  button.foreground:
+  button.hoverBackground: *PURPLEAA
+
+  # Dropdown Control
+  dropdown.background: *PURPLE30
+  dropdown.border:
+  dropdown.foreground:
+
+  # Input Control
+  input.background: *BLACK22
+  input.border: *WHITE11
+  input.foreground:
+  inputOption.activeBorder: *PINK
+  inputValidation.errorBackground:
+  inputValidation.errorBorder:
+  inputValidation.infoBackground:
+  inputValidation.infoBorder:
+  inputValidation.warningBackground:
+  inputValidation.warningBorder:
+
+  # Scrollbar Control
+  scrollbar.shadow:
+  scrollbarSlider.activeBackground: *PINKDD
+  scrollbarSlider.background: *PINK77
+  scrollbarSlider.hoverBackground: *PINKAA
+
+  # Lists & Trees
+  list.activeSelectionBackground: *YELLOW50
+  list.activeSelectionForeground:
+  list.dropBackground:
+  list.focusBackground: *YELLOW30
+  list.highlightForeground:
+  list.hoverBackground:
+  list.inactiveSelectionBackground:
+
+  # Activity Bar
+  activityBar.background: *BGLight
+  activityBar.dropBackground:
+  activityBar.foreground:
+  activityBarBadge.background: *PINK
+  activityBarBadge.foreground:
+
+  # Side Bar
+  sideBar.background: *BGDark
+  sideBarSectionHeader.background: *BGDarker
+  sideBarTitle.foreground:
+
+  # Editor Groups & Tabs
+  editorGroup.background:
+  editorGroup.border: *PURPLE
+  editorGroup.dropBackground:
+  editorGroupHeader.noTabsBackground:
+  editorGroupHeader.tabsBackground: *BGDarker
+  tab.activeBackground: *BG
+  tab.activeForeground: *FG
+  tab.border: *BGDark
+  tab.inactiveBackground: *BGDark
+  tab.inactiveForeground: *COMMENT
 
   # Editor
   editor.background: *BG
   editor.foreground: *FG
-  
+  editorLineNumber.foreground: *COMMENT
   editorCursor.foreground:
-  editorGroup.dropBackground:
+
+  editor.selectionBackground: *SELECTION
+  editor.selectionHighlightBackground:
+  editor.inactiveSelectionBackground:
+
+  editor.wordHighlightBackground:
+  editor.wordHighlightStrongBackground:
+
   editor.findMatchBackground: *YELLOW50
   editor.findMatchHighlightBackground: *PURPLE30
-  editorGroup.background:
-  editorGroup.border: *PURPLE
+  editor.findRangeHighlightBackground:
+
+  editor.hoverHighlightBackground:
+
+  editor.lineHighlightBackground: *LineHighlight
+  editor.lineHighlightBorder:
+
+  editorLink.activeForeground:
+
+  editor.rangeHighlightBackground:
+
+  editorWhitespace.foreground:
+  editorIndentGuide.background:
+
+  # Diff Editor
+  diffEditor.insertedTextBackground:
+  diffEditor.insertedTextBorder:
+  diffEditor.removedTextBackground:
+  diffEditor.removedTextBorder:
+
+  # Editor Widgets
+  editorWidget.background: *BGDarker
+  editorSuggestWidget.background: *BGDarker
+  editorSuggestWidget.border: *WHITE11
+  editorSuggestWidget.foreground: *WHITEAA
+  editorSuggestWidget.highlightForeground: *WHITE
+  editorSuggestWidget.selectedBackground: *PURPLE30
   editorHoverWidget.background: *BG
   editorHoverWidget.border: *PURPLE
-  editorIndentGuide.background:
-  editor.lineHighlightBackground: *LineHighlight
-  editorLineNumber.foreground: *COMMENT
-  editor.selectionBackground: *SELECTION
-  editorWhitespace.foreground:
 
-  # Tabs
-  tab.activeForeground: *FG
-  tab.activeBackground: *BG
-  tab.inactiveForeground: *COMMENT
-  tab.inactiveBackground: *BGDark
-  tab.border: *BGDark
-  editorGroupHeader.tabsBackground: *BGDarker
+  debugExceptionWidget.background:
+  debugExceptionWidget.border:
 
-  # Activity Bar
-  activityBarBadge.background: *PINK
-  activityBar.background: *BGLight
-  activityBar.dropBackground:
-
-  # Sidebar
-  sideBar.background: *BGDark
-  sideBarTitle.foreground:
-
-  # Status Bar
-  statusBar.background: *BGDarker
-  statusBar.debuggingBackground:
-  statusBar.noFolderBackground: *BGDarker 
-
-  # Debug Bar
-  debugToolBar.background:
+  editorMarkerNavigation.background:
+  editorMarkerNavigationError.background:
+  editorMarkerNavigationWarning.background:
 
   # Peek View
   peekView.border: *COMMENT
   peekViewEditor.background: *BG
   peekViewEditor.matchHighlightBackground: *YELLOW50
   peekViewResult.background: *BGDark
+  peekViewResult.fileForeground: *FG
   peekViewResult.lineForeground: *FG
+  peekViewResult.matchHighlightBackground:
   peekViewResult.selectionBackground: *LineHighlight
   peekViewResult.selectionForeground: *FG
   peekViewTitle.background: *BGDark
+  peekViewTitleDescription.foreground:
+  peekViewTitleLabel.foreground:
 
-  editorMarkerNavigation.background:
-  editorMarkerNavigationError.background:
-  editorMarkerNavigationWarning.background:
-
-  # Misc
-  editorWidget.background:
-  focusBorder: *COMMENT
+  # Panel
+  panel.background:
   panel.border: *PURPLE
+  panelTitle.activeBorder:
+  panelTitle.activeForeground:
+  panelTitle.inactiveForeground:
+
+  # Status Bar
+  statusBar.background: *BGDarker
+  statusBar.debuggingBackground:
+  statusBar.foreground:
+  statusBar.noFolderBackground: *BGDarker
+  statusBarItem.activeBackground:
+  statusBarItem.hoverBackground:
+  statusBarItem.prominentBackground:
+  statusBarItem.prominentHoverBackground:
+
+  # Title Bar
   titleBar.activeBackground:
+  titleBar.activeForeground:
   titleBar.inactiveBackground:
+  titleBar.inactiveForeground:
+
+  # Notification Dialog
+  notification.background:
+  notification.foreground:
+
+  # Quick Picker
+  pickerGroup.border:
+  pickerGroup.foreground:
+
+  # Integrated Terminal
+  terminal.ansiBlack:
+  terminal.ansiBlue:
+  terminal.ansiBrightBlack:
+  terminal.ansiBrightBlue:
+  terminal.ansiBrightCyan:
+  terminal.ansiBrightGreen:
+  terminal.ansiBrightMagenta:
+  terminal.ansiBrightRed:
+  terminal.ansiBrightWhite:
+  terminal.ansiBrightYellow:
+  terminal.ansiCyan:
+  terminal.ansiGreen:
+  terminal.ansiMagenta:
+  terminal.ansiRed:
+  terminal.ansiWhite:
+  terminal.ansiYellow:
+
+  # Debug Bar
+  debugToolBar.background:
 
 tokenColors:
   - settings:
@@ -107,106 +238,7 @@ tokenColors:
       foreground: *FG
   
   # ALL AVAILABLE UI SCOPES
-  # "tab.activeForeground": "",
-  # "tab.activeBackground": "",
-  # "activityBarBadge.background": "",
-  # "activityBarBadge.foreground": "",
-  # "activityBar.background": "",
-  # "activityBar.dropBackground": "",
-  # "debugExceptionWidget.background": "",
-  # "debugExceptionWidget.border": "",
-  # "debugToolBar.background": "",
-  # "dropdown.background": "",
-  # "dropdown.border": "",
-  # "dropdown.foreground": "",
-  # "editorLink.activeForeground": "",
-  # "editor.background": "",
-  # "editorCursor.foreground": "",
-  # "editorGroup.dropBackground": "",
-  # "editor.findMatchBackground": "",
-  # "editor.findMatchHighlightBackground": "",
-  # "editor.findRangeHighlightBackground": "",
-  # "editorWidget.background": "",
-  # "editor.foreground": "",
-  # "editorGroup.background": "",
-  # "editorGroup.border": "",
-  # "editorGroupHeader.noTabsBackground": "",
-  # "editorHoverWidget.background": "",
-  # "editorHoverWidget.border": "",
-  # "editor.hoverHighlightBackground": "",
-  # "editor.inactiveSelectionBackground": "",
-  # "editorIndentGuide.background": "",
-  # "editor.lineHighlightBackground": "",
-  # "editor.lineHighlightBorder": "",
-  # "editorLineNumber.foreground": "",
-  # "editorMarkerNavigation.background": "",
-  # "editorMarkerNavigationError.background": "",
-  # "editorMarkerNavigationWarning.background": "",
-  # "editor.rangeHighlightBackground": "",
-  # "editor.selectionBackground": "",
-  # "editor.selectionHighlightBackground": "",
-  # "editorWhitespace.foreground": "",
-  # "editor.wordHighlightBackground": "",
-  # "editor.wordHighlightStrongBackground": "",
-  # "focusBorder": "",
-  # "foreground": "",
-  # "contrastBorder": "",
-  # "contrastActiveBorder": "",
-  # "tab.inactiveForeground": "",
-  # "tab.inactiveBackground": "",
-  # "inputOption.activeBorder": "",
-  # "input.background": "",
-  # "input.border": "",
-  # "input.foreground": "",
-  # "panelTitle.activeBorder": "",
-  # "panelTitle.activeForeground": "",
-  # "panel.background": "",
-  # "panelTitle.inactiveForeground": "",
-  # "panel.border": "",
-  # "peekView.border": "",
-  # "peekViewEditor.background": "",
-  # "peekViewEditor.matchHighlightBackground": "",
-  # "peekViewResult.background": "",
-  # "peekViewResult.fileForeground": "",
-  # "peekViewResult.lineForeground": "",
-  # "peekViewResult.matchHighlightBackground": "",
-  # "peekViewResult.selectionBackground": "",
-  # "peekViewResult.selectionForeground": "",
-  # "peekViewTitleLabel.foreground": "",
-  # "peekViewTitle.background": "",
-  # "peekViewTitleDescription.foreground": "",
-  # "sideBar.background": "",
-  # "sideBarTitle.foreground": "",
-  # "statusBar.background": "",
-  # "statusBar.debuggingBackground": "",
-  # "statusBar.foreground": "",
-  # "statusBarItem.prominentBackground": "",
-  # "statusBarItem.prominentHoverBackground": "",
-  # "statusBarItem.activeBackground": "",
-  # "statusBarItem.hoverBackground": "",
-  # "statusBar.noFolderBackground": "",
-  # "tab.border": "",
-  # "editorGroupHeader.tabsBackground": "",
-  # "terminal.ansiBlack": "",
-  # "terminal.ansiBlue": "",
-  # "terminal.ansiBrightBlack": "",
-  # "terminal.ansiBrightBlue": "",
-  # "terminal.ansiBrightCyan": "",
-  # "terminal.ansiBrightGreen": "",
-  # "terminal.ansiBrightMagenta": "",
-  # "terminal.ansiBrightRed": "",
-  # "terminal.ansiBrightWhite": "",
-  # "terminal.ansiBrightYellow": "",
-  # "terminal.ansiCyan": "",
-  # "terminal.ansiGreen": "",
-  # "terminal.ansiMagenta": "",
-  # "terminal.ansiRed": "",
-  # "terminal.ansiWhite": "",
-  # "terminal.ansiYellow": "",
-  # "titleBar.activeBackground": "",
-  # "titleBar.activeForeground": "",
-  # "titleBar.inactiveBackground": "",
-  # "titleBar.inactiveForeground": "",
+  # https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
   # General
   - scope: emphasis
