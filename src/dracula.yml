@@ -134,10 +134,10 @@ colors:
   diffEditor.removedTextBorder:
 
   # Workbench
-  titleBar.activeBackground:     # MacOS only
-  titleBar.inactiveBackground:   # MacOS only
-  titleBar.activeForeground:     # MacOS only
-  titleBar.inactiveForeground:   # MacOS only
+  titleBar.activeBackground: *BGDark      # MacOS only
+  titleBar.inactiveBackground: *BGDarker  # MacOS only
+  titleBar.activeForeground: *FG          # MacOS only
+  titleBar.inactiveForeground: *COMMENT   # MacOS only
 
   editorGroupHeader.noTabsBackground:
   editorGroup.border: *PURPLE
