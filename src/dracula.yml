@@ -3,210 +3,191 @@ author: Zeno Rocha
 maintainers:
   - Derek P Sifford <dereksifford@gmail.com>
 semanticClass: theme.dracula
-scheme:
-  BG: &BG               '#282a36'
-  FG: &FG               '#f8f8f2'
-  SELECTION: &SELECTION '#44475a'
-  COMMENT: &COMMENT     '#6272a4'
-  CYAN: &CYAN           '#8be9fd'
-  GREEN: &GREEN         '#50fa7b'
-  ORANGE: &ORANGE       '#ffb86c'
-  PINK: &PINK           '#ff79c6'
-  PURPLE: &PURPLE       '#bd93f9'
-  RED: &RED             '#ff5555'
-  YELLOW: &YELLOW       '#f1fa8c'
-
-  # UI
-  BGLight: &BGLight   '#343746' # HSV (230   , 25.71, 27.45)
-  BGDark: &BGDark     '#21222c' # HSV (234.55, 25   , 17.25)
-  BGDarker: &BGDarker '#191a21' # HSV (234.55, 25   , 13   )
-
-  # Highlight Colors
-  LineHighlight: &LineHighlight '#44475a75'
-  FindMatch: &FindMatch         '#f8f8f220'
-  
-  # Opaque Colors
-  PURPLE30: &PURPLE30  '#bd93f930'
-  YELLOW50: &YELLOW50  '#f1fa8c50'
+dracula.other:
+  - &COMMENT       '#6272A4'
+  - &ORANGE        '#FFB86C'
+  - &LineHighlight '#44475A75'
+  # UI Variants
+  - &BGLighter     '#424450'
+  - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
+  - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
+  - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+  # Opaque colors
+  - &GREEN20       '#50FA7B20'
+  - &RED20         '#FF555550'
+  - &PURPLE30      '#BD93F930'
+  - &CYAN50        '#8BE9FD50'
+  - &GREEN50       '#50FA7B50'
+  - &YELLOW50      '#F1FA8C50'
 
 # User Interface
 colors:
 
+  # ANSI Scheme
+  terminal.ansiBrightBlack:           '#000000'
+  terminal.ansiBrightRed:     &RED    '#FF5555'
+  terminal.ansiBrightGreen:   &GREEN  '#50FA7B'
+  terminal.ansiBrightYellow:  &YELLOW '#F1FA8C'
+  terminal.ansiBrightBlue:    &PURPLE '#BD93F9'
+  terminal.ansiBrightMagenta: &PINK   '#FF79C6'
+  terminal.ansiBrightCyan:    &CYAN   '#8BE9FD'
+  terminal.ansiBrightWhite:           '#BFBFBF'
+  terminal.ansiBlack:                 '#4D4D4D'
+  terminal.ansiRed:                   '#FF6E67'
+  terminal.ansiGreen:                 '#5AF78E'
+  terminal.ansiYellow:                '#F4F99D'
+  terminal.ansiBlue:                  '#CAA9FA'
+  terminal.ansiMagenta:               '#FF92D0'
+  terminal.ansiCyan:                  '#9AEDFE'
+  terminal.ansiWhite:                 '#E6E6E6'
+
   # Base
-  input.background:
+  editor.background:          &BG        '#282A36'
+  editor.foreground:          &FG        '#F8F8F2'
+  editor.selectionBackground: &SELECTION '#44475A'
+  foreground: *FG
+  focusBorder: *COMMENT
+  contrastActiveBorder:
+  contrastBorder: *BGDarker
+
+  widget.shadow:
+
+  input.background: *BG
+  input.foreground: *FG
+  input.border: *BGDarker
+
+  inputOption.activeBorder: *PURPLE
+  inputValidation.infoBorder:
+  inputValidation.infoBackground:
+  inputValidation.warningBackground:
+  inputValidation.warningBorder:
+  inputValidation.errorBackground:
+  inputValidation.errorBorder:
+
   dropdown.background:
-  inputOption.activeBorder:
+  dropdown.border:
+  dropdown.foreground:
+
+  button.background: *PURPLE
+  button.foreground: *BG
+
+  list.activeSelectionBackground: *SELECTION
+  list.activeSelectionForeground: *FG
+  list.focusBackground: *LineHighlight
+  list.hoverBackground: *LineHighlight
+  list.inactiveSelectionBackground: *LineHighlight
+  list.dropBackground: *SELECTION
+  list.highlightForeground: *CYAN
+
+  scrollbar.shadow:
+  scrollbarSlider.activeBackground:
+  scrollbarSlider.background:
+  scrollbarSlider.hoverBackground:
 
   # Editor
-  editor.background: *BG
-  editor.foreground: *FG
-  
+  editorWidget.background: *BGDark
   editorCursor.foreground:
-  editorGroup.dropBackground:
+  editorWhitespace.foreground:
+  editor.lineHighlightBackground: # Set this if you want full line highlight
+  editor.lineHighlightBorder: *SELECTION
+  editorIndentGuide.background:
+  editorHoverWidget.background: *BG
+  editorHoverWidget.border: *COMMENT
+  editorLineNumber.foreground: *COMMENT
+  editorMarkerNavigation.background:
+  editorMarkerNavigationError.background:
+  editorMarkerNavigationWarning.background:
+  editorLink.activeForeground: *RED
+
   editor.findMatchBackground: *YELLOW50
   editor.findMatchHighlightBackground: *PURPLE30
-  editorGroup.background:
-  editorGroup.border: *PURPLE
-  editorHoverWidget.background: *BG
-  editorHoverWidget.border: *PURPLE
-  editorIndentGuide.background:
-  editor.lineHighlightBackground: *LineHighlight
-  editorLineNumber.foreground: *COMMENT
-  editor.selectionBackground: *SELECTION
-  editorWhitespace.foreground:
+  editor.findRangeHighlightBackground: *LineHighlight
+  editor.hoverHighlightBackground: *BGDarker
+  editor.inactiveSelectionBackground:
+  editor.rangeHighlightBackground: *PURPLE30
+  editor.selectionHighlightBackground: *BGLighter
+  editor.wordHighlightBackground: *CYAN50
+  editor.wordHighlightStrongBackground: *GREEN50
 
-  # Tabs
+  editorSuggestWidget.background: *BGDark
+  editorSuggestWidget.border:
+  editorSuggestWidget.foreground: *FG
+  editorSuggestWidget.highlightForeground:
+  editorSuggestWidget.selectedBackground: *SELECTION
+
+  peekViewResult.background: *BGDark
+  peekViewResult.lineForeground: *FG
+  peekViewResult.selectionBackground: *SELECTION
+  peekViewResult.selectionForeground: *FG
+  peekViewEditor.background: *BG
+  peekViewTitle.background: *BGDarker
+  peekView.border: *SELECTION
+  peekViewEditor.matchHighlightBackground: *YELLOW50
+  peekViewResult.fileForeground: *FG
+  peekViewResult.matchHighlightBackground: *YELLOW50
+  peekViewTitleLabel.foreground: *FG
+  peekViewTitleDescription.foreground: *COMMENT
+
+  diffEditor.insertedTextBackground: *GREEN20
+  diffEditor.insertedTextBorder:
+  diffEditor.removedTextBackground: *RED20
+  diffEditor.removedTextBorder:
+
+  # Workbench
+  titleBar.activeBackground:     # MacOS only
+  titleBar.inactiveBackground:   # MacOS only
+  titleBar.activeForeground:     # MacOS only
+  titleBar.inactiveForeground:   # MacOS only
+
+  editorGroupHeader.noTabsBackground:
+  editorGroup.border: *PURPLE
+  editorGroup.background:
+  editorGroup.dropBackground: *SELECTION
+  editorGroupHeader.tabsBackground: *BGDarker
+
   tab.activeForeground: *FG
   tab.activeBackground: *BG
   tab.inactiveForeground: *COMMENT
   tab.inactiveBackground: *BGDark
   tab.border: *BGDark
-  editorGroupHeader.tabsBackground: *BGDarker
 
-  # Activity Bar
-  activityBarBadge.background: *PINK
   activityBar.background: *BGLight
+  activityBarBadge.background: *PINK
   activityBar.dropBackground:
+  activityBar.foreground: *FG
+  activityBarBadge.foreground: *FG
 
-  # Sidebar
-  sideBar.background: *BGDark
-  sideBarTitle.foreground:
-
-  # Status Bar
-  statusBar.background: *BGDarker
-  statusBar.debuggingBackground:
-  statusBar.noFolderBackground: *BGDarker 
-
-  # Debug Bar
-  debugToolBar.background:
-
-  # Peek View
-  peekView.border: *COMMENT
-  peekViewEditor.background: *BG
-  peekViewEditor.matchHighlightBackground: *YELLOW50
-  peekViewResult.background: *BGDark
-  peekViewResult.lineForeground: *FG
-  peekViewResult.selectionBackground: *LineHighlight
-  peekViewResult.selectionForeground: *FG
-  peekViewTitle.background: *BGDark
-
-  editorMarkerNavigation.background:
-  editorMarkerNavigationError.background:
-  editorMarkerNavigationWarning.background:
-
-  # Misc
-  editorWidget.background:
-  focusBorder: *COMMENT
+  panel.background: *BG
   panel.border: *PURPLE
-  titleBar.activeBackground:
-  titleBar.inactiveBackground:
+  panelTitle.activeBorder: *PINK
+  panelTitle.activeForeground: *FG
+  panelTitle.inactiveForeground: *COMMENT
 
+  sideBar.background: *BGDark
+  sideBarTitle.foreground: *FG
+  sideBarSectionHeader.background:
+
+  statusBar.foreground: *FG
+  statusBar.background: *BGDarker
+  statusBar.debuggingBackground: *RED
+  statusBar.noFolderBackground: *BGDarker
+  statusBarItem.prominentBackground:
+  statusBarItem.prominentHoverBackground:
+  statusBarItem.activeBackground:
+  statusBarItem.hoverBackground:
+
+  debugToolBar.background: *BGDark
+  debugExceptionWidget.background:
+  debugExceptionWidget.border:
+
+  notification.background:
+  notification.foreground:
+
+  pickerGroup.foreground: *CYAN
+  pickerGroup.border: *PURPLE
+
+# Syntaxes
 tokenColors:
-  - settings:
-      background: *BG
-      foreground: *FG
-  
-  # ALL AVAILABLE UI SCOPES
-  # "tab.activeForeground": "",
-  # "tab.activeBackground": "",
-  # "activityBarBadge.background": "",
-  # "activityBarBadge.foreground": "",
-  # "activityBar.background": "",
-  # "activityBar.dropBackground": "",
-  # "debugExceptionWidget.background": "",
-  # "debugExceptionWidget.border": "",
-  # "debugToolBar.background": "",
-  # "dropdown.background": "",
-  # "dropdown.border": "",
-  # "dropdown.foreground": "",
-  # "editorLink.activeForeground": "",
-  # "editor.background": "",
-  # "editorCursor.foreground": "",
-  # "editorGroup.dropBackground": "",
-  # "editor.findMatchBackground": "",
-  # "editor.findMatchHighlightBackground": "",
-  # "editor.findRangeHighlightBackground": "",
-  # "editorWidget.background": "",
-  # "editor.foreground": "",
-  # "editorGroup.background": "",
-  # "editorGroup.border": "",
-  # "editorGroupHeader.noTabsBackground": "",
-  # "editorHoverWidget.background": "",
-  # "editorHoverWidget.border": "",
-  # "editor.hoverHighlightBackground": "",
-  # "editor.inactiveSelectionBackground": "",
-  # "editorIndentGuide.background": "",
-  # "editor.lineHighlightBackground": "",
-  # "editor.lineHighlightBorder": "",
-  # "editorLineNumber.foreground": "",
-  # "editorMarkerNavigation.background": "",
-  # "editorMarkerNavigationError.background": "",
-  # "editorMarkerNavigationWarning.background": "",
-  # "editor.rangeHighlightBackground": "",
-  # "editor.selectionBackground": "",
-  # "editor.selectionHighlightBackground": "",
-  # "editorWhitespace.foreground": "",
-  # "editor.wordHighlightBackground": "",
-  # "editor.wordHighlightStrongBackground": "",
-  # "focusBorder": "",
-  # "foreground": "",
-  # "contrastBorder": "",
-  # "contrastActiveBorder": "",
-  # "tab.inactiveForeground": "",
-  # "tab.inactiveBackground": "",
-  # "inputOption.activeBorder": "",
-  # "input.background": "",
-  # "input.border": "",
-  # "input.foreground": "",
-  # "panelTitle.activeBorder": "",
-  # "panelTitle.activeForeground": "",
-  # "panel.background": "",
-  # "panelTitle.inactiveForeground": "",
-  # "panel.border": "",
-  # "peekView.border": "",
-  # "peekViewEditor.background": "",
-  # "peekViewEditor.matchHighlightBackground": "",
-  # "peekViewResult.background": "",
-  # "peekViewResult.fileForeground": "",
-  # "peekViewResult.lineForeground": "",
-  # "peekViewResult.matchHighlightBackground": "",
-  # "peekViewResult.selectionBackground": "",
-  # "peekViewResult.selectionForeground": "",
-  # "peekViewTitleLabel.foreground": "",
-  # "peekViewTitle.background": "",
-  # "peekViewTitleDescription.foreground": "",
-  # "sideBar.background": "",
-  # "sideBarTitle.foreground": "",
-  # "statusBar.background": "",
-  # "statusBar.debuggingBackground": "",
-  # "statusBar.foreground": "",
-  # "statusBarItem.prominentBackground": "",
-  # "statusBarItem.prominentHoverBackground": "",
-  # "statusBarItem.activeBackground": "",
-  # "statusBarItem.hoverBackground": "",
-  # "statusBar.noFolderBackground": "",
-  # "tab.border": "",
-  # "editorGroupHeader.tabsBackground": "",
-  # "terminal.ansiBlack": "",
-  # "terminal.ansiBlue": "",
-  # "terminal.ansiBrightBlack": "",
-  # "terminal.ansiBrightBlue": "",
-  # "terminal.ansiBrightCyan": "",
-  # "terminal.ansiBrightGreen": "",
-  # "terminal.ansiBrightMagenta": "",
-  # "terminal.ansiBrightRed": "",
-  # "terminal.ansiBrightWhite": "",
-  # "terminal.ansiBrightYellow": "",
-  # "terminal.ansiCyan": "",
-  # "terminal.ansiGreen": "",
-  # "terminal.ansiMagenta": "",
-  # "terminal.ansiRed": "",
-  # "terminal.ansiWhite": "",
-  # "terminal.ansiYellow": "",
-  # "titleBar.activeBackground": "",
-  # "titleBar.activeForeground": "",
-  # "titleBar.inactiveBackground": "",
-  # "titleBar.inactiveForeground": "",
 
   # General
   - scope: emphasis
@@ -229,7 +210,7 @@ tokenColors:
   - scope: constant.language
     settings:
       foreground: *GREEN
-  - scope: 
+  - scope:
     - constant.numeric
     - constant.numeric.integer
     - constant.numeric.float
@@ -250,7 +231,7 @@ tokenColors:
     - constant.character.escape
     settings:
       foreground: *PINK
-  
+
   # Variables
   - scope: variable
     settings:
@@ -262,7 +243,7 @@ tokenColors:
     settings:
       fontStyle: italic
       foreground: *ORANGE
-  
+
   # Keywords
   - scope:
     - keyword
@@ -306,7 +287,7 @@ tokenColors:
   - scope: invalid
     settings:
       background: *RED
-      foreground: *FG 
+      foreground: *FG
   - scope: invalid.deprecated
     settings:
       background: *PURPLE
@@ -317,7 +298,7 @@ tokenColors:
   - scope: markup.error
     settings:
       foreground: *RED
-  
+
   # Markdown
   - scope:
     - beginning.punctuation.definition.quote.markdown
@@ -348,12 +329,12 @@ tokenColors:
       foreground: *GREEN
   - scope: fenced_code.block.language
     settings:
-      foreground: *ORANGE 
-  
+      foreground: *ORANGE
+
   # Meta
   - scope: meta.selector
     settings:
-      foreground: *FG 
+      foreground: *FG
   - scope: meta.preprocessor
     settings:
       foreground: *CYAN
@@ -385,10 +366,10 @@ tokenColors:
   - scope: storage.modifier
     settings:
       foreground: *PINK
-  
+
   # String
   - scope:
-    # NOTE: This is a temporary fix for VSCode expand selection. See (https://github.com/Microsoft/vscode/issues/4795) 
+    # NOTE: This is a temporary fix for VSCode expand selection. See (https://github.com/Microsoft/vscode/issues/4795)
     - punctuation.definition.string.begin
     - punctuation.definition.string.end
     settings:
@@ -405,7 +386,7 @@ tokenColors:
   - scope: string.regexp
     settings:
       foreground: *RED
-  
+
   # Support
   - name: Provided by external / built-in library
     scope:
@@ -457,13 +438,13 @@ tokenColors:
       fontStyle: italic underline
       foreground: *GREEN
   - name: Decorators
-    scope: 
+    scope:
     - meta.decorator
     - meta.decorator variable.other.readwrite
     settings:
-      foreground: *FG 
+      foreground: *FG
       fontStyle: italic
-  
+
   # CSS / CSS Preprocessors
   - scope:
     - support.constant.property-value
@@ -491,7 +472,7 @@ tokenColors:
     - support.type.vendored.property-name
     - support.type.property-name
     settings:
-      foreground: *CYAN 
+      foreground: *CYAN
   - name: HTML tags in CSS
     scope: entity.name.tag.css
     settings:
@@ -512,7 +493,7 @@ tokenColors:
     - entity.other.attribute-name.class.mixin.css
     settings:
       foreground: *GREEN
-  
+
   # GraphQL
   - scope:
     - meta.selectionset.graphql meta.selectionset.graphql
@@ -595,7 +576,7 @@ tokenColors:
   - name: Key-value separators
     scope: punctuation.separator.dictionary.key-value.json
     settings:
-      foreground: *PINK 
+      foreground: *PINK
   - name: Strings
     scope: meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json
     settings:
@@ -626,7 +607,7 @@ tokenColors:
   - scope: meta.structure.dictionary.key.python
     settings:
       foreground: *CYAN
-  
+
   # Ruby
   - name: Ruby's @variable
     scope: variable.other.readwrite.instance
@@ -653,9 +634,9 @@ tokenColors:
     settings:
       fontStyle: italic
       foreground: *CYAN
-  
+
   # YAML
-  - name: Object keys 
+  - name: Object keys
     scope: entity.name.tag.yaml
     settings:
       foreground: *CYAN

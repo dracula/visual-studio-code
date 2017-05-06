@@ -1,3 +1,21 @@
+# 1.15.0
+
+## Minor
+- Switch from highlighting the entire current line to coloring only the border.
+
+## Patch
+- General overhaul/improvement of new UI scopes.
+
+**Note:** If you prefer to have the entire current line highlighted like it was previously, you can enable it by adding the following in your User Settings:
+
+```json
+{
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#44475A"
+    }
+}
+```
+
 # 1.14.0
 
 ## Minor
@@ -92,7 +110,7 @@ I've [opened an issue on github](https://github.com/dracula/visual-studio-code/i
 
 # 1.7.0
 
-## Minor 
+## Minor
 - Remove italics from JS & friends arrow functions to play nicer with fonts using custom ligatures (e.g. FiraCode). HT: @joaoevangelista
 - Improve syntax for object destructuring assignment with renaming in JS and friends.
 
