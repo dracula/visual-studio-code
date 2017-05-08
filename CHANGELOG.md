@@ -1,3 +1,10 @@
+# 1.15.1
+
+## Patch
+- Fix dropdown colors.
+- Revert button colors to system default.
+- Small adjustements to `findMatchHighlight` and `findRangeHighlight` in an attempt to improve contrast. #31
+
 # 1.15.0
 
 ## Minor

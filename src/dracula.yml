@@ -13,12 +13,13 @@ dracula.other:
   - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
   - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
   # Opaque colors
+  - &PURPLE15      '#BD93F915'
   - &GREEN20       '#50FA7B20'
-  - &RED20         '#FF555550'
-  - &PURPLE30      '#BD93F930'
+  - &WHITE40       '#ffffff40'
   - &CYAN50        '#8BE9FD50'
   - &GREEN50       '#50FA7B50'
-  - &YELLOW50      '#F1FA8C50'
+  - &RED50         '#FF555550'
+  - &YELLOW80      '#F1FA8C80'
 
 # User Interface
 colors:
@@ -64,12 +65,12 @@ colors:
   inputValidation.errorBackground:
   inputValidation.errorBorder:
 
-  dropdown.background:
-  dropdown.border:
-  dropdown.foreground:
+  dropdown.background: *BGLight
+  dropdown.border: *BGDarker
+  dropdown.foreground: *FG
 
-  button.background: *PURPLE
-  button.foreground: *BG
+  button.background:
+  button.foreground:
 
   list.activeSelectionBackground: *SELECTION
   list.activeSelectionForeground: *FG
@@ -99,12 +100,12 @@ colors:
   editorMarkerNavigationWarning.background:
   editorLink.activeForeground: *RED
 
-  editor.findMatchBackground: *YELLOW50
-  editor.findMatchHighlightBackground: *PURPLE30
+  editor.findMatchBackground: *YELLOW80
+  editor.findMatchHighlightBackground: *WHITE40
   editor.findRangeHighlightBackground: *LineHighlight
   editor.hoverHighlightBackground: *BGDarker
   editor.inactiveSelectionBackground:
-  editor.rangeHighlightBackground: *PURPLE30
+  editor.rangeHighlightBackground: *PURPLE15
   editor.selectionHighlightBackground: *BGLighter
   editor.wordHighlightBackground: *CYAN50
   editor.wordHighlightStrongBackground: *GREEN50
@@ -122,15 +123,15 @@ colors:
   peekViewEditor.background: *BG
   peekViewTitle.background: *BGDarker
   peekView.border: *SELECTION
-  peekViewEditor.matchHighlightBackground: *YELLOW50
+  peekViewEditor.matchHighlightBackground: *YELLOW80
   peekViewResult.fileForeground: *FG
-  peekViewResult.matchHighlightBackground: *YELLOW50
+  peekViewResult.matchHighlightBackground: *YELLOW80
   peekViewTitleLabel.foreground: *FG
   peekViewTitleDescription.foreground: *COMMENT
 
   diffEditor.insertedTextBackground: *GREEN20
   diffEditor.insertedTextBorder:
-  diffEditor.removedTextBackground: *RED20
+  diffEditor.removedTextBackground: *RED50
   diffEditor.removedTextBorder:
 
   # Workbench
