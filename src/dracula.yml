@@ -3,49 +3,73 @@ author: Zeno Rocha
 maintainers:
   - Derek P Sifford <dereksifford@gmail.com>
 semanticClass: theme.dracula
-dracula.other:
-  - &COMMENT       '#6272A4'
-  - &ORANGE        '#FFB86C'
-  - &LineHighlight '#44475A75'
-  # UI Variants
-  - &BGLighter     '#424450'
-  - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
-  - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
-  - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
-  # Opaque colors
-  - &PURPLE15      '#BD93F915'
-  - &GREEN20       '#50FA7B20'
-  - &WHITE40       '#ffffff40'
-  - &CYAN50        '#8BE9FD50'
-  - &GREEN50       '#50FA7B50'
-  - &RED50         '#FF555550'
-  - &YELLOW80      '#F1FA8C80'
-
+dracula:
+  base:
+    - &BG '#282A36'
+    - &FG '#F8F8F2'
+    - &SELECTION '#44475A'
+  ansi:
+    - &BLACK   '#4D4D4D'
+    - &RED     '#FF5555'
+    - &GREEN   '#50FA7B'
+    - &YELLOW  '#F1FA8C'
+    - &PURPLE  '#BD93F9'
+    - &PINK    '#FF79C6'
+    - &CYAN    '#8BE9FD'
+    - &COLOR7  '#BFBFBF'
+    - &COLOR8  '#575757'
+    - &COLOR9  '#FF6E67'
+    - &COLOR10 '#5AF78E'
+    - &COLOR11 '#F4F99D'
+    - &COLOR12 '#CAA9FA'
+    - &COLOR13 '#FF92D0'
+    - &COLOR14 '#9AEDFE'
+    - &COLOR15 '#F8F8F2'
+    # - &COLOR15 '#E6E6E6'
+  other:
+    - &COMMENT       '#6272A4'
+    - &ORANGE        '#FFB86C'
+    - &LineHighlight '#44475A75'
+    # UI Variants
+    - &BGLighter     '#424450'
+    - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
+    - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
+    - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+    # Opaque colors
+    - &PURPLE15      '#BD93F915'
+    - &GREEN20       '#50FA7B20'
+    - &WHITE40       '#FFFFFF40'
+    - &CYAN50        '#8BE9FD50'
+    - &GREEN50       '#50FA7B50'
+    - &RED50         '#FF555550'
+    - &YELLOW80      '#F1FA8C80'
+    # Temporary (awaitiing fix)
+    - &TEMP_QUOTES   '#E9F284'
 # User Interface
 colors:
 
   # ANSI Scheme
-  terminal.ansiBrightBlack:           '#000000'
-  terminal.ansiBrightRed:     &RED    '#FF5555'
-  terminal.ansiBrightGreen:   &GREEN  '#50FA7B'
-  terminal.ansiBrightYellow:  &YELLOW '#F1FA8C'
-  terminal.ansiBrightBlue:    &PURPLE '#BD93F9'
-  terminal.ansiBrightMagenta: &PINK   '#FF79C6'
-  terminal.ansiBrightCyan:    &CYAN   '#8BE9FD'
-  terminal.ansiBrightWhite:           '#BFBFBF'
-  terminal.ansiBlack:                 '#4D4D4D'
-  terminal.ansiRed:                   '#FF6E67'
-  terminal.ansiGreen:                 '#5AF78E'
-  terminal.ansiYellow:                '#F4F99D'
-  terminal.ansiBlue:                  '#CAA9FA'
-  terminal.ansiMagenta:               '#FF92D0'
-  terminal.ansiCyan:                  '#9AEDFE'
-  terminal.ansiWhite:                 '#E6E6E6'
+  terminal.ansiBrightBlack: *BLACK
+  terminal.ansiBrightRed: *RED
+  terminal.ansiBrightGreen: *GREEN
+  terminal.ansiBrightYellow: *YELLOW
+  terminal.ansiBrightBlue: *PURPLE
+  terminal.ansiBrightMagenta: *PINK
+  terminal.ansiBrightCyan: *CYAN
+  terminal.ansiBrightWhite: *COLOR7
+  terminal.ansiBlack: *COLOR8
+  terminal.ansiRed: *COLOR9
+  terminal.ansiGreen: *COLOR10
+  terminal.ansiYellow: *COLOR11
+  terminal.ansiBlue: *COLOR12
+  terminal.ansiMagenta: *COLOR13
+  terminal.ansiCyan: *COLOR14
+  terminal.ansiWhite: *COLOR15
 
   # Base
-  editor.background:          &BG        '#282A36'
-  editor.foreground:          &FG        '#F8F8F2'
-  editor.selectionBackground: &SELECTION '#44475A'
+  editor.background: *BG
+  editor.foreground: *FG
+  editor.selectionBackground: *SELECTION
   foreground: *FG
   focusBorder: *COMMENT
   contrastActiveBorder:
@@ -374,7 +398,7 @@ tokenColors:
     - punctuation.definition.string.begin
     - punctuation.definition.string.end
     settings:
-      foreground: '#E9F284'
+      foreground: *TEMP_QUOTES
   - scope: string
     settings:
       foreground: *YELLOW
