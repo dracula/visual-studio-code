@@ -1,3 +1,11 @@
+# 1.16.0
+
+## Minor
+- Add `Dracula Soft` theme variant (beta - comments/critiques welcomed). #30
+
+## Patch
+- Lighten ANSI `color0` and `color8` so that they're more legible in the terminal. #32
+
 # 1.15.1
 
 ## Patch

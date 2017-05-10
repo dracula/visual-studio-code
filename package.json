@@ -42,10 +42,16 @@
                 "label": "Dracula",
                 "uiTheme": "vs-dark",
                 "path": "./theme/dracula.json"
+            },
+            {
+                "label": "Dracula Soft",
+                "uiTheme": "vs-dark",
+                "path": "./theme/dracula-soft.json"
             }
         ]
     },
     "devDependencies": {
-        "js-yaml": "^3.8.4"
+        "js-yaml": "^3.8.4",
+        "tinycolor2": "^1.4.1"
     }
 }
