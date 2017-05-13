@@ -16,6 +16,10 @@ This theme is maintained by the following person(s) and a bunch of [awesome cont
 :---: |
 [Derek S.](https://github.com/dsifford) |
 
+## Contributing
+
+If you'd like to contribute to this theme, please read the [contributing guidelines](./.github/CONTRIBUTING.md).
+
 ## License
 
 [MIT License](./LICENSE)

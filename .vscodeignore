@@ -3,3 +3,5 @@ src/**
 node_modules
 build.js
 .github/*
+.vscode/**
+bootstrap.sh

@@ -25,7 +25,6 @@ dracula:
     - &COLOR13 '#FF92D0'
     - &COLOR14 '#9AEDFE'
     - &COLOR15 '#F8F8F2'
-    # - &COLOR15 '#E6E6E6'
   other:
     - &COMMENT       '#6272A4'
     - &ORANGE        '#FFB86C'
@@ -82,19 +81,19 @@ colors:
   input.border: *BGDarker
 
   inputOption.activeBorder: *PURPLE
-  inputValidation.infoBorder:
+  inputValidation.infoBorder: *PINK
   inputValidation.infoBackground:
   inputValidation.warningBackground:
-  inputValidation.warningBorder:
+  inputValidation.warningBorder: *ORANGE
   inputValidation.errorBackground:
-  inputValidation.errorBorder:
+  inputValidation.errorBorder: *RED
 
   dropdown.background: *BGLight
   dropdown.border: *BGDarker
   dropdown.foreground: *FG
 
-  button.background:
-  button.foreground:
+  button.background: *SELECTION
+  button.foreground: *FG
 
   list.activeSelectionBackground: *SELECTION
   list.activeSelectionForeground: *FG
@@ -124,7 +123,7 @@ colors:
   editorMarkerNavigationWarning.background:
   editorLink.activeForeground: *RED
 
-  editor.findMatchBackground: *YELLOW80
+  editor.findMatchBackground: *GREEN50
   editor.findMatchHighlightBackground: *WHITE40
   editor.findRangeHighlightBackground: *LineHighlight
   editor.hoverHighlightBackground: *BGDarker
@@ -205,8 +204,8 @@ colors:
   debugExceptionWidget.background:
   debugExceptionWidget.border:
 
-  notification.background:
-  notification.foreground:
+  notification.background: *BG
+  notification.foreground: *FG
 
   pickerGroup.foreground: *CYAN
   pickerGroup.border: *PURPLE
@@ -632,6 +631,9 @@ tokenColors:
   - scope: meta.structure.dictionary.key.python
     settings:
       foreground: *CYAN
+  - scope: string.regexp.quoted.single.python constant.character.escape.regexp
+    settings:
+      foreground: *RED
 
   # Ruby
   - name: Ruby's @variable

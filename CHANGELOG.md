@@ -1,3 +1,16 @@
+# 1.17.0
+
+## Minor
+- Apply theme to notification panel. #35
+- Apply theme to buttons.
+
+## Patch
+- Make colorization of python raw string literals more consistent. #36
+- Switch from yellow to green for current highlight match to improve contrast over purple tokens. #33
+
+## Chore
+- Add contributing guidelines.
+
 # 1.16.0
 
 ## Minor
