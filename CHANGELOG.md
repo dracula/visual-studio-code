@@ -1,3 +1,24 @@
+# 2.0.0
+
+The theme has been completely overhauled in accordance to the new [Dracula Theme Specification RFC](https://github.com/dracula/dracula-theme/issues/232) that I put together.
+
+All languages provided by VSCode as well as `GraphQL` and `TOML` were scrutinized and have been confirmed to be spec compliant with a few exceptions (see [`known_issues.md`](https://github.com/dracula/visual-studio-code/blob/master/known_issues.md) in this repo for details). (#38)
+
+Please leave your comments in the RFC issue thread if you have any suggestions.
+
+## Minor
+- Add UI color for `statusBarItem.prominentBackground` and `statusBarItem.prominentHoverBackground`. (#42)
+
+
+
+# 1.17.1
+
+## Patch
+- Change variable-setting keywords (e.g. `var`, `const`, etc.) to pink color to match other reserved language words.
+- Fix color of parameterless decorators.
+
+
+
 # 1.17.0
 
 ## Minor
@@ -11,6 +32,8 @@
 ## Chore
 - Add contributing guidelines.
 
+
+
 # 1.16.0
 
 ## Minor
@@ -19,12 +42,16 @@
 ## Patch
 - Lighten ANSI `color0` and `color8` so that they're more legible in the terminal. #32
 
+
+
 # 1.15.1
 
 ## Patch
 - Fix dropdown colors.
 - Revert button colors to system default.
 - Small adjustements to `findMatchHighlight` and `findRangeHighlight` in an attempt to improve contrast. #31
+
+
 
 # 1.15.0
 
@@ -44,6 +71,8 @@
 }
 ```
 
+
+
 # 1.14.0
 
 ## Minor
@@ -51,25 +80,35 @@
 
 Thanks @Eric-Jackson for your contribution!
 
+
+
 # 1.13.1
 
 ## Patch
 - Fix magic variable highlighting in python. (e.g. `__name__`)
+
+
 
 # 1.13.0
 
 ## Minor
 - Add highlighting for HTML entities. (HT: @ajitid)
 
+
+
 # 1.12.0
 
 ## Minor
 - Add highlighting for escape characters. (HT: @ajitid)
 
+
+
 # 1.11.1
 
 ## Patch
 - Adjust TextMate scopes for strings so that VSCode "Expand Select" function works properly. Closes #24 (HT: @ajitid)
+
+
 
 # 1.11.0
 
@@ -79,12 +118,16 @@ Thanks @Eric-Jackson for your contribution!
 
 Thanks @DanielRamosAcosta for the contribution!
 
+
+
 # 1.10.0
 
 ## Patch
 - Fix status bar background color when there's no folder selected. Closes #20 (HT: @23doors)
 
 **Note:** Published as a minor bump by mistake. Should have been patch.
+
+
 
 # 1.9.1
 
@@ -95,6 +138,8 @@ Thanks @DanielRamosAcosta for the contribution!
 - Adjust find match highlight to be differentiable from selection. Closes #18 (HT: @nguyenhuumy)
 - Adjust active/inactive tab colors.
 - Add requirement for VSCode engine `^1.11.0` in package.json
+
+
 
 # 1.9.0
 
@@ -107,6 +152,8 @@ Thanks @DanielRamosAcosta for the contribution!
 - **PHP**: Fix color of language constants.
 
 **Note:** UI changes are very preliminary and partially incomplete. This will be improved when the API stabilizes and gets documented.
+
+
 
 # 1.8.0
 
@@ -136,6 +183,8 @@ The goal of the next several upcoming updates is to improve the uniformity of se
 
 I've [opened an issue on github](https://github.com/dracula/visual-studio-code/issues/12) for this process. Your feedback is welcomed and encouraged!
 
+
+
 # 1.7.0
 
 ## Minor
@@ -148,10 +197,14 @@ I've [opened an issue on github](https://github.com/dracula/visual-studio-code/i
 
 Feedback, suggestions, comments appreciated.
 
+
+
 # 1.6.1
 
 - Fix highlighting for numbers (`constant.numeric.decimal`).
 - Fix hex color highlighting for CSS and friends.
+
+
 
 # 1.6.0
 

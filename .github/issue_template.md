@@ -1,1 +1,8 @@
-> If you're reporting an UI issue, make sure you take a screenshot that shows the actual bug.
+<!-- Please be sure to include a screenshot of your issue!
+
+=== Reporting a LANGUAGE/SYNTAX issue? ===
+
+Check the known_issues.md file first to make sure it's not one that is out of our control.
+
+-->
+
