@@ -1,3 +1,10 @@
+# 2.0.1
+
+## Patch
+- Fix curly braces for embedded JS in `.jsx` and `.tsx` files.
+
+
+
 # 2.0.0
 
 The theme has been completely overhauled in accordance to the new [Dracula Theme Specification RFC](https://github.com/dracula/dracula-theme/issues/232) that I put together.

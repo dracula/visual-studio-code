@@ -793,6 +793,10 @@ tokenColors:
     - meta.scope.for-loop.shell punctuation.definition.string.end
     - meta.scope.for-loop.shell string
     - storage.modifier.import                                       # Java / Groovy imports
+    - punctuation.section.embedded.begin.tsx
+    - punctuation.section.embedded.end.tsx
+    - punctuation.section.embedded.begin.jsx
+    - punctuation.section.embedded.end.jsx
     settings:
       foreground: *FG
 
