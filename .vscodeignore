@@ -5,3 +5,4 @@ build.js
 .github/*
 .vscode/**
 bootstrap.sh
+known_issues.md
