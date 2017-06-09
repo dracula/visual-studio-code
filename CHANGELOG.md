@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.1
+
+### Patch
+
+- Fix extension install/update button color. #43
+
+---
+
 ## 2.1.0
 
 ### Minor

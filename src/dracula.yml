@@ -282,8 +282,8 @@ colors:
 
   # Extensions
   extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button).
-  extensionButton.prominentBackground: *GREEN                                   # Extension view button background color.
-  extensionButton.prominentHoverBackground: *COLOR10                            # Extension view button background hover color.
+  extensionButton.prominentBackground: !alpha [ *GREEN, 90 ]                    # Extension view button background color
+  extensionButton.prominentHoverBackground: !alpha [ *GREEN, 60 ]               # Extension view button background hover color
 
   # Quick Picker
   pickerGroup.border: *PURPLE                                                   # Quick picker (Quick Open) color for grouping borders
@@ -293,9 +293,9 @@ colors:
   debugToolBar.background: *BGDark                                              # Debug toolbar background color
 
   # Welcome Page
-  welcomePage.buttonBackground:                                                 # Background color for the buttons on the Welcome page.
-  welcomePage.buttonHoverBackground:                                            # Hover background color for the buttons on the Welcome page.
-  walkThrough.embeddedEditorBackground: *BGDark                                 # Background color for the embedded editors on the Interactive Playground.
+  welcomePage.buttonBackground:                                                 # Background color for the buttons on the Welcome page
+  welcomePage.buttonHoverBackground:                                            # Hover background color for the buttons on the Welcome page
+  walkThrough.embeddedEditorBackground: *BGDark                                 # Background color for the embedded editors on the Interactive Playground
 
 
 # Syntaxes
