@@ -29,7 +29,7 @@
         "url": "https://github.com/dracula/visual-studio-code/issues"
     },
     "engines": {
-        "vscode": "^1.12.0"
+        "vscode": "^1.13.0"
     },
     "categories": [
         "Themes"

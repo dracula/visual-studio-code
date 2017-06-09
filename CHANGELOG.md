@@ -1,11 +1,43 @@
-# 2.0.1
+# Changelog
 
-## Patch
+## 2.1.0
+
+### Minor
+
+- Apply dracula theme to (nearly) all the newly released UI scopes that became available in VSCode 1.13.0.
+- Add support for `Haskell` and (some) other Standard ML languages.
+
+### Patch
+
+- `[Make]`: Fix incorrect color for prerequisites.
+- `[CSS]`: Fix incorrect comma colors.
+
+### Notes
+
+Because highlighting or highlight color of bracket matches seems to be a taste that differs broadly from person-to-person, built-in support was not added for it.
+
+If you'd prefer your bracket matches highlighted with a noticable color, add the following to your User Settings (adjustcing the olors to your own taste):
+
+```json
+{
+    "workbench.colorCustomizations": {
+        "editorBracketMatch.background": "#ff79c680",
+        "editorBracketMatch.border": "#ff00ff"
+    }
+}
+```
+
+---
+
+## 2.0.1
+
+### Patch
+
 - Fix curly braces for embedded JS in `.jsx` and `.tsx` files.
 
+---
 
-
-# 2.0.0
+## 2.0.0
 
 The theme has been completely overhauled in accordance to the new [Dracula Theme Specification RFC](https://github.com/dracula/dracula-theme/issues/232) that I put together.
 
@@ -13,59 +45,69 @@ All languages provided by VSCode as well as `GraphQL` and `TOML` were scrutinize
 
 Please leave your comments in the RFC issue thread if you have any suggestions.
 
-## Minor
+### Minor
+
 - Add UI color for `statusBarItem.prominentBackground` and `statusBarItem.prominentHoverBackground`. (#42)
 
+---
 
+## 1.17.1
 
-# 1.17.1
+### Patch
 
-## Patch
 - Change variable-setting keywords (e.g. `var`, `const`, etc.) to pink color to match other reserved language words.
 - Fix color of parameterless decorators.
 
+---
 
+## 1.17.0
 
-# 1.17.0
+### Minor
 
-## Minor
 - Apply theme to notification panel. #35
 - Apply theme to buttons.
 
-## Patch
+### Patch
+
 - Make colorization of python raw string literals more consistent. #36
 - Switch from yellow to green for current highlight match to improve contrast over purple tokens. #33
 
-## Chore
+### Chore
+
 - Add contributing guidelines.
 
+---
 
+## 1.16.0
 
-# 1.16.0
+### Minor
 
-## Minor
 - Add `Dracula Soft` theme variant (beta - comments/critiques welcomed). #30
 
-## Patch
+### Patch
+
 - Lighten ANSI `color0` and `color8` so that they're more legible in the terminal. #32
 
+---
 
+## 1.15.1
 
-# 1.15.1
+### Patch
 
-## Patch
 - Fix dropdown colors.
 - Revert button colors to system default.
 - Small adjustements to `findMatchHighlight` and `findRangeHighlight` in an attempt to improve contrast. #31
 
+---
 
+## 1.15.0
 
-# 1.15.0
+### Minor
 
-## Minor
 - Switch from highlighting the entire current line to coloring only the border.
 
-## Patch
+### Patch
+
 - General overhaul/improvement of new UI scopes.
 
 **Note:** If you prefer to have the entire current line highlighted like it was previously, you can enable it by adding the following in your User Settings:
@@ -78,67 +120,75 @@ Please leave your comments in the RFC issue thread if you have any suggestions.
 }
 ```
 
+---
 
+## 1.14.0
 
-# 1.14.0
+### Minor
 
-## Minor
 - Upgrade from experimental UI theme scopes (requires VSCode `v1.12.0`). #28
 
 Thanks @Eric-Jackson for your contribution!
 
+---
 
+## 1.13.1
 
-# 1.13.1
+### Patch
 
-## Patch
 - Fix magic variable highlighting in python. (e.g. `__name__`)
 
+---
 
+## 1.13.0
 
-# 1.13.0
+### Minor
 
-## Minor
 - Add highlighting for HTML entities. (HT: @ajitid)
 
+---
 
+## 1.12.0
 
-# 1.12.0
+### Minor
 
-## Minor
 - Add highlighting for escape characters. (HT: @ajitid)
 
+---
 
+## 1.11.1
 
-# 1.11.1
+### Patch
 
-## Patch
 - Adjust TextMate scopes for strings so that VSCode "Expand Select" function works properly. Closes #24 (HT: @ajitid)
 
+---
 
+## 1.11.0
 
-# 1.11.0
+### Minor
 
-## Minor
 - Adjust tab colors to make active/inactive tabs more identifiable.
 - Darken the status bar to match the tab bar.
 
 Thanks @DanielRamosAcosta for the contribution!
 
+---
 
+## 1.10.0
 
-# 1.10.0
+### Patch
 
-## Patch
 - Fix status bar background color when there's no folder selected. Closes #20 (HT: @23doors)
 
 **Note:** Published as a minor bump by mistake. Should have been patch.
 
+---
 
+## 1.9.1
 
-# 1.9.1
+### Patch
 
-## Patch
 - Fix peekview colorization.
 - Fix debug panel background color. Closes #19 (HT: @23doors)
 - Add contrast to the Activity Bar. (HT: @rajasimon)
@@ -146,25 +196,28 @@ Thanks @DanielRamosAcosta for the contribution!
 - Adjust active/inactive tab colors.
 - Add requirement for VSCode engine `^1.11.0` in package.json
 
+---
 
+## 1.9.0
 
-# 1.9.0
+### Minor
 
-## Minor
 - Early experimental support for custom UI theming. (Feedback appreciated).
 - Add basic support for GraphQL. (Requires `GraphQL for VSCode` extension).
 
-## Patch
+### Patch
+
 - **PHP**: Fix double quoted variable highlighting for `${variablename}` and `{$variablename}` forms.
 - **PHP**: Fix color of language constants.
 
 **Note:** UI changes are very preliminary and partially incomplete. This will be improved when the API stabilizes and gets documented.
 
+---
 
+## 1.8.0
 
-# 1.8.0
+### Minor
 
-## Minor
 - Remove italics from JSON keys.
 - Colorize JSON key-value separators
 - Complete overhaul of Yaml lang to better align with JSON highlighting.
@@ -175,45 +228,49 @@ Thanks @DanielRamosAcosta for the contribution!
     - Read access => cyan
     - Write access => green
 
-## Patch
+### Patch
+
 - Adjust `currentFindMatchHighlight` so that it doesn't completely mask comments. HT: @nguyenhuumy (#11)
 - Fix highlighting for variable constants (i.e. variables in all caps in JS).
 - Fix highlighting for JS string interpolation.
 - Fix miscolor of quoted object literal keys in JS and friends.
 
-## Chore
+### Chore
+
 - Add test files for a handful of popular languages
 
-## Notes
+### Notes
 
 The goal of the next several upcoming updates is to improve the uniformity of semantic highlighting between languages. I find it personally disorienting when using one language that has cyan as the color for types and then switch to another where it is green. The experience should be seamless across all languages.
 
 I've [opened an issue on github](https://github.com/dracula/visual-studio-code/issues/12) for this process. Your feedback is welcomed and encouraged!
 
+---
 
+## 1.7.0
 
-# 1.7.0
+### Minor
 
-## Minor
 - Remove italics from JS & friends arrow functions to play nicer with fonts using custom ligatures (e.g. FiraCode). HT: @joaoevangelista
 - Improve syntax for object destructuring assignment with renaming in JS and friends.
 
-## Patch
+### Patch
+
 - Fix miscolored decorators.
 - Fix template string syntax in JS (previously only applied to TS).
 
 Feedback, suggestions, comments appreciated.
 
+---
 
-
-# 1.6.1
+## 1.6.1
 
 - Fix highlighting for numbers (`constant.numeric.decimal`).
 - Fix hex color highlighting for CSS and friends.
 
+---
 
-
-# 1.6.0
+## 1.6.0
 
 - Change Maintainers
 - Add Markdown Syntax.
