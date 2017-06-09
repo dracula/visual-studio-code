@@ -14,9 +14,9 @@
 
 ### Notes
 
-Because highlighting or highlight color of bracket matches seems to be a taste that differs broadly from person-to-person, built-in support was not added for it.
+Because highlight color of bracket matches seems to be a taste that differs broadly from person-to-person, built-in support was not added for it.
 
-If you'd prefer your bracket matches highlighted with a noticable color, add the following to your User Settings (adjustcing the olors to your own taste):
+If you'd prefer your bracket matches highlighted with a noticable color, add the following to your User Settings (adjusting the colors to your own taste):
 
 ```json
 {
