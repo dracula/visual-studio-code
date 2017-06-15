@@ -780,6 +780,7 @@ tokenColors:
     - storage.type.objc
     - storage.type.php
     - storage.type.haskell
+    - storage.type.ocaml
     settings:
       fontStyle: italic
       foreground: *CYAN
