@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.1.2
+
+### Patch
+
+- Fix broken `OCaml` type highlighting. #44
+
+### Credits
+
+Huge thanks to @hackwaly for his help on this!
+
+---
+
 ## 2.1.1
 
 ### Patch
