@@ -25,9 +25,12 @@ dracula:
     - &COLOR13 '#FF92D0'
     - &COLOR14 '#9AEDFE'
     - &COLOR15 '#F8F8F2'
+  brightOther:
+    - &ORANGE        '#FFB86C'
+    # Temporary (awaitiing fix)
+    - &TEMP_QUOTES   '#E9F284'
   other:
     - &COMMENT       '#6272A4'
-    - &ORANGE        '#FFB86C'
     - &LineHighlight '#44475A75'
     - &WHITE         '#FFFFFF'
     # UI Variants
@@ -35,8 +38,6 @@ dracula:
     - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
     - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
     - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
-    # Temporary (awaitiing fix)
-    - &TEMP_QUOTES   '#E9F284'
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:

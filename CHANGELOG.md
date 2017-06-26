@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.3
+
+### Patch
+
+- Improve `dracula-soft` theme by heavily desaturating the bright/intense colors of the theme while leaving the darker/softer colors as-is.
+
+**Notes:** Mac users should have a better experience with this one. Feel free to leave any critiques/comments on #30 on github and we'll go from there.
+
 ## 2.1.2
 
 ### Patch
