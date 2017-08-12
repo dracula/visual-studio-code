@@ -60,7 +60,7 @@
         ]
     },
     "devDependencies": {
-        "js-yaml": "^3.8.4",
+        "js-yaml": "^3.9.1",
         "tinycolor2": "^1.4.1"
     }
 }

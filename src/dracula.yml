@@ -43,7 +43,7 @@ dracula:
 colors:
 
   # Integrated Terminal Colors
-  terminal.background: *BGDark
+  terminal.background: *BG
   terminal.foreground: *FG
   terminal.ansiBrightBlack: *BLACK
   terminal.ansiBrightRed: *RED
@@ -183,7 +183,7 @@ colors:
 
   editorCodeLens.foreground: *ORANGE                                            # Foreground color of an editor CodeLens
 
-  # NOTE: These are not set becuase they tend to be highly contested from
+  # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
   # for workbench.colorCustomizations in User Settings
   editorBracketMatch.background:                                                # Background color behind matching brackets
@@ -280,6 +280,15 @@ colors:
   # Notification Dialog Colors
   notification.background: *BG                                                  # Notifications background color
   notification.foreground: *FG                                                  # Notifications foreground color
+  notification.buttonBackground: *SELECTION
+  notification.buttonForeground: *FG
+  notification.buttonHoverBackground: !alpha [ *LineHighlight, 90 ]
+  notification.errorBackground: *RED
+  notification.errorForeground: *FG
+  notification.infoBackground: *CYAN
+  notification.infoForeground: *BG
+  notification.warningBackground: *ORANGE
+  notification.warningForeground: *BG
 
   # Extensions
   extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button).

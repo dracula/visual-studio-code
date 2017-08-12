@@ -14,7 +14,15 @@ const withAlphaType = new yaml.Type('!alpha', {
 const schema = yaml.Schema.create([ withAlphaType ]);
 const standard = fs.readFileSync(`${__dirname}/src/dracula.yml`, 'utf8');
 
-const yamlObj = yaml.load(standard, { schema });
+yamlObj = yaml.load(standard, { schema });
+
+yamlObj.colors = Object.keys(yamlObj.colors).reduce((obj, key) => {
+    if (yamlObj.colors[key] === null) {
+        return obj;
+    }
+    return Object.assign({}, obj, { [key]: yamlObj.colors[key] });
+}, {});
+
 const brightColors = [ ...yamlObj.dracula.ansi, ...yamlObj.dracula.brightOther ];
 
 const soft = standard.replace(/'(#[0-9A-Z]{6})/g, (match, hex) => {

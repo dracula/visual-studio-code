@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.2.0
+
+### Minor
+
+- Improve colors of info, warning, and error dialogs.
+- Switch terminal background color back to default editor background color in an attempt to make contrast better.
+
+### Patch
+
+- Fix red default colors from appearing on insiders edition.
+
 ## 2.1.3
 
 ### Patch
