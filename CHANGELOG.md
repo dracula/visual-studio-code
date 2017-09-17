@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.3.0
+
+### Minor
+
+- Add theme support for a few newly implemented scopes (`tab.activeBorder`, `editorOverviewRuler`, etc.)
+- Change current find match highlight to orange so it stands out a tad more
+
+### Patch
+
+- Fix small bug that caused notification button highlight color to be bright red
+
 ## 2.2.0
 
 ### Minor

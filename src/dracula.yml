@@ -147,6 +147,8 @@ colors:
   tab.activeBackground: *BG                                                     # Active Tab background color
   tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
   tab.border: *BGDarker                                                         # Border to separate Tabs from each other
+  tab.activeBorder: !alpha [*PINK, 80]                                          # A border drawn to the bottom of the active tab
+  tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
   tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
   tab.inactiveForeground: *COMMENT                                              # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground:                                                # Active tab foreground color in an inactive editor group
@@ -165,7 +167,7 @@ colors:
   editor.wordHighlightBackground: !alpha [ *CYAN, 50 ]                          # Background color of a symbol during read-access, for example when reading a variable
   editor.wordHighlightStrongBackground: !alpha [ *GREEN, 50 ]                   # Background color of a symbol during write-access, for example when writing to a variable
 
-  editor.findMatchBackground: !alpha [ *GREEN, 50 ]                             # Color of the current search match
+  editor.findMatchBackground: *ORANGE
   editor.findMatchHighlightBackground: !alpha [ *WHITE, 40 ]                    # Color of the other search matches
   editor.findRangeHighlightBackground: *LineHighlight                           # Color the range limiting the search
 
@@ -190,6 +192,17 @@ colors:
   editorBracketMatch.border:                                                    # Color for matching brackets boxes
 
   editorOverviewRuler.border: *BGDarker                                         # Color of the overview ruler border
+  editorOverviewRuler.findMatchForeground:
+  editorOverviewRuler.rangeHighlightForeground:
+  editorOverviewRuler.selectionHighlightForeground: *ORANGE
+  editorOverviewRuler.wordHighlightForeground: *CYAN
+  editorOverviewRuler.wordHighlightStrongForeground: *GREEN
+  editorOverviewRuler.modifiedForeground: !alpha [ *CYAN,   80 ]
+  editorOverviewRuler.addedForeground:    !alpha [ *GREEN,  80 ]
+  editorOverviewRuler.deletedForeground:  !alpha [ *RED,    80 ]
+  editorOverviewRuler.errorForeground:    !alpha [ *RED,    80 ]
+  editorOverviewRuler.warningForeground:  !alpha [ *ORANGE, 80 ]
+  editorOverviewRuler.infoForeground:     !alpha [ *CYAN,   80 ]
 
   editorError.foreground: *RED                                                  # Foreground color of error squigglies in the editor
   editorError.border:                                                           # Border color of error squigglies in the editor
@@ -282,7 +295,7 @@ colors:
   notification.foreground: *FG                                                  # Notifications foreground color
   notification.buttonBackground: *SELECTION
   notification.buttonForeground: *FG
-  notification.buttonHoverBackground: !alpha [ *LineHighlight, 90 ]
+  notification.buttonHoverBackground: *LineHighlight
   notification.errorBackground: *RED
   notification.errorForeground: *FG
   notification.infoBackground: *CYAN
