@@ -528,6 +528,8 @@ tokenColors:
   - name: Comments
     scope:
     - comment
+    - unused.comment
+    - wildcard.comment
     settings:
       foreground: *COMMENT
 
