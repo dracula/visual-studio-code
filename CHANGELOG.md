@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.0
+
+### Minor
+
+- Add support for elixir's underscored vars (#53)
+
 ## 2.3.0
 
 ### Minor
