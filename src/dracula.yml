@@ -26,13 +26,15 @@ dracula:
     - &COLOR14 '#9AEDFE'
     - &COLOR15 '#F8F8F2'
   brightOther:
-    - &ORANGE        '#FFB86C'
+    - &ORANGE               '#FFB86C'
     # Temporary (awaitiing fix)
-    - &TEMP_QUOTES   '#E9F284'
+    - &TEMP_QUOTES          '#E9F284'
+    - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
     - &COMMENT       '#6272A4'
     - &LineHighlight '#44475A75'
     - &WHITE         '#FFFFFF'
+    - &TAB_DROP_BG   '#44475A70'
     # UI Variants
     - &BGLighter     '#424450'
     - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
@@ -140,7 +142,7 @@ colors:
   # Editor Group & Tabs
   editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
   editorGroup.border: *PURPLE                                                   # Color to separate multiple editor groups from each other
-  editorGroup.dropBackground: *SELECTION                                        # Background color when dragging editors around
+  editorGroup.dropBackground: *TAB_DROP_BG                                      # Background color when dragging editors around
   editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
   editorGroupHeader.tabsBackground: *BGDarker                                   # Background color of the Tabs container
   editorGroupHeader.tabsBorder:                                                 # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
@@ -848,6 +850,14 @@ tokenColors:
     - punctuation.definition.string.end
     settings:
       foreground: *TEMP_QUOTES
+
+  - name: Property quotes (temporary vscode fix)
+    scope:
+    # NOTE: Same as above
+    - punctuation.support.type.property-name.begin
+    - punctuation.support.type.property-name.end
+    settings:
+      foreground: *TEMP_PROPERTY_QUOTES
 
 # =============================================================================
 # Variables
