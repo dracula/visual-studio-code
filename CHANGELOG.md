@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.4.1
+
+### Patch
+
+- Fix small upstream issue causing expand selection to quotes to not work properly in JSON keys
+- Fix opacity in pane drag and drop
+
+### Credits
+
+Thanks @ajitid for your contribution!
+
 ## 2.4.0
 
 ### Minor
