@@ -955,3 +955,16 @@ tokenColors:
     - meta.scope.prerequisites.makefile
     settings:
       foreground: *YELLOW
+
+  - name: SCSS attibute selector strings
+    scope:
+      - meta.attribute-selector.scss
+    settings:
+      foreground: *YELLOW
+
+  - name: SCSS attribute selector brackets
+    scope:
+      - punctuation.definition.attribute-selector.end.bracket.square.scss
+      - punctuation.definition.attribute-selector.begin.bracket.square.scss
+    settings:
+      foreground: *FG

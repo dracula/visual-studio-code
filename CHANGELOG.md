@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.4.2
+
+### Patch
+
+- Fix SCSS attribute selector string highlighting.
+
+In other words...
+
+```scss
+input[type='text'] {}
+//          ^^^^ now highlighted correctly
+```
+
 ## 2.4.1
 
 ### Patch
