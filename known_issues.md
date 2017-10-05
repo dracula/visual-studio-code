@@ -4,6 +4,12 @@ The following issues are problems with the textmate language files and out of th
 
 If you don't see your issue reported below, then please open an issue here and let us know.
 
+## Fixes Pending
+
+- `scss`: Broken highlighting for properties sharing selector names atom/language-sass#234
+- `less`: Mixin parameters and guards fully scoped and highlighted. atom/language-less#82
+- `php`: Ternary and null coalescing operator highlighting. atom/language-php#285
+
 ## Contents
 
 - [C++](#c++)
@@ -13,7 +19,6 @@ If you don't see your issue reported below, then please open an issue here and l
 - [F#](#f-sharp)
 - [Go](#go)
 - [Java](#java)
-- [Less](#less)
 - [Makefile](#makefile)
 - [Objective-C](#objective-c)
 - [Perl](#perl)
@@ -23,7 +28,6 @@ If you don't see your issue reported below, then please open an issue here and l
 - [R](#r)
 - [Ruby](#ruby)
 - [Rust](#rust)
-- [Sass](#sass)
 - [Shell](#shell)
 - [Swift](#swift)
 - [TOML](#toml)
@@ -81,31 +85,19 @@ class Foo {
 ## Coffeescript
 
 ```coffee
-# Function parameters are scoped too broadly (scope up to and including parens).
-add = (x, y, z = 0) -> x + y + z
-#     ^^^^^^^^^^^^^
-
 # imports and exports are scope incorrectly across the board
 import _ from 'underscore'
-#      ^ ^^^^
+#      ^
 import * as underscore from 'underscore'
-#        ^^ ^^^^^^^^^^ ^^^^
+#           ^^^^^^^^^^
 import { now } from 'underscore'
-#              ^^^^
+#        ^^^
 import { now as currentTimestamp } from 'underscore'
-#        ^^^ ^^                    ^^^^
-import { first, last } from 'underscore'
-#                      ^^^^
-import utilityBelt, { each } from 'underscore'
-#                            ^^^^
+#        ^^^
 export { sqrt as squareRoot }
 #        ^^^^ ^^
 export { Mathematics as default, sqrt as squareRoot }
-#        ^^^^^^^^^^^ ^^          ^^^^ ^^
-export * from 'underscore'
-#        ^^^^
-export { max, min } from 'underscore'
-#                   ^^^^
+#        ^^^^^^^^^^^ ^^          ^^^^
 ```
 
 ## <a id="f-sharp"></a>F#
@@ -168,16 +160,6 @@ private static final Set<String> COUNTRIES = new HashSet<String>();
 //                      ^^^^^^^^                        ^^^^^^^^
 ```
 
-## Less
-
-```less
-// Function parameters not scoped
-.average(@x, @y) {
-//       ^^  ^^
-  @average-result: ((@x + @y) / 2);
-}
-```
-
 ## Makefile
 
 ```Makefile
@@ -226,23 +208,9 @@ $self->{count}++;
 ## PHP
 
 ```php
-// Ternary operators not scoped
-$foo = 1 == 3 ? true : false;
-//            ^      ^
-$shortCircuit = false ?: false ?: true ?: false;
-//                    ^^       ^^      ^^
-$defaultValueIfFalse = false ?? 'default';
-//                           ^^
-
-// "$this" has no special scope
-class Foo {
-    public $bar;
-
-    public function __construct($x) {
-        $this=>bar = $x;
-//      ^^^^^
-    }
-}
+// Namespace colorization when static method called
+$foo = \Foo\Bar\Baz::method();
+//              ^^^
 ```
 
 ## Powershell
@@ -311,10 +279,6 @@ struct Foo<T> { bar: T }
 struct Foo<T> { bar: T }
 //                 ^
 ```
-
-## Sass
-
-If a `@while` is used, the `@while` context exists for the rest of the document, even after terminating (this can potentially screw up lots of syntax highlighting depending on where the `@while` sits in the document)
 
 ## Shell
 
