@@ -827,6 +827,58 @@ tokenColors:
       foreground: *PINK
 
 # =============================================================================
+# RegExp
+# =============================================================================
+
+  - name: RegExp string
+    scope:
+    - string.regexp
+    - constant.other.character-class.set.regexp
+    - constant.character.escape.backslash.regexp
+    settings:
+      foreground: *YELLOW
+
+  - name: Non-capture operators
+    scope:
+    # NOTE: The scope name is a misnomer. It is actually non-capture operators
+    - punctuation.definition.group.capture.regexp
+    settings:
+      foreground: *PINK
+
+  - name: RegExp start and end characters
+    scope:
+    - string.regexp punctuation.definition.string.begin
+    - string.regexp punctuation.definition.string.end
+    settings:
+      foreground: *RED
+
+  - name: Character group
+    scope:
+    - punctuation.definition.character-class.regexp
+    settings:
+      foreground: *CYAN
+
+  - name: Capture groups
+    scope:
+    - punctuation.definition.group.regexp
+    settings:
+      foreground: *ORANGE
+
+  - name: Assertion operators
+    scope:
+    - punctuation.definition.group.assertion.regexp
+    - keyword.operator.negation.regexp
+    settings:
+      foreground: *RED
+
+  - name: Positive lookaheads
+    scope:
+    - meta.assertion.look-ahead.regexp
+    settings:
+      foreground: *GREEN
+
+
+# =============================================================================
 # Strings
 # =============================================================================
 
@@ -835,12 +887,6 @@ tokenColors:
     - string
     settings:
       foreground: *YELLOW
-
-  - name: String (RexExp)
-    scope:
-    - string.regexp
-    settings:
-      foreground: *RED
 
   - name: String quotes (temporary vscode fix)
     scope:

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.0
+
+### Minor
+
+- Add support for improved RegExp highlighting released in VSCode `v1.17.0` (JS and TS especially).
+
 ## 2.4.2
 
 ### Patch
