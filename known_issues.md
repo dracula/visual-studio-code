@@ -22,7 +22,6 @@ If you don't see your issue reported below, then please open an issue here and l
 - [Makefile](#makefile)
 - [Objective-C](#objective-c)
 - [Perl](#perl)
-- [PHP](#php)
 - [Powershell](#powershell)
 - [Python](#python)
 - [R](#r)
@@ -30,7 +29,6 @@ If you don't see your issue reported below, then please open an issue here and l
 - [Rust](#rust)
 - [Shell](#shell)
 - [Swift](#swift)
-- [TOML](#toml)
 
 ## C++
 
@@ -163,10 +161,12 @@ private static final Set<String> COUNTRIES = new HashSet<String>();
 ## Makefile
 
 ```Makefile
-# everything under target lines is unscoped
-file.o: file.cpp file.h
-    $(CC) $(CXX) $^ $? $@ $< $+ $|
-#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hello=hello
+
+# Curly brace variable interpolation
+.PHONY: thing
+thing:
+    echo ${hello}
 
 # Uncommon variant of ":=" scoped incorrectly
 uncommonEqual ::= foo bar baz
@@ -205,14 +205,6 @@ $self->{count}++;
 #             ^^
 ```
 
-## PHP
-
-```php
-// Namespace colorization when static method called
-$foo = \Foo\Bar\Baz::method();
-//              ^^^
-```
-
 ## Powershell
 
 There is too much wrong with the scopes to list. The textmate scopes need a full refactor.
@@ -232,13 +224,6 @@ There is too much wrong with the scopes to list. The textmate scopes need a full
 ## Ruby
 
 ```rb
-# "!" operator loses scope if it falls in the first column.
-if ! false
-    '! works here but not below'
-end
-!nil
-# broken above
-
 # Function names not scoped during calls
 def add1(x)
     x + 1
@@ -254,10 +239,6 @@ hash.key?(:foo)
 # Range ".." and double bar "| |" operators not scoped
 (1..5).each do |counter|
 # ^^           ^       ^
-
-# "puts" has no scope
- puts "Hello, World!"
-#^^^^
 ```
 
 ## Rust
@@ -306,15 +287,3 @@ esac
 ## Swift
 
 There is too much wrong with the scopes to list. The textmate scopes need a full refactor.
-
-## TOML
-
-```toml
-# Quoted keys aren't scoped
-"Hello world" = 1
-#^^^^^^^^^^^
-
-# Nested tables break on the same line
-foo = [[ 1.2, 2.4 ], ["all", 'strings', """are the same""", '''type''']]
-#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-```
