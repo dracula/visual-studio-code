@@ -185,7 +185,7 @@ colors:
   editorIndentGuide.background:                                                 # Color of the editor indentation guides
   editorRuler.foreground:                                                       # Color of the editor rulers
 
-  editorCodeLens.foreground: *ORANGE                                            # Foreground color of an editor CodeLens
+  editorCodeLens.foreground: *COMMENT                                            # Foreground color of an editor CodeLens
 
   # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
