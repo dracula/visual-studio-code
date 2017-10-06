@@ -743,6 +743,7 @@ tokenColors:
     - punctuation.section.embedded.end
     - punctuation.section.embedded.end source.php  # PHP edge case
     - punctuation.section.embedded.end source.ruby # Issue with ruby's tmLanguage
+    - punctuation.definition.variable.makefile
     settings:
       foreground: *PINK
 

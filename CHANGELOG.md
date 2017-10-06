@@ -1,10 +1,21 @@
 # Changelog
 
+## 2.5.1
+
+### Patch
+
+- Fix variable interpolation operators in `Make` language
+- Change codelens from `orange` to `comment` color so it's less distracting. #57
+
+### Credits
+
+Thanks @smt923 for your contribution!
+
 ## 2.5.0
 
 ### Minor
 
-- Add support for improved RegExp highlighting released in VSCode `v1.17.0` (JS and TS especially).
+- Add support for improved RegExp highlighting released in VSCode `v1.17.0` (JS and TS especially)
 
 ## 2.4.2
 
