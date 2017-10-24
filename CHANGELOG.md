@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.5.2
+
+### Patch
+
+- Improve terminal white contrast. #59
+
+### Credits
+
+Thanks @nickcernis for your contribution!
+
 ## 2.5.1
 
 ### Patch
