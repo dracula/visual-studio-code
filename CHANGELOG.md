@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.6.0
+
+### Minor
+
+- Add support for new git status colors in the file explorer.
+- Change `editorGutter.modifiedBackground` from `cyan` to `orange` to match above.
+
+As usual, feedback welcomed and encouraged.
+
 ## 2.5.2
 
 ### Patch
