@@ -1022,3 +1022,9 @@ tokenColors:
       - punctuation.definition.attribute-selector.begin.bracket.square.scss
     settings:
       foreground: *FG
+
+  - name: Haskell Pragmas
+    scope:
+      - meta.preprocessor.haskell
+    settings:
+      foreground: *COMMENT

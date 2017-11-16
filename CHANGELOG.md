@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.6.1
+
+### Patch
+
+- Fix highlighting for pragma instructions in Haskell.
+
 ## 2.6.0
 
 ### Minor
