@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.7.0
+
+### Minor
+
+- Improve highlighting for `invalid` and `invalid.deprecated` scopes.
+- Italicize html attribute names so that Operator Mono font users can have their fancy pseudo-cursive. #62
+
+### Patch
+
+- Fix incorrectly colored type annotation separators in Python.
+
 ## 2.6.1
 
 ### Patch

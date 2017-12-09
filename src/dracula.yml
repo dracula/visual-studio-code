@@ -376,13 +376,13 @@ tokenColors:
   - scope:
     - invalid
     settings:
-      background: *RED
-      foreground: *FG
+      foreground: *RED
+      fontStyle: underline italic
   - scope:
     - invalid.deprecated
     settings:
-      background: *PURPLE
       foreground: *FG
+      fontStyle: underline italic
   - scope:
     - entity.name.filename
     settings:
@@ -598,6 +598,7 @@ tokenColors:
     - entity.other.attribute-name
     settings:
       foreground: *GREEN
+      fontStyle: italic
 
 # =============================================================================
 # Functions/Methods
@@ -716,6 +717,7 @@ tokenColors:
     - punctuation.separator.slice
     - string.unquoted.heredoc punctuation.definition.string
     - support.other.chomping-indicator.yaml
+    - punctuation.separator.annotation
     settings:
       foreground: *PINK
 
