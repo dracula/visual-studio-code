@@ -169,7 +169,7 @@ colors:
   editor.wordHighlightBackground: !alpha [ *CYAN, 50 ]                          # Background color of a symbol during read-access, for example when reading a variable
   editor.wordHighlightStrongBackground: !alpha [ *GREEN, 50 ]                   # Background color of a symbol during write-access, for example when writing to a variable
 
-  editor.findMatchBackground: *ORANGE
+  editor.findMatchBackground: !alpha [ *ORANGE, 80 ]
   editor.findMatchHighlightBackground: !alpha [ *WHITE, 40 ]                    # Color of the other search matches
   editor.findRangeHighlightBackground: *LineHighlight                           # Color the range limiting the search
 
@@ -467,12 +467,13 @@ tokenColors:
     settings:
       foreground: *COMMENT
 
-  - name: Code blocks without scoped language (prose)
+  - name: Code blocks
     scope:
     - fenced_code.block.language
     - markup.raw.inner.restructuredtext
+    - markup.fenced_code.block.markdown punctuation.definition.markdown
     settings:
-      foreground: *ORANGE
+      foreground: *GREEN
 
   - name: Prose constants
     scope:
@@ -633,9 +634,16 @@ tokenColors:
   - name: Decorators
     scope:
     - meta.decorator variable.other.readwrite
+    - meta.decorator variable.other.property
     settings:
       foreground: *GREEN
       fontStyle: italic
+
+  - name: Decorator Objects
+    scope:
+      - meta.decorator variable.other.object
+    settings:
+      foreground: *GREEN
 
 # =============================================================================
 # Keywords
@@ -737,6 +745,8 @@ tokenColors:
     - punctuation.section.scope.begin
     - punctuation.section.scope.end
     - storage.type.generic.java
+    - string.template meta.brace
+    - string.template punctuation.accessor
     settings:
       foreground: *FG
 

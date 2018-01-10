@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.8.0
+
+### Minor
+
+- Fix missing syntax highlighting of markdown code block backticks.
+- Fix missing syntax highlighting for decorator objects in JS & TS.
+- Fix incorrect highlighting for braces/punctuation inside template strings in JS & TS.
+
+### Patch
+
+- Fix overpowering opaque orange color of `editor.findMatchBackground`.
+
 ## 2.7.0
 
 ### Minor
