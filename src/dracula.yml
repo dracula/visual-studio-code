@@ -518,6 +518,7 @@ tokenColors:
     - keyword.expressions-and-types.swift
     - keyword.other.this
     - variable.language
+    - variable.language punctuation.definition.variable.php # the "$" symbol in $this
     - variable.other.readwrite.instance.ruby       # ruby's "@" instance symbol
     - variable.parameter.function.language.special # Special words as parameters
     settings:
@@ -538,6 +539,7 @@ tokenColors:
   - name: Comments
     scope:
     - comment
+    - punctuation.definition.comment
     - unused.comment
     - wildcard.comment
     settings:

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.8.1
+
+### Patch
+
+- Fix small syntax highlighting issues in PHP.
+
 ## 2.8.0
 
 ### Minor
