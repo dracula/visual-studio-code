@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.9.0
+
+### Minor
+
+- Implement improved ANSI colors for integrated terminal. #66
+
+Thanks @teddybradford for your contribution!
+
 ## 2.8.1
 
 ### Patch
