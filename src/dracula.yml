@@ -17,7 +17,7 @@ dracula:
     - &YELLOW    '#F1FA8C'
   ansi:
     - &COLOR0  '#44475A'
-    - &COLOR1  '#DE9442'
+    - &COLOR1  '#DE312B'
     - &COLOR2  '#2FD651'
     - &COLOR3  '#D0D662'
     - &COLOR4  '#9C6FCF'
@@ -25,7 +25,7 @@ dracula:
     - &COLOR6  '#6AC5D3'
     - &COLOR7  '#D7D4C8'
     - &COLOR8  '#656B84'
-    - &COLOR9  '#FFB86C'
+    - &COLOR9  '#FF5555'
     - &COLOR10 '#50FA7B'
     - &COLOR11 '#F1FA8C'
     - &COLOR12 '#BD93F9'
