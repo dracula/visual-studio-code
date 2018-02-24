@@ -5,29 +5,35 @@ maintainers:
 semanticClass: theme.dracula
 dracula:
   base:
-    - &BG '#282A36'
-    - &FG '#F8F8F2'
+    - &BG        '#282A36'
+    - &FG        '#F8F8F2'
     - &SELECTION '#44475A'
+    - &CYAN      '#8BE9FD'
+    - &GREEN     '#50FA7B'
+    - &ORANGE    '#FFB86C'
+    - &PINK      '#FF79C6'
+    - &PURPLE    '#BD93F9'
+    - &RED       '#FF5555'
+    - &YELLOW    '#F1FA8C'
   ansi:
-    - &BLACK   '#4D4D4D'
-    - &RED     '#FF5555'
-    - &GREEN   '#50FA7B'
-    - &YELLOW  '#F1FA8C'
-    - &PURPLE  '#BD93F9'
-    - &PINK    '#FF79C6'
-    - &CYAN    '#8BE9FD'
-    - &COLOR7  '#BFBFBF'
-    - &COLOR8  '#575757'
-    - &COLOR9  '#FF6E67'
-    - &COLOR10 '#5AF78E'
-    - &COLOR11 '#F4F99D'
-    - &COLOR12 '#CAA9FA'
-    - &COLOR13 '#FF92D0'
-    - &COLOR14 '#9AEDFE'
+    - &COLOR0  '#44475A'
+    - &COLOR1  '#DE312B'
+    - &COLOR2  '#2FD651'
+    - &COLOR3  '#D0D662'
+    - &COLOR4  '#9C6FCF'
+    - &COLOR5  '#DE559C'
+    - &COLOR6  '#6AC5D3'
+    - &COLOR7  '#D7D4C8'
+    - &COLOR8  '#656B84'
+    - &COLOR9  '#FF5555'
+    - &COLOR10 '#50FA7B'
+    - &COLOR11 '#F1FA8C'
+    - &COLOR12 '#BD93F9'
+    - &COLOR13 '#FF79C6'
+    - &COLOR14 '#8BE9FD'
     - &COLOR15 '#F8F8F2'
   brightOther:
-    - &ORANGE               '#FFB86C'
-    # Temporary (awaitiing fix)
+    # Temporary (awaiting fix)
     - &TEMP_QUOTES          '#E9F284'
     - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
@@ -47,22 +53,22 @@ colors:
   # Integrated Terminal Colors
   terminal.background: *BG
   terminal.foreground: *FG
-  terminal.ansiBrightBlack: *BLACK
-  terminal.ansiBrightRed: *RED
-  terminal.ansiBrightGreen: *GREEN
-  terminal.ansiBrightYellow: *YELLOW
-  terminal.ansiBrightBlue: *PURPLE
-  terminal.ansiBrightMagenta: *PINK
-  terminal.ansiBrightCyan: *CYAN
-  terminal.ansiBrightWhite: *WHITE
-  terminal.ansiBlack: *COLOR8
-  terminal.ansiRed: *COLOR9
-  terminal.ansiGreen: *COLOR10
-  terminal.ansiYellow: *COLOR11
-  terminal.ansiBlue: *COLOR12
-  terminal.ansiMagenta: *COLOR13
-  terminal.ansiCyan: *COLOR14
-  terminal.ansiWhite: *COLOR15
+  terminal.ansiBrightBlack: *COLOR8
+  terminal.ansiBrightRed: *COLOR9
+  terminal.ansiBrightGreen: *COLOR10
+  terminal.ansiBrightYellow: *COLOR11
+  terminal.ansiBrightBlue: *COLOR12
+  terminal.ansiBrightMagenta: *COLOR13
+  terminal.ansiBrightCyan: *COLOR14
+  terminal.ansiBrightWhite: *COLOR15
+  terminal.ansiBlack: *COLOR0
+  terminal.ansiRed: *COLOR1
+  terminal.ansiGreen: *COLOR2
+  terminal.ansiYellow: *COLOR3
+  terminal.ansiBlue: *COLOR4
+  terminal.ansiMagenta: *COLOR5
+  terminal.ansiCyan: *COLOR6
+  terminal.ansiWhite: *COLOR7
 
   # Contrast Colors
   contrastBorder: *BGDarker                                                     # An extra border around elements to separate them from others for greater contrast
@@ -72,7 +78,7 @@ colors:
   focusBorder: *COMMENT                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
   foreground: *FG                                                               # Overall foreground color. This color is only used if not overridden by a component
   widget.shadow:                                                                # Shadow color of widgets such as Find/Replace inside the editor
-  selection.background: *COLOR12                                                # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
+  selection.background: *PURPLE                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED                                                         # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
   # Button Control
@@ -290,7 +296,7 @@ colors:
   statusBarItem.activeBackground:                                               # Status Bar item background color when clicking
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
-  statusBarItem.prominentHoverBackground: *COLOR9                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
+  statusBarItem.prominentHoverBackground: *ORANGE                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
   statusBar.border:
 
   # Title Bar Colors (MacOS Only)
