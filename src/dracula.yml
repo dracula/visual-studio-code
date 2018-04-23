@@ -964,6 +964,12 @@ tokenColors:
       fontStyle: normal
       foreground: *FG
 
+  - name: Variable.function
+    scope: 
+    - variable.function
+    settings:
+      foreground: *GREEN
+
 # =============================================================================
 # Language Extensions / Edge Cases
 # =============================================================================
