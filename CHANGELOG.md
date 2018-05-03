@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.10.0
+
+- Add support for new highlighted indent guides. #74
+
+Thanks @smt923 for your contribution!
+
 ## 2.9.0
 
 ### Minor
