@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.11.0
+
+### Minor
+
+- Change git modified color from `Orange` to `Cyan` (rationale: less jarring on the eyes).
+- Change warning color from `Yellow` to `Orange` (rationale: more jarring on the eyes).
+
+### Patch
+
+- Fix warning color decorations in the explorer. #77
+
 ## 2.10.0
 
 - Add support for new highlighted indent guides. #74

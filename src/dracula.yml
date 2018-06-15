@@ -127,6 +127,8 @@ colors:
   list.hoverBackground: *LineHighlight                                          # List/Tree background when hovering over items using the mouse
   list.inactiveSelectionBackground: *LineHighlight                              # List/Tree background color for the selected item when the list/tree is inactive
   list.inactiveSelectionForeground:                                             # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
+  list.warningForeground: *ORANGE                                               # Color of warning decorations in the explorer
+  list.errorForeground: *RED                                                    # Color of error decorations in the explorer
   list.hoverForeground:                                                         # List/Tree foreground when hovering over items using the mouse
   list.focusForeground:                                                         # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
 
@@ -207,11 +209,11 @@ colors:
   editorOverviewRuler.selectionHighlightForeground: *ORANGE
   editorOverviewRuler.wordHighlightForeground: *CYAN
   editorOverviewRuler.wordHighlightStrongForeground: *GREEN
-  editorOverviewRuler.modifiedForeground: !alpha [ *ORANGE, 80 ]
+  editorOverviewRuler.modifiedForeground: !alpha [ *CYAN, 80 ]
   editorOverviewRuler.addedForeground:    !alpha [ *GREEN,  80 ]
   editorOverviewRuler.deletedForeground:  !alpha [ *RED,    80 ]
   editorOverviewRuler.errorForeground:    !alpha [ *RED,    80 ]
-  editorOverviewRuler.warningForeground:  !alpha [ *YELLOW, 80 ]
+  editorOverviewRuler.warningForeground:  !alpha [ *ORANGE, 80 ]
   editorOverviewRuler.infoForeground:     !alpha [ *CYAN,   80 ]
 
   editorError.foreground: *RED                                                  # Foreground color of error squigglies in the editor
@@ -220,12 +222,12 @@ colors:
   editorWarning.border:                                                         # Border color of warning squigglies in the editor
 
   editorGutter.background:                                                      # Background color of the editor gutter
-  editorGutter.modifiedBackground: !alpha [ *ORANGE, 80 ]                       # Editor gutter background color for lines that are modified
+  editorGutter.modifiedBackground: !alpha [ *CYAN, 80 ]                       # Editor gutter background color for lines that are modified
   editorGutter.addedBackground:    !alpha [ *GREEN,  80 ]                       # Editor gutter background color for lines that are added
   editorGutter.deletedBackground:  !alpha [ *RED,    80 ]                       # Editor gutter background color for lines that are deleted
 
   # Explorer Colors
-  gitDecoration.modifiedResourceForeground: *ORANGE
+  gitDecoration.modifiedResourceForeground: *CYAN
   gitDecoration.deletedResourceForeground: *RED
   gitDecoration.untrackedResourceForeground: *GREEN
   gitDecoration.ignoredResourceForeground: *COMMENT
