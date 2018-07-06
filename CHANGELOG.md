@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.12.0
+
+### Minor
+
+- Improve integrated terminal ANSI colors.
+
 ## 2.11.0
 
 ### Minor
