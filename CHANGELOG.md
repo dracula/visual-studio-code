@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.12.1
+
+### Patch
+
+- Fix color of editor rulers to match indent guides. #79
+
+Thanks @gabbes for your contribution!
+
 ## 2.12.0
 
 ### Minor
