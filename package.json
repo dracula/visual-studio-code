@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"scripts": {
 		"attach": "./bootstrap.sh attach",
-		"build": "mkdir -p ./theme && node ./build.js",
+		"build": "node ./build.js",
 		"eject": "./bootstrap.sh eject",
 		"package": "vsce package -o ./bin/dracula.vsix",
 		"vscode:prepublish": "npm run build"
