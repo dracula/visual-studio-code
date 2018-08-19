@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.13.0
+
+### Minor
+
+- Add basic styling to the new settings window.
+- Add styling to the new breadcrumbs UI elements. #85
+
+### Fix
+
+- Fix the incorrect syntax highlighting of javascript/typescript "pseudo-constants" (a change that recently was added to the syntaxes). #84
+
+
 ## 2.12.1
 
 ### Patch

@@ -339,6 +339,28 @@ colors:
   welcomePage.buttonHoverBackground:                                            # Hover background color for the buttons on the Welcome page
   walkThrough.embeddedEditorBackground: *BGDark                                 # Background color for the embedded editors on the Interactive Playground
 
+  # Setting Editor
+  settings.headerForeground:           *FG                                      # The foreground color for a section header or active title.
+  settings.modifiedItemForeground:     *ORANGE                                  # The foreground color for a the modified setting indicator.
+  settings.inactiveSelectedItemBorder:                                          # The color of the selected setting row border, when the settings list does not have focus.
+  settings.dropdownBackground:         *BGDark                                  # Dropdown background.
+  settings.dropdownForeground:         *FG                                      # Dropdown foreground.
+  settings.dropdownBorder:             *BGDarker                                # Dropdown border.
+  settings.checkboxBackground:         *BGDark                                  # Checkbox background.
+  settings.checkboxForeground:         *FG                                      # Checkbox foreground.
+  settings.checkboxBorder:             *BGDarker                                # Checkbox border.
+  settings.textInputBackground:        *BGDark                                  # Text input box background.
+  settings.textInputForeground:        *FG                                      # Text input box foreground.
+  settings.textInputBorder:            *BGDarker                                # Text input box border.
+  settings.numberInputBackground:      *BGDark                                  # Number input box background.
+  settings.numberInputForeground:      *FG                                      # Number input box foreground.
+  settings.numberInputBorder:          *BGDarker                                # Number input box border.
+
+  # Breadcrumbs
+  breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items.
+  breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items.
+  breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items.
+  breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker.
 
 # Syntaxes
 tokenColors:
@@ -944,8 +966,10 @@ tokenColors:
   - name: Variables and object properties
     scope:
     - variable
-    - constant.other.key.perl   # Perl edge case
-    - support.variable.property # Object properties
+    - constant.other.key.perl    # Perl edge case
+    - support.variable.property  # Object properties
+    - variable.other.constant.js # Fix incorrect highlighting of pseudo-constants in js
+    - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
     settings:
       foreground: *FG
 
