@@ -342,6 +342,7 @@ colors:
   # Setting Editor
   settings.headerForeground:           *FG                                      # The foreground color for a section header or active title.
   settings.modifiedItemForeground:     *ORANGE                                  # The foreground color for a the modified setting indicator.
+  settings.modifiedItemIndicator:      *ORANGE                                  # The color of the line that indicates a modified setting.
   settings.inactiveSelectedItemBorder:                                          # The color of the selected setting row border, when the settings list does not have focus.
   settings.dropdownBackground:         *BGDark                                  # Dropdown background.
   settings.dropdownForeground:         *FG                                      # Dropdown foreground.
@@ -358,6 +359,7 @@ colors:
 
   # Breadcrumbs
   breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items.
+  breadcrumb.background: *BGDark
   breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items.
   breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items.
   breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker.

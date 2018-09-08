@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.14.0
+
+### Minor
+
+- Add theme support to 2 new UI scopes added in VSCode `v1.27`
+
+
 ## 2.13.0
 
 ### Minor
