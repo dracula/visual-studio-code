@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.14.1
+
+### Patch
+
+- Fix the incorrect syntax highlighting of "pseudo-constants" in `tsx` files. #84
+
+
 ## 2.14.0
 
 ### Minor

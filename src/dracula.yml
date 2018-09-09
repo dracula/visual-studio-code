@@ -968,10 +968,11 @@ tokenColors:
   - name: Variables and object properties
     scope:
     - variable
-    - constant.other.key.perl    # Perl edge case
-    - support.variable.property  # Object properties
-    - variable.other.constant.js # Fix incorrect highlighting of pseudo-constants in js
-    - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
+    - constant.other.key.perl     # Perl edge case
+    - support.variable.property   # Object properties
+    - variable.other.constant.js  # Fix incorrect highlighting of pseudo-constants in js, jsx
+    - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
+    - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
     settings:
       foreground: *FG
 
