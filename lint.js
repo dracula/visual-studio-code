@@ -7,17 +7,11 @@ const util = require("util");
 const get = url =>
     new Promise((resolve, reject) => {
         https.get(url, res => {
-            res.setEncoding("utf8");
             let body = "";
-            res.on("data", data => {
-                body += data;
-            });
-            res.on("end", () => {
-                resolve(body);
-            });
-            res.on("error", err => {
-                reject(err);
-            });
+            res.setEncoding("utf8");
+            res.on("data", data => (body += data));
+            res.on("end", () => resolve(body));
+            res.on("error", reject);
         });
     });
 
@@ -31,16 +25,14 @@ const NOT_THEME_KEYS = [
     "editor.tokenColorCustomizations"
 ];
 
-const fileToLint = process.argv[2];
-
-if (!fileToLint) {
-    throw new Error("You need to specifiy the path of the theme to lint");
-}
-
 async function scrapThemeAvailableKeys() {
     const data = await get(THEME_COLOR_REFERENCE_URL);
 
     const matches = data.match(new RegExp("<code>.+?</code>", "g"));
+
+    if (!matches) {
+        throw new Error("Couldn't find any matches with <code>...</code>, maybe docs have chaged?")
+    }
 
     const availableKeys = [...matches]
         .map(key => key.replace("<code>", "").replace("</code>", ""))
@@ -53,16 +45,22 @@ async function scrapThemeAvailableKeys() {
     return availableKeys;
 }
 
-async function getTheme() {
+async function getTheme(fileToLint) {
     const fileContent = await readFile(fileToLint, "utf8");
     const theme = JSON.parse(fileContent);
     return theme;
 }
 
-async function main() {
+(async () => {
+    const fileToLint = process.argv[2];
+
+    if (!fileToLint) {
+        throw new Error("You need to specify the path of the theme to lint");
+    }
+
     const [availableKeys, theme] = await Promise.all([
         scrapThemeAvailableKeys(),
-        getTheme()
+        getTheme(fileToLint)
     ]);
 
     Object.keys(theme.colors).forEach(key => {
@@ -76,6 +74,4 @@ async function main() {
             console.warn(`Missing key "${key}" in theme`);
         }
     });
-}
-
-main().catch(err => console.error(err));
+})().catch(err => console.error(err));
