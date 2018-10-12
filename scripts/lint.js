@@ -1,8 +1,8 @@
 'use strict';
 
 const https = require('https');
-const fs = require('fs');
-const util = require('util');
+const loadThemes = require('./loadThemes');
+const path = require('path');
 
 const get = url =>
     new Promise((resolve, reject) => {
@@ -15,8 +15,6 @@ const get = url =>
         });
     });
 
-const readFile = util.promisify(fs.readFile);
-
 const THEME_COLOR_REFERENCE_URL =
     'https://code.visualstudio.com/docs/getstarted/theme-color-reference';
 
@@ -24,6 +22,8 @@ const NOT_THEME_KEYS = [
     'workbench.colorCustomizations',
     'editor.tokenColorCustomizations',
 ];
+
+const THEME_YAML_FILE = path.join(__dirname, '..', 'src', 'dracula.yml');
 
 async function scrapeThemeAvailableKeys() {
     const data = await get(THEME_COLOR_REFERENCE_URL);
@@ -47,32 +47,19 @@ async function scrapeThemeAvailableKeys() {
     return availableKeys;
 }
 
-async function getTheme(fileToLint) {
-    const fileContent = await readFile(fileToLint, 'utf8');
-    const theme = JSON.parse(fileContent);
-    return theme;
-}
-
 (async () => {
-    const fileToLint = process.argv[2];
-
-    if (!fileToLint) {
-        throw new Error('You need to specify the path of the theme to lint');
-    }
-
-    const [availableKeys, theme] = await Promise.all([
+    const [availableKeys, { standardTheme }] = await Promise.all([
         scrapeThemeAvailableKeys(),
-        getTheme(fileToLint),
+        loadThemes(THEME_YAML_FILE),
     ]);
-
-    Object.keys(theme.colors).forEach(key => {
+    Object.keys(standardTheme.colors).forEach(key => {
         if (!availableKeys.includes(key)) {
             console.warn(`Unsupported key "${key}", probably deprecated?`);
         }
     });
 
     availableKeys.forEach(key => {
-        if (!Object.keys(theme.colors).includes(key)) {
+        if (!Object.keys(standardTheme.colors).includes(key)) {
             console.warn(`Missing key "${key}" in theme`);
         }
     });
