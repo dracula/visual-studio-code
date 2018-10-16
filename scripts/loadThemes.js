@@ -20,19 +20,14 @@ function getSoftThemeYAML(fileContent, standardTheme) {
         ...standardTheme.dracula.brightOther,
     ];
 
-    const brightSoftColors = brightColors.map(brightColor => ({
-        brightColorRegex: new RegExp(brightColor, 'g'),
-        softColor: tinycolor(brightColor)
-            .desaturate(20)
-            .toHexString(),
-    }));
-
-    return brightSoftColors.reduce(
-        (fileContent, { brightColorRegex, softColor }) => {
-            return fileContent.replace(brightColorRegex, softColor);
-        },
-        fileContent
-    );
+    return fileContent.replace(/#[0-9A-F]{6}/g, color => {
+        if (brightColors.includes(color)) {
+            return tinycolor(color)
+                .desaturate(20)
+                .toHexString();
+        }
+        return color;
+    });
 }
 
 module.exports = loadTheme;
