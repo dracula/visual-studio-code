@@ -222,7 +222,7 @@ colors:
   editorWarning.border:                                                         # Border color of warning squigglies in the editor
 
   editorGutter.background:                                                      # Background color of the editor gutter
-  editorGutter.modifiedBackground: !alpha [ *CYAN, 80 ]                       # Editor gutter background color for lines that are modified
+  editorGutter.modifiedBackground: !alpha [ *CYAN, 80 ]                         # Editor gutter background color for lines that are modified
   editorGutter.addedBackground:    !alpha [ *GREEN,  80 ]                       # Editor gutter background color for lines that are added
   editorGutter.deletedBackground:  !alpha [ *RED,    80 ]                       # Editor gutter background color for lines that are deleted
 
@@ -323,7 +323,7 @@ colors:
   notification.warningForeground: *BG
 
   # Extensions
-  extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button).
+  extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button)
   extensionButton.prominentBackground: !alpha [ *GREEN, 90 ]                    # Extension view button background color
   extensionButton.prominentHoverBackground: !alpha [ *GREEN, 60 ]               # Extension view button background hover color
 
@@ -340,29 +340,30 @@ colors:
   walkThrough.embeddedEditorBackground: *BGDark                                 # Background color for the embedded editors on the Interactive Playground
 
   # Setting Editor
-  settings.headerForeground:           *FG                                      # The foreground color for a section header or active title.
-  settings.modifiedItemForeground:     *ORANGE                                  # The foreground color for a the modified setting indicator.
-  settings.modifiedItemIndicator:      *ORANGE                                  # The color of the line that indicates a modified setting.
-  settings.inactiveSelectedItemBorder:                                          # The color of the selected setting row border, when the settings list does not have focus.
-  settings.dropdownBackground:         *BGDark                                  # Dropdown background.
-  settings.dropdownForeground:         *FG                                      # Dropdown foreground.
-  settings.dropdownBorder:             *BGDarker                                # Dropdown border.
-  settings.checkboxBackground:         *BGDark                                  # Checkbox background.
-  settings.checkboxForeground:         *FG                                      # Checkbox foreground.
-  settings.checkboxBorder:             *BGDarker                                # Checkbox border.
-  settings.textInputBackground:        *BGDark                                  # Text input box background.
-  settings.textInputForeground:        *FG                                      # Text input box foreground.
-  settings.textInputBorder:            *BGDarker                                # Text input box border.
-  settings.numberInputBackground:      *BGDark                                  # Number input box background.
-  settings.numberInputForeground:      *FG                                      # Number input box foreground.
-  settings.numberInputBorder:          *BGDarker                                # Number input box border.
+  settings.headerForeground:           *FG                                      # The foreground color for a section header or active title
+  settings.modifiedItemForeground:     *ORANGE                                  # The foreground color for a the modified setting indicator
+  settings.modifiedItemIndicator:      *ORANGE                                  # The color of the line that indicates a modified setting
+  settings.inactiveSelectedItemBorder:                                          # The color of the selected setting row border, when the settings list does not have focus
+  settings.dropdownBackground:         *BGDark                                  # Dropdown background
+  settings.dropdownForeground:         *FG                                      # Dropdown foreground
+  settings.dropdownBorder:             *BGDarker                                # Dropdown border
+  settings.checkboxBackground:         *BGDark                                  # Checkbox background
+  settings.checkboxForeground:         *FG                                      # Checkbox foreground
+  settings.checkboxBorder:             *BGDarker                                # Checkbox border
+  settings.textInputBackground:        *BGDark                                  # Text input box background
+  settings.textInputForeground:        *FG                                      # Text input box foreground
+  settings.textInputBorder:            *BGDarker                                # Text input box border
+  settings.numberInputBackground:      *BGDark                                  # Number input box background
+  settings.numberInputForeground:      *FG                                      # Number input box foreground
+  settings.numberInputBorder:          *BGDarker                                # Number input box border
 
   # Breadcrumbs
-  breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items.
+  breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items
   breadcrumb.background: *BGDark
-  breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items.
-  breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items.
-  breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker.
+  breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items
+  breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items
+  breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker
+
 
 # Syntaxes
 tokenColors:
