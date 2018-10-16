@@ -16,12 +16,12 @@ function toJSON(theme) {
         await fsp.mkdir(THEME_DIR);
     }
 
-    const { standardTheme, sotfTheme } = await loadThemes(THEME_YAML_FILE);
+    const { standardTheme, softTheme } = await loadThemes(THEME_YAML_FILE);
     const standardThemePath = path.join(THEME_DIR, 'dracula.json');
     const softThemePath = path.join(THEME_DIR, 'dracula-soft.json');
 
     await Promise.all([
         fsp.writeFile(standardThemePath, toJSON(standardTheme)),
-        fsp.writeFile(softThemePath, toJSON(sotfTheme)),
+        fsp.writeFile(softThemePath, toJSON(softTheme)),
     ]);
 })().catch(err => console.error(err))
