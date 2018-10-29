@@ -1,8 +1,8 @@
 'use strict';
 
 const https = require('https');
-const loadThemes = require('./loadThemes');
 const path = require('path');
+const loadThemes = require('./loadThemes');
 
 const get = url =>
     new Promise((resolve, reject) => {

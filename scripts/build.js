@@ -1,7 +1,7 @@
 'use strict';
 
-const fsp = require('./fsp');
 const path = require('path');
+const fsp = require('./fsp');
 const loadThemes = require('./loadThemes');
 
 const THEME_DIR = path.join(__dirname, '..', 'theme');
@@ -24,4 +24,4 @@ function toJSON(theme) {
         fsp.writeFile(standardThemePath, toJSON(standardTheme)),
         fsp.writeFile(softThemePath, toJSON(softTheme)),
     ]);
-})().catch(err => console.error(err))
+})();

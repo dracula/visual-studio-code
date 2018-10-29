@@ -1,7 +1,7 @@
 'use strict';
 
-const fsp = require('./fsp');
 const tinycolor = require('tinycolor2');
+const fsp = require('./fsp');
 const { loadYAML } = require('./yaml');
 
 async function loadTheme(yamlFilePath) {
