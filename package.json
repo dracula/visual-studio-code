@@ -7,10 +7,10 @@
 	"publisher": "dracula-theme",
 	"license": "MIT",
 	"scripts": {
-		"attach": "./bootstrap.sh attach",
+		"attach": "node ./scripts/bootstrap.js attach",
 		"build": "node ./scripts/build.js",
 		"lint": "node ./scripts/lint.js",
-		"eject": "./bootstrap.sh eject",
+		"eject": "node ./scripts/bootstrap.js eject",
 		"package": "vsce package -o ./bin/dracula.vsix",
 		"vscode:prepublish": "npm run build"
 	},
