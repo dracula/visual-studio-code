@@ -11,6 +11,9 @@ const bootstrapedDraculaPath = path.join(extensionspath, 'dracula');
 
 const commands = {
     attach() {
+        if (fs.existsSync(disabledPath)) {
+            return;
+        }
         const draculaDir = fs
             .readdirSync(extensionspath)
             .find(extension => extension.match(/^dracula/));
