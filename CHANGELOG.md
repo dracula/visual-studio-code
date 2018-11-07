@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.15.0
+
+### Minor
+
+- Themeing for the following areas added/modified:
+    - `sideBarSectionHeader`
+    - `snippetTabStop`, `snippetFinalTabStop`
+
+### Patch
+
+- Fix incorrect highlighting for variable names in JavaScript (and friends) in the body of default-exported classes/functions/etc. (#88, #82)
+
 ## 2.14.1
 
 ### Patch

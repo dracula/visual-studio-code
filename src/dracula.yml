@@ -98,10 +98,13 @@ colors:
   input.border: *BGDarker                                                       # Input box border
   input.placeholderForeground: *COMMENT                                         # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE                                             # Border color of activated options in input fields
+  inputValidation.infoForeground:                                               # Input validation foreground color for information severity
   inputValidation.infoBackground:                                               # Input validation background color for information severity
   inputValidation.infoBorder: *PINK                                             # Input validation border color for information severity
+  inputValidation.warningForeground:                                            # Input validation foreground color for warning severity
   inputValidation.warningBackground:                                            # Input validation background color for information warning
   inputValidation.warningBorder: *ORANGE                                        # Input validation border color for warning severity
+  inputValidation.errorForeground:                                              # Input validation foreground color for error severity
   inputValidation.errorBackground:                                              # Input validation background color for error severity
   inputValidation.errorBorder: *RED                                             # Input validation border color for error severity
 
@@ -134,6 +137,7 @@ colors:
 
   # Activity Bar
   activityBar.background: *BGLight                                              # Activity Bar background color
+  activityBar.inactiveForeground: *COMMENT                                      # Activity bar item foreground color when it is inactive
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar
@@ -145,8 +149,9 @@ colors:
   sideBar.foreground:                                                           # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
   sideBar.border:                                                               # Side Bar border color on the side separating the editor
   sideBarTitle.foreground: *FG                                                  # Side Bar title foreground color
-  sideBarSectionHeader.background:                                              # Side Bar section header background color
+  sideBarSectionHeader.background: *BG                                          # Side Bar section header background color
   sideBarSectionHeader.foreground:                                              # Side Bar section header foreground color
+  sideBarSectionHeader.border: *BGDarker                                        # Side bar section header border color
 
   # Editor Group & Tabs
   editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
@@ -189,6 +194,11 @@ colors:
 
   editorLink.activeForeground: *CYAN                                            # Color of active links
   editor.rangeHighlightBackground: !alpha [ *PURPLE, 15 ]                       # Background color of highlighted ranges, like by Quick Open and Find features
+
+  editor.snippetTabstopHighlightBackground: *BG                                 # Highlight background color of a snippet tabstop
+  editor.snippetTabstopHighlightBorder: *COMMENT                                # Highlight border color of a snippet tabstop
+  editor.snippetFinalTabstopHighlightBackground: *BG                            # Highlight background color of the final tabstop of a snippet
+  editor.snippetFinalTabstopHighlightBorder: *GREEN                             # Highlight border color of the final tabstop of a snippet
 
   editorWhitespace.foreground: *NonText                                         # Color of whitespace characters in the editor
   editorIndentGuide.background: *NonText                                        # Color of the editor indentation guides
@@ -364,6 +374,8 @@ colors:
   breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items
   breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker
 
+  # Misc
+  menu.separatorBackground:                                                     # Color of a separator menu item in menus
 
 # Syntaxes
 tokenColors:
@@ -980,7 +992,6 @@ tokenColors:
   - name: Destructuring / aliasing reference name (LHS)
     scope:
     - meta.import variable.other.readwrite                          # Module import aliasing (real name)
-    - meta.export variable.other.readwrite                          # Module import aliasing (real name)
     - meta.object-binding-pattern-variable variable.object.property # Object destructuring property
     - meta.variable.assignment.destructured.object.coffee variable  # Object destructuring property (coffeescript)
     settings:
