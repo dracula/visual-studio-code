@@ -377,8 +377,8 @@ colors:
   # Misc
   menu.separatorBackground:                                                     # Color of a separator menu item in menus
 
-  listFilterWidget.background: *BG                                              # Background color of the type filter widget in lists and trees.
-  listFilterWidget.outline: *BGDarker                                           # Outline color of the type filter widget in lists and trees.
+  listFilterWidget.background: *BGLight                                              # Background color of the type filter widget in lists and trees.
+  listFilterWidget.outline: *BGLighter                                           # Outline color of the type filter widget in lists and trees.
   listFilterWidget.noMatchesOutline: *RED                                       # Outline color of the type filter widget in lists and trees, when there are no matches.
 
 # Syntaxes
