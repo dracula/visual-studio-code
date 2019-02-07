@@ -16,7 +16,7 @@ const get = url =>
     });
 
 const THEME_COLOR_REFERENCE_URL =
-    'https://code.visualstudio.com/docs/getstarted/theme-color-reference';
+    'https://code.visualstudio.com/api/references/theme-color';
 
 const NOT_THEME_KEYS = [
     'workbench.colorCustomizations',
