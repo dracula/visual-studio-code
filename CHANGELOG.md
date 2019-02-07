@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.16.0
+
+### Minor
+
+- Implement colors for new `List Filter Widget` scopes. (#95).
+
 ## 2.15.0
 
 ### Minor
