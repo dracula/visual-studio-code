@@ -11,7 +11,7 @@ function toJSON(theme) {
     return JSON.stringify(theme, null, 4);
 }
 
-(async () => {
+async function build() {
     if (!(await fsp.exists(THEME_DIR))) {
         await fsp.mkdir(THEME_DIR);
     }
@@ -24,4 +24,10 @@ function toJSON(theme) {
         fsp.writeFile(standardThemePath, toJSON(standardTheme)),
         fsp.writeFile(softThemePath, toJSON(softTheme)),
     ]);
-})();
+}
+
+module.exports = {
+    build,
+};
+
+build();
