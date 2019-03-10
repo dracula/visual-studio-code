@@ -42,7 +42,9 @@ dracula:
     - &NonText       '#424450'
     - &WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#44475A70'
+    - &ICON_PURPLE   '#949ED7'
     # UI Variants
+    - &EXT_PINK      '#DD5EA7'
     - &BGLighter     '#424450'
     - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
     - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
@@ -52,7 +54,7 @@ dracula:
 colors:
 
   # Integrated Terminal Colors
-  terminal.background: *BG
+  terminal.background: *COLOR0
   terminal.foreground: *FG
   terminal.ansiBrightBlack: *COLOR8
   terminal.ansiBrightRed: *COLOR9
@@ -136,8 +138,8 @@ colors:
   list.focusForeground:                                                         # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
 
   # Activity Bar
-  activityBar.background: *BGLight                                              # Activity Bar background color
-  activityBar.inactiveForeground: *COMMENT                                      # Activity bar item foreground color when it is inactive
+  activityBar.background: *COLOR0                                              # Activity Bar background color
+  activityBar.inactiveForeground: *ICON_PURPLE                                     # Activity bar item foreground color when it is inactive
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar
@@ -294,7 +296,7 @@ colors:
   editorOverviewRuler.incomingContentForeground: *PURPLE                        # Incoming overview ruler foreground for inline merge conflicts
 
   # Panel Colors
-  panel.background: *BG                                                         # Panel background color
+  panel.background: *COLOR0                                                         # Panel background color
   panel.border: *PURPLE                                                         # Panel border color on the top separating to the editor
   panelTitle.activeBorder: *PINK                                                # Border color for the active panel title
   panelTitle.activeForeground: *FG                                              # Title color for the active panel
@@ -334,8 +336,8 @@ colors:
 
   # Extensions
   extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button)
-  extensionButton.prominentBackground: !alpha [ *GREEN, 90 ]                    # Extension view button background color
-  extensionButton.prominentHoverBackground: !alpha [ *GREEN, 60 ]               # Extension view button background hover color
+  extensionButton.prominentBackground: *EXT_PINK                    # Extension view button background color
+  extensionButton.prominentHoverBackground: *COMMENT               # Extension view button background hover color
 
   # Quick Picker
   pickerGroup.border: *PURPLE                                                   # Quick picker (Quick Open) color for grouping borders
