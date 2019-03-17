@@ -6,6 +6,10 @@
 
 - Adjust JSDoc-style comments to align with specification.
 
+### Patch
+
+- Fix python docstring highlighting.
+
 ## 2.16.0
 
 ### Minor
