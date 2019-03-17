@@ -978,6 +978,15 @@ tokenColors:
     settings:
       foreground: *TEMP_PROPERTY_QUOTES
 
+  - name: Docstrings
+    scope:
+    - string.quoted.docstring.multi
+    - string.quoted.docstring.multi.python punctuation.definition.string.begin
+    - string.quoted.docstring.multi.python punctuation.definition.string.end
+    - string.quoted.docstring.multi.python constant.character.escape
+    settings:
+      foreground: *COMMENT
+
 # =============================================================================
 # Variables
 # =============================================================================
