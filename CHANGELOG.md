@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.17.0
+
+### Minor
+
+- Adjust JSDoc-style comments to align with specification.
+
 ## 2.16.0
 
 ### Minor
