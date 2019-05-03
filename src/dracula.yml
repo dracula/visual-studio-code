@@ -311,6 +311,8 @@ colors:
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.prominentHoverBackground: *ORANGE                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
+  statusBarItem.remoteForeground: *FG
+  statusBarItem.remoteBackground: *PINK
   statusBar.border:
 
   # Title Bar Colors (MacOS Only)
