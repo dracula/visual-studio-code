@@ -59,6 +59,11 @@
 				"label": "Dracula Soft",
 				"uiTheme": "vs-dark",
 				"path": "./theme/dracula-soft.json"
+			},
+			{
+				"label": "Dracula Bold",
+				"uiTheme": "vs-dark",
+				"path": "./theme/dracula-bold.json"
 			}
 		]
 	},

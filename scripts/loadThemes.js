@@ -23,7 +23,9 @@ async function loadTheme(yamlFilePath) {
     const softThemeYAML = getSoftThemeYAML(standardThemeYAML, standardTheme);
     const softTheme = await loadYAML(softThemeYAML);
 
-    return { standardTheme, softTheme };
+    const boldTheme = await getBoldThemeYAML(standardThemeYAML, standardTheme);
+
+    return { standardTheme, softTheme, boldTheme };
 }
 
 function getSoftThemeYAML(fileContent, standardTheme) {
@@ -40,6 +42,31 @@ function getSoftThemeYAML(fileContent, standardTheme) {
         }
         return color;
     });
+}
+
+async function getBoldThemeYAML(fileContent, standardTheme) {
+    const fileSoftContent = getSoftThemeYAML(fileContent, standardTheme);
+    const boldTheme = await loadYAML(fileSoftContent);
+    const syntaxes = boldTheme.tokenColors;
+    const scopes = [
+        "Function names",
+        "Decorators",
+        "Decorator Objects",
+    ];
+
+    for (let i in syntaxes) {
+        for (let j in scopes) {
+            if (syntaxes[i].name == scopes[j]) {
+                if (syntaxes[i].settings.fontStyle) {
+                    syntaxes[i].settings.fontStyle += " bold";
+                } else {
+                    syntaxes[i].settings.fontStyle = "bold";
+                }
+            }
+        }
+    }
+
+    return boldTheme;
 }
 
 module.exports = loadTheme;
