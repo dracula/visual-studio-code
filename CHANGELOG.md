@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.18.1
+
+### Patch
+
+- Fix class keyword highlighting in babel syntax. #118
+
+Thanks @black-black-cat for your contribution!
+
 ## 2.18.0
 
 ### Minor
