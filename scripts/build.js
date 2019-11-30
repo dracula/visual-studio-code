@@ -1,33 +1,28 @@
-'use strict';
-
+const fs = require('fs');
 const path = require('path');
-const fsp = require('./fsp');
-const loadThemes = require('./loadThemes');
+const generate = require('./generate');
 
 const THEME_DIR = path.join(__dirname, '..', 'theme');
-const THEME_YAML_FILE = path.join(__dirname, '..', 'src', 'dracula.yml');
 
-function toJSON(theme) {
-    return JSON.stringify(theme, null, 4);
+if (!fs.existsSync(THEME_DIR)) {
+    fs.mkdirSync(THEME_DIR);
 }
 
-async function build() {
-    if (!(await fsp.exists(THEME_DIR))) {
-        await fsp.mkdir(THEME_DIR);
-    }
+module.exports = async () => {
+    const { base, soft } = await generate();
 
-    const { standardTheme, softTheme } = await loadThemes(THEME_YAML_FILE);
-    const standardThemePath = path.join(THEME_DIR, 'dracula.json');
-    const softThemePath = path.join(THEME_DIR, 'dracula-soft.json');
-
-    await Promise.all([
-        fsp.writeFile(standardThemePath, toJSON(standardTheme)),
-        fsp.writeFile(softThemePath, toJSON(softTheme)),
+    return Promise.all([
+        fs.promises.writeFile(
+            path.join(THEME_DIR, 'dracula.json'),
+            JSON.stringify(base, null, 4)
+        ),
+        fs.promises.writeFile(
+            path.join(THEME_DIR, 'dracula-soft.json'),
+            JSON.stringify(soft, null, 4)
+        ),
     ]);
-}
-
-module.exports = {
-    build,
 };
 
-build();
+if (require.main === module) {
+    module.exports();
+}

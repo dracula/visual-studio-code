@@ -1,4 +1,5 @@
 root = true
+end_of_line = lf
 
 [*.yml]
 indent_style = space

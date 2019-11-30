@@ -7,7 +7,6 @@
 	"publisher": "dracula-theme",
 	"license": "MIT",
 	"scripts": {
-		"dev": "node ./scripts/dev.js",
 		"build": "node ./scripts/build.js",
 		"lint": "node ./scripts/lint.js",
 		"package": "vsce package -o ./bin/dracula.vsix",
@@ -64,7 +63,7 @@
 	},
 	"devDependencies": {
 		"js-yaml": "^3.13.1",
-		"prettier": "^1.17.0",
+		"prettier": "^1.19.1",
 		"tinycolor2": "^1.4.1"
 	},
 	"__metadata": {

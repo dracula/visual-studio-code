@@ -1,4 +1,4 @@
-node_modules
-theme
-src/tests
-bin
+node_modules/
+/theme/
+/tests/
+bin/
