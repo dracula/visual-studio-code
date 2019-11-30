@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.19.0
+
+### Minor
+
+- Add activitybar colors. #121
+
+### Patch
+
+- Fix cursor color in `ipynb` files. #124
+
 ## 2.18.1
 
 ### Patch
