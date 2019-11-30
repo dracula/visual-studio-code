@@ -141,6 +141,8 @@ colors:
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar
+  activityBar.activeBorder: !alpha [*PINK, 80]                                  # Activity Bar indicator color
+  activityBar.activeBackground: !alpha [*PURPLE, 10]                           # Activity Bar indicator background color
   activityBarBadge.background: *PINK                                            # Activity notification badge background color
   activityBarBadge.foreground: *FG                                              # Activity notification badge foreground color
 
