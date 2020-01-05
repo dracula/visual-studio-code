@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.19.2
+
+### Patch
+
+- noop update to fix screenshot in readme
+
+## 2.19.1
+
+### Patch
+
+- noop update to fix screenshot in readme
+
 ## 2.19.0
 
 ### Minor
