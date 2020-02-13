@@ -1,16 +1,22 @@
 # Changelog
 
+## 2.20.0
+
+### Minor
+
+- support new `editor.foldBackground` highlight group.
+
 ## 2.19.2
 
 ### Patch
 
-- noop update to fix screenshot in readme
+- noop update to fix screenshot in readme.
 
 ## 2.19.1
 
 ### Patch
 
-- noop update to fix screenshot in readme
+- noop update to fix screenshot in readme.
 
 ## 2.19.0
 
