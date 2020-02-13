@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1 
+      - run: npm install
       - run: npm run package
       - uses: actions/create-release@v1
         id: create_release
