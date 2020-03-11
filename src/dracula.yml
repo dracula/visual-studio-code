@@ -39,7 +39,7 @@ dracula:
     - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
     - &LineHighlight '#44475A75'
-    - &NonText       '#424450'
+    - &NonText       '#FFFFFF1A'
     - &WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
@@ -203,7 +203,7 @@ colors:
   editor.snippetFinalTabstopHighlightBackground: *BG                            # Highlight background color of the final tabstop of a snippet
   editor.snippetFinalTabstopHighlightBorder: *GREEN                             # Highlight border color of the final tabstop of a snippet
 
-  editorWhitespace.foreground: !alpha [ *WHITE, 20 ]                            # Color of whitespace characters in the editor
+  editorWhitespace.foreground: *NonText                                         # Color of whitespace characters in the editor
   editorIndentGuide.background: *NonText                                        # Color of the editor indentation guides
   editorIndentGuide.activeBackground: !alpha [ *WHITE, 45]                      # Color of the active indentation guide
   editorRuler.foreground: *NonText                                              # Color of the editor rulers
