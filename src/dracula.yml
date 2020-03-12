@@ -374,7 +374,7 @@ colors:
 
   # Breadcrumbs
   breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items
-  breadcrumb.background: *BGDark
+  breadcrumb.background: *BG
   breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items
   breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items
   breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker
