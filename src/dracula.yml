@@ -165,7 +165,8 @@ colors:
   tab.activeBackground: *BG                                                     # Active Tab background color
   tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
   tab.border: *BGDarker                                                         # Border to separate Tabs from each other
-  tab.activeBorder: !alpha [*PINK, 80]                                          # A border drawn to the bottom of the active tab
+  tab.activeBorderTop: !alpha [*PINK, 80]                                       # A border drawn to the top of the active tab
+  tab.activeBorder:                                                             # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
   tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
   tab.inactiveForeground: *COMMENT                                              # Inactive Tab foreground color in an active group
