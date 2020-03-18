@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.21.0
+
+### Minor
+
+- make breadcrumb color match active tab color (#138)
+- improve rendered whitespace color. (#135)
+
 ## 2.20.0
 
 ### Minor
