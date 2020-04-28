@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.22.0
+
+### Minor
+
+- enable semantic highlighting.
+- update screenshot.
+
+**NOTE:** This is probably going to be somewhat buggy in certain situations. We can address those bugs as they come up. Feel free to open issues for these.
+
+Keep in mind, the source of truth for "correctness" should come from https://spec.draculatheme.com
+
 ## 2.21.0
 
 ### Minor
