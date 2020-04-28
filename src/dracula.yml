@@ -3,6 +3,7 @@ author: Zeno Rocha
 maintainers:
   - Derek P Sifford <dereksifford@gmail.com>
 semanticClass: theme.dracula
+semanticHighlighting: true
 dracula:
   base:
     - &BG        '#282A36'
