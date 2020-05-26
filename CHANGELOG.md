@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.22.1
+
+### Patch
+
+- Fix small bug that caused hover color to be black for directories in the terminal (#156).
+
 ## 2.22.0
 
 ### Minor
