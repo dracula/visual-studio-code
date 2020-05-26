@@ -192,7 +192,7 @@ colors:
   editor.findMatchHighlightBackground: !alpha [ *WHITE, 40 ]                    # Color of the other search matches
   editor.findRangeHighlightBackground: *LineHighlight                           # Color the range limiting the search
 
-  editor.hoverHighlightBackground: *BGDarker                                    # Highlight below the word for which a hover is shown
+  editor.hoverHighlightBackground: !alpha [*CYAN, 50]                           # Highlight below the word for which a hover is shown
 
   editor.lineHighlightBackground:                                               # Background color for the highlight of line at the cursor position
   editor.lineHighlightBorder: *SELECTION                                        # Background color for the border around the line at the cursor position
