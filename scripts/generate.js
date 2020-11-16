@@ -19,7 +19,7 @@ const tinycolor = require('tinycolor2');
  */
 
 /**
- * @typedef {(yamlContent: string, yamlObj: Theme) => Theme} ThemeTransform
+ * @typedef {(yamlObj: Theme) => Theme} ThemeTransform
  */
 
 const withAlphaType = new Type('!alpha', {
@@ -34,22 +34,18 @@ const schema = Schema.create([withAlphaType]);
  * Soft variant transform.
  * @type {ThemeTransform}
  */
-const transformSoft = (yamlContent, yamlObj) => {
-    const brightColors = [
-        ...yamlObj.dracula.ansi,
-        ...yamlObj.dracula.brightOther,
-    ];
-    return load(
-        yamlContent.replace(/#[0-9A-F]{6}/g, color => {
-            if (brightColors.includes(color)) {
-                return tinycolor(color)
-                    .desaturate(20)
-                    .toHexString();
-            }
-            return color;
-        }),
-        { schema }
-    );
+const transformSoft = theme => {
+    /** @type {Theme} */
+    const soft = JSON.parse(JSON.stringify(theme));
+    const brightColors = [...soft.dracula.ansi, ...soft.dracula.brightOther];
+    for (const key of Object.keys(soft.colors)) {
+        if (brightColors.includes(soft.colors[key])) {
+            soft.colors[key] = tinycolor(soft.colors[key])
+                .desaturate(20)
+                .toHexString();
+        }
+    }
+    return soft;
 };
 
 module.exports = async () => {
@@ -70,6 +66,6 @@ module.exports = async () => {
 
     return {
         base,
-        soft: transformSoft(yamlFile, base),
+        soft: transformSoft(base),
     };
 };
