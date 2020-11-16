@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.22.2
+
+### Patch
+
+- fix: address issue of black cursor in ipynb file for soft variant #124
+- chore: add `$schema` property to theme's json output
+
 ## 2.22.1
 
 ### Patch
