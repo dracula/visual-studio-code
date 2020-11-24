@@ -46,7 +46,7 @@ const transformSoft = theme => {
         }
     }
     soft.tokenColors = soft.tokenColors.map((value) => {
-        if (brightColors.includes(value.settings?.foreground)) {
+        if (brightColors.includes(value.settings.foreground)) {
             value.settings.foreground = tinycolor(value.settings.foreground).desaturate(20).toHexString();
         }
         return value;

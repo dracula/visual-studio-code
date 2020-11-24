@@ -5,6 +5,7 @@
 ### Fix
 
 - Fix another small issue impacting the build of the soft theme. #165
+
 ## 2.22.2
 
 ### Patch
