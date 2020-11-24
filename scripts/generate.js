@@ -45,6 +45,12 @@ const transformSoft = theme => {
                 .toHexString();
         }
     }
+    soft.tokenColors = soft.tokenColors.map((value) => {
+        if (brightColors.includes(value.settings?.foreground)) {
+            value.settings.foreground = tinycolor(value.settings.foreground).desaturate(20).toHexString();
+        }
+        return value;
+    })
     return soft;
 };
 
