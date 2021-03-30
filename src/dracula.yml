@@ -884,6 +884,7 @@ tokenColors:
   - name: Types
     scope:
     - entity.name.type
+    - entity.name.namespace
     - keyword.primitive-datatypes.swift
     - keyword.type.cs
     - meta.protocol-list.objc
@@ -902,6 +903,7 @@ tokenColors:
     - storage.type.php
     - storage.type.haskell
     - storage.type.ocaml
+    - variable.annotation
     settings:
       fontStyle: italic
       foreground: *CYAN
