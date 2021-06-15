@@ -1,6 +1,6 @@
 const { readFile } = require('fs').promises;
 const { join } = require('path');
-const { Type, Schema, load } = require('js-yaml');
+const { Type, DEFAULT_SCHEMA, load } = require('js-yaml');
 const tinycolor = require('tinycolor2');
 
 /**
@@ -28,7 +28,7 @@ const withAlphaType = new Type('!alpha', {
     represent: ([hexRGB, alpha]) => hexRGB + alpha,
 });
 
-const schema = Schema.create([withAlphaType]);
+const schema = DEFAULT_SCHEMA.extend([withAlphaType]);
 
 /**
  * Soft variant transform.
