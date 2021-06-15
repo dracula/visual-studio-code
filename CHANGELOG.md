@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.22.4
+
+### Fix
+
+- Address broken style property in html filetypes. #177
+
 ## 2.22.3
 
 ### Fix

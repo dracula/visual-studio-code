@@ -408,10 +408,6 @@ tokenColors:
     - header
     settings:
       foreground: *PURPLE
-  - scope:
-    - source
-    settings:
-      foreground: *FG
 
   # Diffs
   # ======
