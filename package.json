@@ -63,10 +63,10 @@
 		]
 	},
 	"devDependencies": {
-		"js-yaml": "^3.14.0",
-		"prettier": "^2.2.1",
+		"js-yaml": "^4.1.0",
+		"prettier": "^2.3.1",
 		"tinycolor2": "^1.4.2",
-		"vsce": "^1.85.0"
+		"vsce": "^1.93.0"
 	},
 	"__metadata": {
 		"id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
