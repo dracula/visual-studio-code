@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.23.0
+
+### Feat
+
+- Add secondary button styles. (closes #176)
+
+### Fix
+
+- Remove preset contrast borders. (closes #120, #147)
+- Improve contrast of "open a remote window" button. (closes #146)
+
 ## 2.22.4
 
 ### Fix
