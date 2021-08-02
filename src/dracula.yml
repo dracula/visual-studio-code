@@ -88,6 +88,10 @@ colors:
   button.background: *SELECTION                                                 # Button background color
   button.foreground: *FG                                                        # Button foreground color
   button.hoverBackground:                                                       # Button background color when hovering
+  button.secondaryBackground: *BG                                               # Secondary button background color.
+  button.secondaryForeground: *FG                                               # Secondary button foreground color.
+  button.secondaryHoverBackground: *BGLight                                     # Secondary button background color when hovering.
+
 
   # Dropdown Control
   dropdown.background: *BGLight                                                 # Dropdown background
