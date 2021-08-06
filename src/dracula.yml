@@ -682,7 +682,6 @@ tokenColors:
   - name: Function names
     scope:
     - entity.name.function
-    - meta.function-call.generic
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.23.1
+
+### Fix
+
+- [python]: Only apply function highlighting for functions that are actually defined. (#186)
+
 ## 2.23.0
 
 ### Feat
