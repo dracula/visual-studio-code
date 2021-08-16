@@ -74,7 +74,7 @@ colors:
   terminal.ansiWhite: *COLOR7
 
   # Contrast Colors
-  contrastBorder: *BGDarker                                                     # An extra border around elements to separate them from others for greater contrast
+  contrastBorder:                                                               # An extra border around elements to separate them from others for greater contrast
   contrastActiveBorder:                                                         # An extra border around active elements to separate them from others for greater contrast
 
   # Base Colors
@@ -87,7 +87,12 @@ colors:
   # Button Control
   button.background: *SELECTION                                                 # Button background color
   button.foreground: *FG                                                        # Button foreground color
+  button.border:                                                                # Button border color
   button.hoverBackground:                                                       # Button background color when hovering
+  button.secondaryBackground: *BG                                               # Secondary button background color.
+  button.secondaryForeground: *FG                                               # Secondary button foreground color.
+  button.secondaryHoverBackground: *BGLight                                     # Secondary button background color when hovering.
+
 
   # Dropdown Control
   dropdown.background: *BGLight                                                 # Dropdown background
@@ -317,7 +322,7 @@ colors:
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.prominentHoverBackground: *ORANGE                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
-  statusBarItem.remoteForeground: *FG                                           # Background color for the remote indicator on the status bar
+  statusBarItem.remoteForeground: *BG                                           # Background color for the remote indicator on the status bar
   statusBarItem.remoteBackground: *PURPLE                                       # Foreground color for the remote indicator on the status bar
   statusBar.border:
 
@@ -384,9 +389,8 @@ colors:
 
   # Misc
   menu.separatorBackground:                                                     # Color of a separator menu item in menus
-
-  listFilterWidget.background: *BGLight                                              # Background color of the type filter widget in lists and trees.
-  listFilterWidget.outline: *BGLighter                                           # Outline color of the type filter widget in lists and trees.
+  listFilterWidget.background: *BGLight                                         # Background color of the type filter widget in lists and trees.
+  listFilterWidget.outline: *BGLighter                                          # Outline color of the type filter widget in lists and trees.
   listFilterWidget.noMatchesOutline: *RED                                       # Outline color of the type filter widget in lists and trees, when there are no matches.
 
 # Syntaxes
@@ -408,10 +412,6 @@ tokenColors:
     - header
     settings:
       foreground: *PURPLE
-  - scope:
-    - source
-    settings:
-      foreground: *FG
 
   # Diffs
   # ======
@@ -682,7 +682,6 @@ tokenColors:
   - name: Function names
     scope:
     - entity.name.function
-    - meta.function-call.generic
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static

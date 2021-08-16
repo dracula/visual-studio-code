@@ -1,5 +1,28 @@
 # Changelog
 
+## 2.23.1
+
+### Fix
+
+- [python]: Only apply function highlighting for functions that are actually defined. (#186)
+
+## 2.23.0
+
+### Feat
+
+- Add secondary button styles. (closes #176)
+
+### Fix
+
+- Remove preset contrast borders. (closes #120, #147)
+- Improve contrast of "open a remote window" button. (closes #146)
+
+## 2.22.4
+
+### Fix
+
+- Address broken style property in html filetypes. #177
+
 ## 2.22.3
 
 ### Fix
