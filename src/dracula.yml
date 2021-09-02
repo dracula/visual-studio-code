@@ -224,6 +224,14 @@ colors:
   editorBracketMatch.background:                                                # Background color behind matching brackets
   editorBracketMatch.border:                                                    # Color for matching brackets boxes
 
+  editorBracketHighlight.foreground1: *FG
+  editorBracketHighlight.foreground2: *PINK
+  editorBracketHighlight.foreground3: *CYAN
+  editorBracketHighlight.foreground4: *GREEN
+  editorBracketHighlight.foreground5: *PURPLE
+  editorBracketHighlight.foreground6: *ORANGE
+  editorBracketHighlight.unexpectedBracket.foreground: *RED
+
   editorOverviewRuler.border: *BGDarker                                         # Color of the overview ruler border
   editorOverviewRuler.findMatchForeground:
   editorOverviewRuler.rangeHighlightForeground:
