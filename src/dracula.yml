@@ -340,19 +340,6 @@ colors:
   titleBar.inactiveBackground: *BGDarker                                        # Title Bar background when the window is inactive
   titleBar.inactiveForeground: *COMMENT                                         # Title Bar foreground when the window is inactive
 
-  # Notification Dialog Colors
-  notification.background: *BG                                                  # Notifications background color
-  notification.foreground: *FG                                                  # Notifications foreground color
-  notification.buttonBackground: *SELECTION
-  notification.buttonForeground: *FG
-  notification.buttonHoverBackground: *LineHighlight
-  notification.errorBackground: *RED
-  notification.errorForeground: *FG
-  notification.infoBackground: *CYAN
-  notification.infoForeground: *BG
-  notification.warningBackground: *ORANGE
-  notification.warningForeground: *BG
-
   # Extensions
   extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button)
   extensionButton.prominentBackground: !alpha [ *GREEN, 90 ]                    # Extension view button background color
@@ -372,7 +359,6 @@ colors:
 
   # Setting Editor
   settings.headerForeground:           *FG                                      # The foreground color for a section header or active title
-  settings.modifiedItemForeground:     *ORANGE                                  # The foreground color for a the modified setting indicator
   settings.modifiedItemIndicator:      *ORANGE                                  # The color of the line that indicates a modified setting
   settings.inactiveSelectedItemBorder:                                          # The color of the selected setting row border, when the settings list does not have focus
   settings.dropdownBackground:         *BGDark                                  # Dropdown background
