@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.24.1
+
+### Patch
+
+- Fix incorrect colors in `log` syntax. (#200)
+
 ## 2.24.0
 
 ### Minor
