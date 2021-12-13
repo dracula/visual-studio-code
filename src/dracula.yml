@@ -1118,3 +1118,17 @@ tokenColors:
       - meta.preprocessor.haskell
     settings:
       foreground: *COMMENT
+
+  - name: Log file error
+    scope:
+      - log.error
+    settings:
+      foreground: *RED
+      fontStyle: bold
+
+  - name: Log file warning
+    scope:
+      - log.warning
+    settings:
+      foreground: *YELLOW
+      fontStyle: bold
