@@ -811,6 +811,7 @@ tokenColors:
     - punctuation.definition.type.end
     - punctuation.section.scope.begin
     - punctuation.section.scope.end
+    - punctuation.terminator.expression.php
     - storage.type.generic.java
     - string.template meta.brace
     - string.template punctuation.accessor
