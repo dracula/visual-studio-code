@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.24.2
+
+### Patch
+
+- Fix incorrect javascript destructuring colors in certain conditions. #203
+
 ## 2.24.1
 
 ### Patch
