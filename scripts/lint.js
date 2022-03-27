@@ -27,7 +27,7 @@ async function scrapeThemeAvailableKeys() {
 
     if (!matches) {
         throw new Error(
-            "Couldn't find any matches with <code>...</code>, maybe docs have chaged?"
+            "Couldn't find any matches with <code>...</code>, maybe docs have changed?"
         );
     }
 
