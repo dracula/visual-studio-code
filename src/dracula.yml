@@ -1180,3 +1180,15 @@ tokenColors:
     settings:
       fontStyle: "underline"
 
+  - name: C++ User-Defined Literal - Number
+    scope:
+      - entity.name.operator.custom-literal.number.cpp
+    settings:
+      fontStyle: "underline"
+
+  - name: C++ User-Defined Literal - String
+    scope:
+      - entity.name.operator.custom-literal.string.cpp
+    settings:
+      fontStyle: "underline"
+
