@@ -1161,13 +1161,6 @@ tokenColors:
     settings:
       foreground: *CYAN
 
-  # to match entity.name.function.operator
-  - name: C++ Operator Overload Member
-    scope:
-      - entity.name.function.operator.member.cpp
-    settings:
-      foreground: *GREEN
-
   - name: C++ Label
     scope:
       - entity.name.label.cpp
