@@ -1132,3 +1132,51 @@ tokenColors:
     settings:
       foreground: *YELLOW
       fontStyle: bold
+
+  - name: C++ Namespace
+    scope:
+      - entity.name.namespace.cpp
+    settings:
+      foreground: *PINK
+      fontStyle: "italic underline"
+
+  # Constant like
+  - name: C++ Enumerator
+    scope:
+      - variable.other.enummember.cpp
+    settings:
+      foreground: *PURPLE
+
+  # Constant like
+  - name: C++ Macro
+    scope:
+      - entity.name.function.preprocessor.cpp
+    settings:
+      foreground: *PURPLE
+      fontStyle: "bold"
+
+  - name: C++ Type
+    scope:
+      - entity.name.type.cpp
+    settings:
+      foreground: *CYAN
+
+  # to match entity.name.function.operator
+  - name: C++ Operator Overload Member
+    scope:
+      - entity.name.function.operator.member.cpp
+    settings:
+      foreground: *GREEN
+
+  - name: C++ Label
+    scope:
+      - entity.name.label.cpp
+    settings:
+      foreground: *PURPLE
+
+  - name: C++ User-Defined Literal - Raw
+    scope:
+      - entity.name.operator.custom-literal.cpp
+    settings:
+      fontStyle: "underline"
+
