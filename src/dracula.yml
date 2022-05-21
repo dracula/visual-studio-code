@@ -1155,12 +1155,6 @@ tokenColors:
       foreground: *PURPLE
       fontStyle: "bold"
 
-  - name: C++ Type
-    scope:
-      - entity.name.type.cpp
-    settings:
-      foreground: *CYAN
-
   - name: C++ Label
     scope:
       - entity.name.label.cpp
