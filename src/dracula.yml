@@ -1133,49 +1133,31 @@ tokenColors:
       foreground: *YELLOW
       fontStyle: bold
 
+  # Types like https://spec.draculatheme.com/#Types
   - name: C++ Namespace
     scope:
       - entity.name.namespace.cpp
     settings:
-      foreground: *PINK
-      fontStyle: "italic underline"
+      foreground: *CYAN
+      fontStyle: "italic"
 
-  # Constant like
+  # Constant like https://spec.draculatheme.com/#Constant
   - name: C++ Enumerator
     scope:
       - variable.other.enummember.cpp
     settings:
       foreground: *PURPLE
 
-  # Constant like
+  # Constant like https://spec.draculatheme.com/#Constant
   - name: C++ Macro
     scope:
       - entity.name.function.preprocessor.cpp
     settings:
       foreground: *PURPLE
-      fontStyle: "bold"
 
+  # Constant like https://spec.draculatheme.com/#Constant
   - name: C++ Label
     scope:
       - entity.name.label.cpp
     settings:
       foreground: *PURPLE
-
-  - name: C++ User-Defined Literal - Raw
-    scope:
-      - entity.name.operator.custom-literal.cpp
-    settings:
-      fontStyle: "underline"
-
-  - name: C++ User-Defined Literal - Number
-    scope:
-      - entity.name.operator.custom-literal.number.cpp
-    settings:
-      fontStyle: "underline"
-
-  - name: C++ User-Defined Literal - String
-    scope:
-      - entity.name.operator.custom-literal.string.cpp
-    settings:
-      fontStyle: "underline"
-
