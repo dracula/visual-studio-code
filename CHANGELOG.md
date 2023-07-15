@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.24.3
+
+### Patch
+
+- Fix highlight color for inline chat region for copilot. #238
+
 ## 2.24.2
 
 ### Patch
