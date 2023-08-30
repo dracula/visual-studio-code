@@ -26,6 +26,10 @@ This theme is maintained by the following person(s) and a bunch of [awesome cont
 
 If you'd like to contribute to this theme, please read the [contributing guidelines](./.github/CONTRIBUTING.md).
 
+## Dracula PRO
+
+[![Dracula PRO](./dracula-pro.png)](https://draculatheme.com/pro)
+
 ## License
 
 [MIT License](./LICENSE)
