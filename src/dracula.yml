@@ -247,8 +247,10 @@ colors:
 
   editorError.foreground: *RED                                                  # Foreground color of error squigglies in the editor
   editorError.border:                                                           # Border color of error squigglies in the editor
-  editorWarning.foreground: *CYAN                                               # Foreground color of warning squigglies in the editor
+  editorWarning.foreground: *ORANGE                                             # Foreground color of warning squigglies in the editor
   editorWarning.border:                                                         # Border color of warning squigglies in the editor
+  editorInfo.foreground: *CYAN                                                  # Foreground color of warning squigglies in the editor
+  editorInfo.border:                                                            # Border color of warning squigglies in the editor
 
   editorGutter.background:                                                      # Background color of the editor gutter
   editorGutter.modifiedBackground: !alpha [ *CYAN, 80 ]                         # Editor gutter background color for lines that are modified
