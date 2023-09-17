@@ -200,7 +200,7 @@ colors:
 
   editor.hoverHighlightBackground: !alpha [*CYAN, 50]                           # Highlight below the word for which a hover is shown
 
-  editor.lineHighlightBackground:                                               # Background color for the highlight of line at the cursor position
+  editor.lineHighlightBackground:                                              # Background color for the highlight of line at the cursor position
   editor.lineHighlightBorder: *SELECTION                                        # Background color for the border around the line at the cursor position
 
   editorLink.activeForeground: *CYAN                                            # Color of active links
@@ -266,9 +266,20 @@ colors:
 
   # Diff Editor Colors
   diffEditor.insertedTextBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted text
-  diffEditor.insertedTextBorder:                                                # Outline color for inserted text
-  diffEditor.removedTextBackground: !alpha [ *RED, 50 ]                         # Background color for removed text
-  diffEditor.removedTextBorder:                                                 # Outline color for removed text
+  diffEditor.insertedTextBorder:     !alpha [ *GREEN, 20 ]                      # Outline color for inserted text
+  diffEditor.removedTextBackground:  !alpha [ *RED, 30 ]                        # Background color for removed text
+  diffEditor.removedTextBorder:      !alpha [ *RED, 30 ]                        # Outline color for removed text
+  diffEditor.diagonalFill: !alpha [ *RED, 40 ]                                  # Color of the diagonal fill in diff editor
+  diffEditor.insertedLineBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted lines
+  diffEditor.removedLineBackground:  !alpha [ *RED, 30 ]                        # Background color for removed lines
+  diffEditorGutter.insertedLineBackground: !alpha [ *GREEN, 20 ]                # Background color for the diff editor's inserted text overview ruler marker
+  diffEditorGutter.removedLineBackground:  !alpha [ *RED, 30 ]                  # Background color for the diff editor's removed text overview ruler marker
+  diffEditorOverview.insertedForeground: *GREEN                                 # Current overview ruler foreground for inline merge conflicts
+  diffEditorOverview.removedForeground: *RED                                    # Current overview ruler foreground for inline merge conflicts
+  diffEditor.unchangedRegionBackground: *BGLighter                              # Background color for unchanged text
+  diffEditor.unchangedRegionForeground: *COMMENT                                # Outline color for unchanged text
+  diffEditor.unchangedCodeBackground: *BGLighter                                # Background color for unchanged text
+  diffEditor.move.border: !alpha [ *RED, 30 ]                                   # Border color between the two text editors
   inlineChat.regionHighlight: *BGLight                                          # Background color for the inline chat diff region
 
   # Editor Widget Colors
