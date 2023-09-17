@@ -256,11 +256,13 @@ colors:
   editorGutter.deletedBackground:  !alpha [ *RED,    80 ]                       # Editor gutter background color for lines that are deleted
 
   # Explorer Colors
-  gitDecoration.modifiedResourceForeground: *CYAN
-  gitDecoration.deletedResourceForeground: *RED
-  gitDecoration.untrackedResourceForeground: *GREEN
-  gitDecoration.ignoredResourceForeground: *COMMENT
-  gitDecoration.conflictingResourceForeground: *ORANGE
+  gitDecoration.gitDecoration.addedResourceForeground: *GREEN                   # Color for added resources in git decorations
+  gitDecoration.modifiedResourceForeground: *CYAN                               # Color for modified resources in git decorations
+  gitDecoration.deletedResourceForeground: *RED                                 # Color for deleted resources in git decorations
+  gitDecoration.untrackedResourceForeground: *GREEN                             # Color for untracked resources in git decorations
+  gitDecoration.ignoredResourceForeground: *COMMENT                             # Color for ignored resources in git decorations
+  gitDecoration.conflictingResourceForeground: *ORANGE                          # Color for conflicting resources in git decorations
+  gitDecoration.submoduleResourceForeground: *COMMENT                           # Color for submodule resources in git decorations
 
   # Diff Editor Colors
   diffEditor.insertedTextBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted text
