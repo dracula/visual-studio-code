@@ -1,9 +1,9 @@
 {
     "name": "theme-dracula",
-    "version": "2.24.3",
-    "displayName": "Dracula Official",
+    "version": "2.25.1",
+    "displayName": "Dracula Theme Official",
     "homepage": "https://draculatheme.com/",
-    "description": "Official Dracula Theme. A dark theme for many editors, shells, and more.",
+    "description": "The official Dracula Theme: a dark theme for many editors, shells, and more. 🦇",
     "publisher": "dracula-theme",
     "license": "MIT",
     "scripts": {
@@ -14,7 +14,9 @@
         "vsce-publish": "vsce publish"
     },
     "maintainers": [
-        "Derek Sifford"
+        "Derek Sifford",
+        "Lucas de França (luxonauta)",
+        "Zeno Rocha"
     ],
     "contributors": [
         "Krzysztof Wisznarewski",
@@ -51,12 +53,12 @@
     "contributes": {
         "themes": [
             {
-                "label": "Dracula",
+                "label": "Dracula Theme",
                 "uiTheme": "vs-dark",
                 "path": "./theme/dracula.json"
             },
             {
-                "label": "Dracula Soft",
+                "label": "Dracula Theme Soft",
                 "uiTheme": "vs-dark",
                 "path": "./theme/dracula-soft.json"
             }
