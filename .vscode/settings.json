@@ -1,6 +1,13 @@
 {
     "files.trimTrailingWhitespace": true,
-    "[yaml]": {
+    "files.eol": "\n",
+    "[md]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 75
+    },
+    "[yml]": {
+        "editor.insertSpaces": true,
         "editor.renderWhitespace": "boundary",
+        "editor.tabSize": 2
     }
 }

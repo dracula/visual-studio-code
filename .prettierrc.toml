@@ -7,8 +7,3 @@ trailingComma = 'all'
   files = '*.js'
   [overrides.options]
     trailingComma = 'es5'
-
-[[overrides]]
-  files = '*.{yml,yaml}'
-  [overrides.options]
-    tabWidth = 2

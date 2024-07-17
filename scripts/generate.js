@@ -1,6 +1,6 @@
 const { readFile } = require('fs').promises;
 const { join } = require('path');
-const { Type, DEFAULT_SCHEMA, load } = require('js-yaml');
+const { Type, Schema, load } = require('js-yaml');
 const tinycolor = require('tinycolor2');
 
 /**
@@ -19,7 +19,7 @@ const tinycolor = require('tinycolor2');
  */
 
 /**
- * @typedef {(yamlObj: Theme) => Theme} ThemeTransform
+ * @typedef {(yamlContent: string, yamlObj: Theme) => Theme} ThemeTransform
  */
 
 const withAlphaType = new Type('!alpha', {
@@ -28,35 +28,11 @@ const withAlphaType = new Type('!alpha', {
     represent: ([hexRGB, alpha]) => hexRGB + alpha,
 });
 
-const schema = DEFAULT_SCHEMA.extend([withAlphaType]);
+const schema = Schema.create([withAlphaType]);
 
-/**
- * Soft variant transform.
- * @type {ThemeTransform}
- */
-const transformSoft = theme => {
-    /** @type {Theme} */
-    const soft = JSON.parse(JSON.stringify(theme));
-    const brightColors = [...soft.dracula.ansi, ...soft.dracula.brightOther];
-    for (const key of Object.keys(soft.colors)) {
-        if (brightColors.includes(soft.colors[key])) {
-            soft.colors[key] = tinycolor(soft.colors[key])
-                .desaturate(20)
-                .toHexString();
-        }
-    }
-    soft.tokenColors = soft.tokenColors.map((value) => {
-        if (brightColors.includes(value.settings.foreground)) {
-            value.settings.foreground = tinycolor(value.settings.foreground).desaturate(20).toHexString();
-        }
-        return value;
-    })
-    return soft;
-};
-
-module.exports = async () => {
+module.exports = async (themeName) => {
     const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'dracula.yml'),
+        join(__dirname, '..', 'src', `${themeName}.yml`),
         'utf-8'
     );
 
@@ -72,6 +48,5 @@ module.exports = async () => {
 
     return {
         base,
-        soft: transformSoft(base),
     };
 };
