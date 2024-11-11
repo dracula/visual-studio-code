@@ -1,0 +1,122 @@
+/* Contenedor de Banderas */
+.flags-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .flags-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Layout Vertical */
+  .vertical-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Layout Horizontal */
+  .horizontal-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  /* Estructura Horizontal de Imágenes */
+  .horizontal-images {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .horizontal-images img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* Estructura Vertical de Imágenes */
+  .vertical-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vertical-images img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* Barra de Navegación */
+  .navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+
+  .navbar a:hover {
+    background-color: #555;
+  }
+
+  /* Card */
+  .card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Hero */
+  .hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .hero button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Sección */
+  .section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+
+  .section h2 {
+    color: #333;
+  }
+
+  .section p {
+    color: #555;
+  }

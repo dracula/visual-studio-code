@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Completa</title>
+    <style>
+        /* Contenedor de banderas */
+        .banderas-contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .banderas-contenedor img {
+            width: 100px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Layouts vertical y horizontal */
+        .layout-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .layout-horizontal {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* Estructuras de imágenes */
+        .imagenes-horizontal, .imagenes-vertical {
+            display: flex;
+            gap: 10px;
+        }
+
+        .imagenes-horizontal {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .imagenes-vertical {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imagenes-horizontal img, .imagenes-vertical img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Barra de navegación */
+        .barra-navegacion {
+            display: flex;
+            gap: 15px;
+            background-color: #333;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .barra-navegacion a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Card */
+        .card {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Hero */
+        .hero {
+            background-color: #4CAF50;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* Sección */
+        .seccion {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Banderas dentro de un contenedor -->
+    <section class="seccion">
+        <h2>1. Banderas dentro de un contenedor</h2>
+        <div class="banderas-contenedor">
+            <img src="bandera1.jpg" alt="Bandera 1">
+            <img src="bandera2.jpg" alt="Bandera 2">
+            <img src="bandera3.jpg" alt="Bandera 3">
+            <img src="bandera4.jpg" alt="Bandera 4">
+            <img src="bandera5.jpg" alt="Bandera 5">
+            <img src="bandera6.jpg" alt="Bandera 6">
+            <img src="bandera7.jpg" alt="Bandera 7">
+            <img src="bandera8.jpg" alt="Bandera 8">
+            <img src="bandera9.jpg" alt="Bandera 9">
+        </div>
+    </section>
+
+    <!-- 2. Layout en vertical -->
+    <section class="seccion">
+        <h2>2. Layout en vertical</h2>
+        <div class="layout-vertical">
+            <div>Elemento 1</div>
+            <div>Elemento 2</div>
+            <div>Elemento 3</div>
+        </div>
+    </section>
+
+    <!-- 3. Layout en horizontal -->
+    <section class="seccion">
+        <h2>3. Layout en horizontal</h2>
+        <div class="layout-horizontal">
+            <div>Elemento 1</div>
+            <div>Elemento 2</div>
+            <div>Elemento 3</div>
+        </div>
+    </section>
+
+    <!-- 4. Estructura horizontal de imágenes -->
+    <section class="seccion">
+        <h2>4. Estructura horizontal de imágenes</h2>
+        <div class="imagenes-horizontal">
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <img src="imagen3.jpg" alt="Imagen 3">
+        </div>
+    </section>
+
+    <!-- 5. Estructura vertical de imágenes -->
+    <section class="seccion">
+        <h2>5. Estructura vertical de imágenes</h2>
+        <div class="imagenes-vertical">
+            <img src="imagen4.jpg" alt="Imagen 4">
+            <img src="imagen5.jpg" alt="Imagen 5">
+            <img src="imagen6.jpg" alt="Imagen 6">
+        </div>
+    </section>
+
+    <!-- 6. Barra de navegación -->
+    <section class="seccion">
+        <h2>6. Barra de navegación</h2>
+        <nav class="barra-navegacion">
+            <a href="#home">Inicio</a>
+            <a href="#about">Acerca de</a>
+            <a href="#services">Servicios</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </section>
+
+    <!-- 7. Card -->
+    <section class="seccion">
+        <h2>7. Card</h2>
+        <div class="card">
+            <img src="card.jpg" alt="Imagen de Card">
+            <h3>Título de la Card</h3>
+            <p>Descripción breve de la card.</p>
+        </div>
+    </section>
+
+    <!-- 8. Hero -->
+    <section class="hero">
+        <h2>8. Hero</h2>
+        <p>Esta es la sección destacada de la página.</p>
+    </section>
+
+    <!-- 9. Sección -->
+    <section class="seccion">
+        <h2>9. Sección</h2>
+        <p>Contenido de la sección general.</p>
+    </section>
+
+</body>
+</html>

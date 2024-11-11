@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo sin nombres de secciones</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .banderas-contenedor, .imagenes-horizontal, .imagenes-vertical {
+            display: flex;
+            gap: 10px;
+            margin: 20px;
+            justify-content: center;
+        }
+        .imagenes-vertical {
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .card, .hero, .section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banderas/imagenes -->
+    <div class="banderas-contenedor">
+        <img src="https://example.com/bandera1.jpg" alt="Bandera 1">
+        <img src="https://example.com/bandera2.jpg" alt="Bandera 2">
+        <img src="https://example.com/bandera3.jpg" alt="Bandera 3">
+    </div>
+
+    <!-- Layout horizontal de imágenes -->
+    <div class="imagenes-horizontal">
+        <img src="https://example.com/imagen1.jpg" alt="Imagen 1">
+        <img src="https://example.com/imagen2.jpg" alt="Imagen 2">
+        <img src="https://example.com/imagen3.jpg" alt="Imagen 3">
+    </div>
+
+    <!-- Layout vertical de imágenes -->
+    <div class="imagenes-vertical">
+        <img src="https://example.com/imagen4.jpg" alt="Imagen 4">
+        <img src="https://example.com/imagen5.jpg" alt="Imagen 5">
+        <img src="https://example.com/imagen6.jpg" alt="Imagen 6">
+    </div>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+        <p>Contenido de la tarjeta (card)</p>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <p>Sección de héroe</p>
+    </div>
+
+    <!-- Sección -->
+    <div class="section">
+        <p>Otra sección de contenido</p>
+    </div>
+
+</body>
+</html>

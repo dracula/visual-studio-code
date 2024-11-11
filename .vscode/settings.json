@@ -2,5 +2,6 @@
     "files.trimTrailingWhitespace": true,
     "[yaml]": {
         "editor.renderWhitespace": "boundary",
-    }
+    },
+    "liveServer.settings.port": 5501
 }
