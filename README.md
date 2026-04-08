@@ -1,34 +1,61 @@
-# Dracula for [Visual Studio Code](http://code.visualstudio.com)
+# Dracula Variants for [Visual Studio Code](https://code.visualstudio.com)
 
-> A dark theme for [Visual Studio Code](http://code.visualstudio.com).
+🌍 [中文](./README.zh-CN.md) | [Español](./README.es.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md)
 
-![Screenshot](https://raw.githubusercontent.com/dracula/visual-studio-code/master/screenshot.png)
+> Dark & Light themes for [Visual Studio Code](https://code.visualstudio.com), based on [Dracula](https://draculatheme.com).
+
+## Themes
+
+This extension includes **three** theme variants:
+
+| Theme | Type | Description |
+|-------|------|-------------|
+| **Dracula Theme** | Dark | The classic Dracula dark theme |
+| **Dracula Theme Soft** | Dark | A desaturated variant for reduced eye strain |
+| **Dracula Theme Light** | Light | A light variant preserving Dracula's signature color palette |
+
+### Dracula Light
+
+The light variant flips the background/foreground while deepening all syntax colors to maintain WCAG AA contrast on a light canvas. The Dracula color DNA — purple, pink, cyan, green — is fully preserved.
+
+**Color Palette:**
+
+| Role | Dark | Light |
+|------|------|-------|
+| Background | `#282A36` | `#F8F8F2` |
+| Foreground | `#F8F8F2` | `#282A36` |
+| Keywords | `#FF79C6` | `#C0358B` |
+| Functions | `#50FA7B` | `#1B8A3A` |
+| Strings | `#F1FA8C` | `#9B7E00` |
+| Constants | `#BD93F9` | `#7C3AED` |
+| Types | `#8BE9FD` | `#0C7E8F` |
+| Comments | `#6272A4` | `#7E8CAD` |
 
 ## Install
 
-All instructions can be found at [draculatheme.com/visual-studio-code](https://draculatheme.com/visual-studio-code).
+### From Source
 
-## Team
+1. Clone this repository
+2. Copy the folder to your VS Code extensions directory
+3. Restart VS Code
+4. Open **Preferences: Color Theme** and select your preferred variant
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/visual-studio-code/graphs/contributors).
+### Development
 
-[![Derek S.](https://avatars3.githubusercontent.com/u/5240018?v=3&s=70)](https://github.com/dsifford) |
-:---: |
-[Derek S.](https://github.com/dsifford) |
+```bash
+npm install
+npm run build
+```
 
-## Community
-
-* [Twitter](https://twitter.com/draculatheme) - Best for getting updates about themes and new stuff.
-* [GitHub](https://github.com/dracula/dracula-theme/discussions) - Best for asking questions and discussing issues.
-* [Discord](https://draculatheme.com/discord-invite) - Best for hanging out with the community.
+Press `F5` in VS Code to launch the Extension Development Host and preview the themes.
 
 ## Contributing
 
-If you'd like to contribute to this theme, please read the [contributing guidelines](./.github/CONTRIBUTING.md).
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## Dracula PRO
+## Credits
 
-[![Dracula PRO](./dracula-pro.png)](https://draculatheme.com/pro)
+Based on the [Dracula Theme](https://draculatheme.com) by [Zeno Rocha](https://github.com/zenorocha).
 
 ## License
 
