@@ -4,7 +4,7 @@
     "displayName": "Dracula Variants",
     "homepage": "https://github.com/ZhangWillThink/dracula-variants",
     "description": "Dracula theme variants for VS Code — includes the original dark theme, soft variant, and a carefully crafted light variant.",
-    "publisher": "ZhangWillThink",
+    "publisher": "WillZhang",
     "license": "MIT",
     "scripts": {
         "build": "node ./scripts/build.js",
