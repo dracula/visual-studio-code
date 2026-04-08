@@ -1,37 +1,25 @@
 {
-    "name": "theme-dracula",
-    "version": "2.25.1",
-    "displayName": "Dracula Theme Official",
-    "homepage": "https://draculatheme.com/",
-    "description": "The official Dracula Theme: a dark theme for many editors, shells, and more. 🦇",
-    "publisher": "dracula-theme",
+    "name": "dracula-variants",
+    "version": "1.0.0",
+    "displayName": "Dracula Variants",
+    "homepage": "https://github.com/ZhangWillThink/dracula-variants",
+    "description": "Dracula theme variants for VS Code — includes the original dark theme, soft variant, and a carefully crafted light variant.",
+    "publisher": "ZhangWillThink",
     "license": "MIT",
     "scripts": {
         "build": "node ./scripts/build.js",
         "lint": "node ./scripts/lint.js",
-        "package": "vsce package -o ./bin/dracula.vsix",
+        "package": "vsce package -o ./bin/dracula-variants.vsix",
         "vscode:prepublish": "npm run build",
         "vsce-publish": "vsce publish"
     },
-    "maintainers": [
-        "Derek Sifford",
-        "Lucas de França (luxonauta)",
-        "Zeno Rocha"
-    ],
-    "contributors": [
-        "Krzysztof Wisznarewski",
-        "Daniel Ramos",
-        "Eric Jackson",
-        "Elliott Pogue",
-        "Ajit Singh",
-        "Teddy Bradford"
-    ],
+    "author": "ZhangWillThink",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dracula/visual-studio-code.git"
+        "url": "https://github.com/ZhangWillThink/dracula-variants.git"
     },
     "bugs": {
-        "url": "https://github.com/dracula/visual-studio-code/issues"
+        "url": "https://github.com/ZhangWillThink/dracula-variants/issues"
     },
     "engines": {
         "vscode": "^1.13.0"
@@ -48,8 +36,8 @@
     ],
     "icon": "icon.png",
     "galleryBanner": {
-        "color": "#3c4557",
-        "theme": "dark"
+        "color": "#F8F8F2",
+        "theme": "light"
     },
     "contributes": {
         "themes": [
@@ -75,10 +63,5 @@
         "prettier": "^3.0.0",
         "tinycolor2": "^1.6.0",
         "vsce": "^2.15.0"
-    },
-    "__metadata": {
-        "id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
-        "publisherDisplayName": "Dracula Theme",
-        "publisherId": "fbb3d024-f8f2-460c-bdb5-99552f6d8c4b"
     }
 }

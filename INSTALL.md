@@ -1,23 +1,25 @@
 ### [Visual Studio Code](https://code.visualstudio.com/)
 
-#### Install using Command Palette
+#### Install from VSIX
 
-1.  Go to `View -> Command Palette` or press `Ctrl+Shift+P`
-2.  Then enter `Install Extension`
-3.  Write `Dracula Official`
-4.  Select it or press Enter to install
+1. Download the `.vsix` file from [Releases](https://github.com/ZhangWillThink/dracula-variants/releases)
+2. Go to `View -> Command Palette` or press `Ctrl+Shift+P`
+3. Enter `Extensions: Install from VSIX...`
+4. Select the downloaded `.vsix` file
 
 #### Install using Git
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
-
 ```bash
-git clone https://github.com/dracula/visual-studio-code.git ~/.vscode/extensions/theme-dracula
-cd ~/.vscode/extensions/theme-dracula
+git clone https://github.com/ZhangWillThink/dracula-variants.git ~/.vscode/extensions/dracula-variants
+cd ~/.vscode/extensions/dracula-variants
 npm install
 npm run build
 ```
 
 #### Activating theme
 
-Run Visual Studio Code. The Dracula Syntax Theme will be available from `File -> Preferences -> Color Theme` dropdown menu.
+Run Visual Studio Code. The themes will be available from `File -> Preferences -> Color Theme` dropdown menu:
+
+- **Dracula Theme** — Original dark theme
+- **Dracula Theme Soft** — Softer dark variant
+- **Dracula Theme Light** — Light variant

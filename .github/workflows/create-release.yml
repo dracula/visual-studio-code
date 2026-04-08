@@ -7,9 +7,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2 
-        with: 
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
           node-version: lts/*
           cache: npm
       - run: npm install && mkdir -p ./bin
@@ -27,6 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./bin/dracula.vsix
-          asset_name: dracula.vsix
+          asset_path: ./bin/dracula-variants.vsix
+          asset_name: dracula-variants.vsix
           asset_content_type: application/octet-stream
