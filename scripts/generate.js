@@ -54,24 +54,31 @@ const transformSoft = theme => {
     return soft;
 };
 
-module.exports = async () => {
+const loadTheme = async (filename) => {
     const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'dracula.yml'),
+        join(__dirname, '..', 'src', filename),
         'utf-8'
     );
 
     /** @type {Theme} */
-    const base = load(yamlFile, { schema });
+    const theme = load(yamlFile, { schema });
 
-    // Remove nulls and other falsey values from colors
-    for (const key of Object.keys(base.colors)) {
-        if (!base.colors[key]) {
-            delete base.colors[key];
+    for (const key of Object.keys(theme.colors)) {
+        if (!theme.colors[key]) {
+            delete theme.colors[key];
         }
     }
+
+    return theme;
+};
+
+module.exports = async () => {
+    const base = await loadTheme('dracula.yml');
+    const light = await loadTheme('dracula-light.yml');
 
     return {
         base,
         soft: transformSoft(base),
+        light,
     };
 };
