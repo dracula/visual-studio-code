@@ -12,12 +12,12 @@
 If you are a git user, you can install the theme and keep up to date by cloning the repo:
 
 ```bash
-git clone https://github.com/dracula/visual-studio-code.git ~/.vscode/extensions/theme-dracula
-cd ~/.vscode/extensions/theme-dracula
+git clone https://github.com/macielvini/alchemortis-vs-code-theme.git ~/.vscode/extensions/theme-alchemortis
+cd ~/.vscode/extensions/theme-alchemortis
 npm install
 npm run build
 ```
 
 #### Activating theme
 
-Run Visual Studio Code. The Dracula Syntax Theme will be available from `File -> Preferences -> Color Theme` dropdown menu.
+Run Visual Studio Code. The Alchemortis Theme will be available from `File -> Preferences -> Color Theme` dropdown menu.

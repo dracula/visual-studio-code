@@ -1,0 +1,14 @@
+Witching Hour palette https://lospec.com/palette-list/witching-hour
+#f6dbba
+#db604c
+#b13353
+#5e2052
+#74c99e
+#317c87
+#271854
+#1a1016
+
+The colors bellow were slightly adjusted to improve visibility (~20% brightness increase)
+#c94465
+#752866
+#40a2b1

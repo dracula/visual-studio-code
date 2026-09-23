@@ -1,10 +1,10 @@
 {
-    "name": "theme-dracula",
+    "name": "theme-alchemortis",
     "version": "2.25.1",
-    "displayName": "Dracula Theme Official",
-    "homepage": "https://draculatheme.com/",
-    "description": "The official Dracula Theme: a dark theme for many editors, shells, and more. 🦇",
-    "publisher": "dracula-theme",
+    "displayName": "Alchemortis Theme",
+    "homepage": "https://github.com/macielvini/alchemortis-vs-code-theme",
+    "description": "Alchemortis: a dark theme for Visual Studio Code, forked from Dracula. 🦇",
+    "publisher": "macielvini",
     "license": "MIT",
     "scripts": {
         "build": "node ./scripts/build.js",
@@ -28,10 +28,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/dracula/visual-studio-code.git"
+        "url": "https://github.com/macielvini/alchemortis-vs-code-theme.git"
     },
     "bugs": {
-        "url": "https://github.com/dracula/visual-studio-code/issues"
+        "url": "https://github.com/macielvini/alchemortis-vs-code-theme/issues"
     },
     "engines": {
         "vscode": "^1.13.0"
@@ -53,12 +53,12 @@
     "contributes": {
         "themes": [
             {
-                "label": "Dracula Theme",
+                "label": "Alchemortis",
                 "uiTheme": "vs-dark",
                 "path": "./theme/dracula.json"
             },
             {
-                "label": "Dracula Theme Soft",
+                "label": "Alchemortis Soft",
                 "uiTheme": "vs-dark",
                 "path": "./theme/dracula-soft.json"
             }
@@ -72,7 +72,7 @@
     },
     "__metadata": {
         "id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
-        "publisherDisplayName": "Dracula Theme",
+        "publisherDisplayName": "macielvini",
         "publisherId": "fbb3d024-f8f2-460c-bdb5-99552f6d8c4b"
     }
 }

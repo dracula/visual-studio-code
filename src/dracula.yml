@@ -1,23 +1,29 @@
 $schema: vscode://schemas/color-theme
-name: Dracula
-author: Zeno Rocha
+name: Alchemortis
+author: macielvini
 maintainers:
-  - Derek P Sifford <dereksifford@gmail.com>
+  - macielvini
 semanticClass: theme.dracula
 semanticHighlighting: true
 dracula:
+  # Witching Hour Pallete https://lospec.com/palette-list/witching-hour
+  # The pallete is also store locally in pallete.txt
+  # no comment  = inherited from Dracula (original)
+  # palette    = 1:1 to pallet
+  # adjusted    = slightly modified to improve visibility
+  # Changed pointers (*VARIABLE) will have the following comment 'Changed from [ORIGINAL] to [NEW]'
   base:
-    - &BG        '#282A36'
-    - &FG        '#F8F8F2'
+    - &BG        '#1a1016' # palette
+    - &FG        '#f6dbba'
     - &SELECTION '#44475A'
-    - &COMMENT   '#6272A4'
-    - &CYAN      '#8BE9FD'
-    - &GREEN     '#50FA7B'
-    - &ORANGE    '#FFB86C'
-    - &PINK      '#FF79C6'
-    - &PURPLE    '#BD93F9'
-    - &RED       '#FF5555'
-    - &YELLOW    '#F1FA8C'
+    - &COMMENT   '#752866' # adjusted
+    - &CYAN      '#40a2b1' # adjusted
+    - &GREEN     '#74c99e' # palette
+    - &ORANGE    '#f6dbba' # palette
+    - &PINK      '#c94465' # adjusted
+    - &PURPLE    '#317c87'
+    - &RED       '#b13353' # palette
+    - &YELLOW    '#f6dbba' # palette
   ansi:
     - &COLOR0        '#21222C'
     - &COLOR1        '#FF5555'
@@ -37,18 +43,18 @@ dracula:
     - &COLOR15       '#FFFFFF'
   brightOther:
     # Temporary (awaiting fix)
-    - &TEMP_QUOTES          '#E9F284'
+    - &TEMP_QUOTES          '#f6dbba'
     - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
-    - &LineHighlight '#44475A75'
-    - &NonText       '#FFFFFF1A'
-    - &WHITE         '#FFFFFF'
+    - &LineHighlight '#5e205275'
+    - &NonText       '#f6dbba1A'
+    - &WHITE         '#f6dbba'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
     - &BGLighter     '#424450'
-    - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
-    - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
-    - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+    - &BGLight       '#1a1016' # palette
+    - &BGDark        '#1a1016' # palette
+    - &BGDarker      '#1a1016' # palette
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -144,7 +150,7 @@ colors:
 
   # Activity Bar
   activityBar.background: *BGLight                                              # Activity Bar background color
-  activityBar.inactiveForeground: *COMMENT                                      # Activity bar item foreground color when it is inactive
+  activityBar.inactiveForeground: *PURPLE                                       # Activity bar item foreground color when it is inactive / Changed from COMMENT to PURPLE
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar

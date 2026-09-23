@@ -14,7 +14,7 @@
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
                 "--disable-extensions",
-                "${file}"
+                "${workspaceFolder}/samples/Sample.cs"
             ]
         },
         {
@@ -23,7 +23,35 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "preLaunchTask": "npm: build",
-            "args": ["--extensionDevelopmentPath=${workspaceFolder}", "${file}"]
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "${workspaceFolder}/samples/Sample.cs"
+            ]
+        },
+        {
+            "name": "Launch Theme (TypeScript)",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "preLaunchTask": "npm: build",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--disable-extensions",
+                "${workspaceFolder}/samples/Sample.ts"
+            ]
+        },
+        {
+            "name": "Launch Theme (All Samples)",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "preLaunchTask": "npm: build",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--disable-extensions",
+                "${workspaceFolder}/samples/Sample.cs",
+                "${workspaceFolder}/samples/Sample.ts"
+            ]
         }
     ]
 }
